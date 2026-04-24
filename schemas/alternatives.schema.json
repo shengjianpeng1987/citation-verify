@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Candidate replacement papers",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidates", "note"],
+  "properties": {
+    "candidates": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rank", "title", "authors", "year", "venue", "doi", "url", "one_line_summary", "relevance_note"],
+        "properties": {
+          "rank": {"type": "integer", "minimum": 1, "maximum": 5},
+          "title": {"type": "string"},
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["family", "given"],
+              "properties": {
+                "family": {"type": "string"},
+                "given": {"type": "string"}
+              }
+            }
+          },
+          "year": {"type": ["integer", "null"]},
+          "venue": {"type": ["string", "null"]},
+          "doi": {"type": ["string", "null"]},
+          "url": {"type": ["string", "null"]},
+          "one_line_summary": {"type": "string"},
+          "relevance_note": {"type": "string"}
+        }
+      }
+    },
+    "note": {"type": ["string", "null"]}
+  }
+}

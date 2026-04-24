@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Citation verification verdict",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdict", "confidence", "explanation", "matched_identifier", "mismatches", "search_attempts"],
+  "properties": {
+    "verdict": {"type": "string", "enum": ["valid", "partially_valid", "hallucinated", "uncertain"]},
+    "confidence": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+    "explanation": {"type": "string"},
+    "matched_identifier": {"type": ["string", "null"]},
+    "mismatches": {"type": "array", "items": {"type": "string"}},
+    "search_attempts": {"type": "array", "items": {"type": "string"}}
+  }
+}

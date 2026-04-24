@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Stage 4b output: corrections, replacements, and unresolvable citations",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["corrections", "replacements", "unresolvable"],
+  "properties": {
+    "corrections": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/correction"}
+    },
+    "replacements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/replacement"}
+    },
+    "unresolvable": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/unresolvable"}
+    }
+  },
+  "$defs": {
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "authors", "title", "year", "venue", "doi", "url", "raw_text"],
+      "properties": {
+        "id": {"type": "integer", "minimum": 1},
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["family", "given"],
+            "properties": {
+              "family": {"type": "string"},
+              "given": {"type": "string"}
+            }
+          }
+        },
+        "title": {"type": ["string", "null"]},
+        "year": {"type": ["integer", "null"]},
+        "venue": {"type": ["string", "null"]},
+        "doi": {"type": ["string", "null"]},
+        "url": {"type": ["string", "null"]},
+        "raw_text": {"type": "string"}
+      }
+    },
+    "canonical_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "raw_record_url", "doi", "title", "authors", "year", "venue"],
+      "properties": {
+        "source": {"enum": ["crossref", "openalex", "semantic_scholar"]},
+        "raw_record_url": {"type": "string", "format": "uri"},
+        "doi": {"type": "string"},
+        "title": {"type": "string"},
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["family", "given"],
+            "properties": {
+              "family": {"type": "string"},
+              "given": {"type": "string"}
+            }
+          }
+        },
+        "year": {"type": "integer"},
+        "venue": {"type": "string"},
+        "volume": {"type": ["string", "null"]},
+        "issue": {"type": ["string", "null"]},
+        "page": {"type": ["string", "null"]},
+        "url": {"type": ["string", "null"], "format": "uri"}
+      }
+    },
+    "field_diff_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "original", "corrected", "severity"],
+      "properties": {
+        "field": {"enum": ["authors", "title", "year", "venue", "volume", "issue", "page", "doi"]},
+        "original": {"type": ["string", "null"]},
+        "corrected": {"type": ["string", "null"]},
+        "severity": {"enum": ["high", "medium", "low"]}
+      }
+    },
+    "correction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation_id", "original_citation", "canonical_record", "field_diff", "confidence"],
+      "properties": {
+        "citation_id": {"type": "integer"},
+        "original_citation": {"$ref": "#/$defs/citation"},
+        "canonical_record": {"$ref": "#/$defs/canonical_record"},
+        "field_diff": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/field_diff_entry"}
+        },
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "requires_human_review": {"type": "boolean"}
+      }
+    },
+    "replacement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation_id", "original_citation", "canonical_record", "fit_score", "confidence"],
+      "properties": {
+        "citation_id": {"type": "integer"},
+        "original_citation": {"$ref": "#/$defs/citation"},
+        "canonical_record": {"$ref": "#/$defs/canonical_record"},
+        "fit_score": {"type": "integer", "minimum": 0, "maximum": 10},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "unresolvable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation_id", "reason", "channel_a_best_guess", "channel_b_best_guess"],
+      "properties": {
+        "citation_id": {"type": "integer"},
+        "reason": {"type": "string"},
+        "channel_a_best_guess": {"type": ["object", "null"]},
+        "channel_b_best_guess": {"type": ["object", "null"]}
+      }
+    }
+  }
+}

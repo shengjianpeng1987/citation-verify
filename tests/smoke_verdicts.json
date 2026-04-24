@@ -1,0 +1,447 @@
+[
+  {
+    "citation_id": 1,
+    "citation": {
+      "id": 1,
+      "authors": [
+        {
+          "family": "[1] Vaswani",
+          "given": "A"
+        },
+        {
+          "family": "Shazeer",
+          "given": "N"
+        },
+        {
+          "family": "Parmar",
+          "given": "N., et al"
+        }
+      ],
+      "title": "Attention is all you need",
+      "year": 2017,
+      "venue": "Advances in Neural Information Processing Systems, 30",
+      "doi": "10.48550/arXiv.1706.03762",
+      "url": null,
+      "raw_text": "[1] Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30. doi:10.48550/arXiv.1706.03762"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.9,
+      "matched_source": "openalex",
+      "matched_record": {
+        "title": "Attention Is All You Need",
+        "authors": [
+          {
+            "family": "Vaswani",
+            "given": "Ashish"
+          },
+          {
+            "family": "Shazeer",
+            "given": "Noam"
+          },
+          {
+            "family": "Parmar",
+            "given": "Niki"
+          },
+          {
+            "family": "Uszkoreit",
+            "given": "Jakob"
+          },
+          {
+            "family": "Jones",
+            "given": "Llion"
+          },
+          {
+            "family": "Gomez",
+            "given": "Aidan N."
+          },
+          {
+            "family": "Kaiser",
+            "given": "Łukasz"
+          },
+          {
+            "family": "Polosukhin",
+            "given": "Illia"
+          }
+        ],
+        "year": 2025,
+        "venue": "",
+        "doi": "10.65215/2q58a426",
+        "url": "https://openalex.org/W2626778328"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": false,
+      "reasons": [
+        "crossref: DOI 10.48550/arXiv.1706.03762 does not resolve",
+        "openalex: valid (title_sim=1.00, author_overlap=1.00, year_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "skipped",
+      "reasons": [
+        "codex not available — API-only mode"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 2,
+    "citation": {
+      "id": 2,
+      "authors": [
+        {
+          "family": "Jumper",
+          "given": "J"
+        },
+        {
+          "family": "Evans",
+          "given": "R"
+        },
+        {
+          "family": "Pritzel",
+          "given": "A., et al"
+        }
+      ],
+      "title": "Highly accurate protein structure prediction with AlphaFold",
+      "year": 2021,
+      "venue": "Nature, 596(7873), 583-589",
+      "doi": "10.1038/s41586-021-03819-2",
+      "url": null,
+      "raw_text": "Jumper, J., Evans, R., Pritzel, A., et al. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596(7873), 583-589. doi:10.1038/s41586-021-03819-2"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Highly accurate protein structure prediction with AlphaFold",
+        "authors": [
+          {
+            "family": "Jumper",
+            "given": "John"
+          },
+          {
+            "family": "Evans",
+            "given": "Richard"
+          },
+          {
+            "family": "Pritzel",
+            "given": "Alexander"
+          },
+          {
+            "family": "Green",
+            "given": "Tim"
+          },
+          {
+            "family": "Figurnov",
+            "given": "Michael"
+          },
+          {
+            "family": "Ronneberger",
+            "given": "Olaf"
+          },
+          {
+            "family": "Tunyasuvunakool",
+            "given": "Kathryn"
+          },
+          {
+            "family": "Bates",
+            "given": "Russ"
+          },
+          {
+            "family": "Žídek",
+            "given": "Augustin"
+          },
+          {
+            "family": "Potapenko",
+            "given": "Anna"
+          },
+          {
+            "family": "Bridgland",
+            "given": "Alex"
+          },
+          {
+            "family": "Meyer",
+            "given": "Clemens"
+          },
+          {
+            "family": "Kohl",
+            "given": "Simon A. A."
+          },
+          {
+            "family": "Ballard",
+            "given": "Andrew J."
+          },
+          {
+            "family": "Cowie",
+            "given": "Andrew"
+          },
+          {
+            "family": "Romera-Paredes",
+            "given": "Bernardino"
+          },
+          {
+            "family": "Nikolov",
+            "given": "Stanislav"
+          },
+          {
+            "family": "Jain",
+            "given": "Rishub"
+          },
+          {
+            "family": "Adler",
+            "given": "Jonas"
+          },
+          {
+            "family": "Back",
+            "given": "Trevor"
+          },
+          {
+            "family": "Petersen",
+            "given": "Stig"
+          },
+          {
+            "family": "Reiman",
+            "given": "David"
+          },
+          {
+            "family": "Clancy",
+            "given": "Ellen"
+          },
+          {
+            "family": "Zielinski",
+            "given": "Michal"
+          },
+          {
+            "family": "Steinegger",
+            "given": "Martin"
+          },
+          {
+            "family": "Pacholska",
+            "given": "Michalina"
+          },
+          {
+            "family": "Berghammer",
+            "given": "Tamas"
+          },
+          {
+            "family": "Bodenstein",
+            "given": "Sebastian"
+          },
+          {
+            "family": "Silver",
+            "given": "David"
+          },
+          {
+            "family": "Vinyals",
+            "given": "Oriol"
+          },
+          {
+            "family": "Senior",
+            "given": "Andrew W."
+          },
+          {
+            "family": "Kavukcuoglu",
+            "given": "Koray"
+          },
+          {
+            "family": "Kohli",
+            "given": "Pushmeet"
+          },
+          {
+            "family": "Hassabis",
+            "given": "Demis"
+          }
+        ],
+        "year": 2021,
+        "venue": "Nature",
+        "doi": "10.1038/s41586-021-03819-2",
+        "url": "https://doi.org/10.1038/s41586-021-03819-2"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00, author_overlap=1.00, year_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "skipped",
+      "reasons": [
+        "codex not available — API-only mode"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 3,
+    "citation": {
+      "id": 3,
+      "authors": [
+        {
+          "family": "Zhang",
+          "given": "Q"
+        },
+        {
+          "family": "Liu",
+          "given": "M"
+        }
+      ],
+      "title": "Quantum-entangled attention for zero-shot generalization in Martian robotics",
+      "year": 2023,
+      "venue": "Journal of Fictional AI Studies, 42, 1-17",
+      "doi": "10.1234/fake.2023.0001",
+      "url": null,
+      "raw_text": "Zhang, Q., Liu, M. (2023). Quantum-entangled attention for zero-shot generalization in Martian robotics. Journal of Fictional AI Studies, 42, 1-17. doi:10.1234/fake.2023.0001"
+    },
+    "channel_a": {
+      "verdict": "not_found",
+      "confidence": 0.366,
+      "matched_source": "openalex",
+      "matched_record": {
+        "title": "A way forward for fundamental physics in space",
+        "authors": [
+          {
+            "family": "Bassi",
+            "given": "Angelo"
+          },
+          {
+            "family": "Cacciapuoti",
+            "given": "L."
+          },
+          {
+            "family": "Capozzıello",
+            "given": "Salvatore"
+          },
+          {
+            "family": "Dell’Agnello",
+            "given": "S."
+          },
+          {
+            "family": "Diamanti",
+            "given": "Eleni"
+          },
+          {
+            "family": "Giulini",
+            "given": "Domenico"
+          },
+          {
+            "family": "Iess",
+            "given": "L."
+          },
+          {
+            "family": "Jetzer",
+            "given": "Philippe"
+          },
+          {
+            "family": "Joshi",
+            "given": "Siddarth Koduru"
+          },
+          {
+            "family": "Landragin",
+            "given": "Arnaud"
+          },
+          {
+            "family": "Poncin-Lafitte",
+            "given": "C. Le"
+          },
+          {
+            "family": "Rasel",
+            "given": "Ernst M."
+          },
+          {
+            "family": "Roura",
+            "given": "Albert"
+          },
+          {
+            "family": "Salomon",
+            "given": "C."
+          },
+          {
+            "family": "Ulbricht",
+            "given": "Hendrik"
+          }
+        ],
+        "year": 2022,
+        "venue": "npj Microgravity",
+        "doi": "10.1038/s41526-022-00229-0",
+        "url": "https://openalex.org/W4308291697"
+      },
+      "title_similarity": 0.443,
+      "author_overlap": 0.0,
+      "year_match": true,
+      "reasons": [
+        "crossref: DOI 10.1234/fake.2023.0001 does not resolve",
+        "openalex: best candidate title_sim=0.44, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.44, author_overlap=0.00, year_match=True)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "skipped",
+      "reasons": [
+        "codex not available — API-only mode"
+      ]
+    },
+    "final_label": "hallucinated"
+  },
+  {
+    "citation_id": 4,
+    "citation": {
+      "id": 4,
+      "authors": [
+        {
+          "family": "Nakamura",
+          "given": "T"
+        },
+        {
+          "family": "Einstein",
+          "given": "A"
+        }
+      ],
+      "title": "Consciousness-preserving large language models: a telepathic transformer",
+      "year": 2019,
+      "venue": "Proceedings of the Imaginary Conference on AI, 7, 12-24",
+      "doi": null,
+      "url": null,
+      "raw_text": "Nakamura, T., Einstein, A. (2019). Consciousness-preserving large language models: a telepathic transformer. Proceedings of the Imaginary Conference on AI, 7, 12-24."
+    },
+    "channel_a": {
+      "verdict": "not_found",
+      "confidence": 0.385,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Emergent Sentience in Large Language Models Emergent Sentience in Large Language Models: Transformer Architecture and the Neurological Foundations of Consciousness",
+        "authors": [
+          {
+            "family": "Rivera",
+            "given": "Michael"
+          }
+        ],
+        "year": 2025,
+        "venue": "",
+        "doi": "10.2139/ssrn.5205537",
+        "url": "https://doi.org/10.2139/ssrn.5205537"
+      },
+      "title_similarity": 0.642,
+      "author_overlap": 0.0,
+      "year_match": false,
+      "reasons": [
+        "crossref: best candidate title_sim=0.64, author_overlap=0.00 — too weak to call a match",
+        "crossref: not_found (title_sim=0.64, author_overlap=0.00, year_match=False)",
+        "openalex: best candidate title_sim=0.37, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.37, author_overlap=0.00, year_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "skipped",
+      "reasons": [
+        "codex not available — API-only mode"
+      ]
+    },
+    "final_label": "hallucinated"
+  }
+]

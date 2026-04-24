@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenv
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# Pipeline run outputs (land next to input docs, not in repo — ignore defensively)
+*.citation-verify/
+*.patched.docx
+
+# Editor
+.vscode/
+.idea/
