@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "citation-verify"
+dynamic = ["version"]
+description = "Dual-channel verification for detecting AI-hallucinated citations in academic documents"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Sheng Jianpeng" },
+]
+keywords = [
+    "citations",
+    "hallucination",
+    "verification",
+    "bibliography",
+    "LLM",
+    "academic-integrity",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "python-docx>=0.8.11",
+    "requests>=2.28.0",
+    "rapidfuzz>=3.0.0",
+    "jsonschema>=4.17.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "jsonschema>=4.17.0",
+]
+dev = [
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/shengjianpeng1987/citation-verify"
+Repository = "https://github.com/shengjianpeng1987/citation-verify"
+Issues = "https://github.com/shengjianpeng1987/citation-verify/issues"
+
+[tool.setuptools.dynamic]
+version = { file = "VERSION" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scripts*"]
+exclude = ["tests*", ".venv*", "examples*"]
