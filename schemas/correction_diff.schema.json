@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Stage 4b atomic output: per-citation correction diff",
+  "description": "Output shape for a single build_correction codex atom call. Consumed by orchestrate.py which wraps it into a full correction entry (adding citation_id, original_citation, canonical_record). Keep in sync with the correction definition in corrections.schema.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["field_diff", "confidence", "requires_human_review"],
+  "properties": {
+    "field_diff": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "original", "corrected", "severity"],
+        "properties": {
+          "field": {"enum": ["authors", "title", "year", "venue", "volume", "issue", "page", "doi"]},
+          "original": {"type": ["string", "null"]},
+          "corrected": {"type": ["string", "null"]},
+          "severity": {"enum": ["high", "medium", "low"]}
+        }
+      }
+    },
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "requires_human_review": {"type": "boolean"}
+  }
+}

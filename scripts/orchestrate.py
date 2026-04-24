@@ -15,6 +15,13 @@ Flow:
        c. Take top candidate with fit_score>=7
        d. Re-verify the winner via Stage 3
        e. If re-verification passes → confirmed replacement
+  4b. Build corrections.json (3-bucket structured output):
+       partially_valid → corrections[]  (Codex diffs original vs canonical_record)
+       hallucinated+confirmed_replacement → replacements[]
+       uncertain / hallucinated-no-replacement → unresolvable[]
+       Plus a required meta block (schema_version, sha256, codex_model, ...).
+       Invariant: canonical_record.source is always a Channel A API; Channel B web
+       findings must be round-tripped through A before landing in canonical_record.
   5. Render report + optionally patch document         (render_report.py)
 
 Never calls `codex resume`. Every Codex invocation is one-shot.
@@ -23,12 +30,14 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import hashlib
 import json
 import os
 import re
 import subprocess
 import sys
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -36,6 +45,11 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_ROOT = SCRIPT_DIR.parent
 PROMPTS = SKILL_ROOT / "prompts"
 SCHEMAS = SKILL_ROOT / "schemas"
+
+# --- Stage 4b constants ---
+
+SCHEMA_VERSION = "0.1.0"  # corrections.schema.json version. Bump per semver on schema change.
+API_SOURCES_ENABLED = ["crossref", "openalex", "semantic_scholar"]
 
 # --- dependency check ---
 
@@ -485,6 +499,289 @@ def _extract_claim(context: str) -> str:
     return sents[-1] if sents else context
 
 
+# --- step 4b: build Stage 4b corrections.json (3-bucket structured output) ---
+
+def _read_orchestrator_version() -> str:
+    vfile = SKILL_ROOT / "VERSION"
+    if vfile.exists():
+        val = vfile.read_text().strip()
+        if re.match(r"^\d+\.\d+\.\d+$", val):
+            return val
+    return "0.1.0"
+
+
+def _detect_codex_model() -> str:
+    env = os.environ.get("CODEX_MODEL")
+    if env:
+        return env
+    cfg = Path.home() / ".codex" / "config.toml"
+    if cfg.exists():
+        try:
+            for line in cfg.read_text(encoding="utf-8").splitlines():
+                s = line.strip()
+                if s.startswith("[") and s.endswith("]"):
+                    break  # first section header ends top-level scope
+                m = re.match(r'^model\s*=\s*"([^"]+)"', s)
+                if m:
+                    return m.group(1)
+        except OSError:
+            pass
+    return "codex-default"
+
+
+def _sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def _build_raw_record_url(source: str, rec: dict) -> str:
+    doi = (rec.get("doi") or "").strip()
+    if source == "crossref" and doi:
+        return f"https://api.crossref.org/works/{doi}"
+    if source == "openalex":
+        return rec.get("url") or (f"https://api.openalex.org/works/doi:{doi}" if doi else "")
+    if source == "semantic_scholar":
+        return rec.get("url") or (f"https://doi.org/{doi}" if doi else "")
+    return rec.get("url") or ""
+
+
+def _build_canonical_record(source: str | None, rec: dict | None) -> dict | None:
+    """Construct a canonical_record dict conforming to corrections.schema.json.
+    Returns None if the source is not a Channel A enum value, the record is missing,
+    or required fields (doi, title) cannot be populated. Callers should route such
+    citations to the unresolvable bucket — never fabricate a canonical record."""
+    if source not in API_SOURCES_ENABLED:
+        return None
+    if not rec:
+        return None
+    doi = (rec.get("doi") or "").strip()
+    title = (rec.get("title") or "").strip()
+    if not doi or not title:
+        return None
+    raw_url = _build_raw_record_url(source, rec)
+    if not raw_url:
+        return None
+    authors = [
+        {"family": (a.get("family") or "").strip(), "given": (a.get("given") or "").strip()}
+        for a in (rec.get("authors") or [])
+    ]
+    venue = rec.get("venue")
+    venue = venue.strip() if isinstance(venue, str) and venue.strip() else None
+    human_url = rec.get("url") or None
+    return {
+        "source": source,
+        "raw_record_url": raw_url,
+        "doi": doi,
+        "title": title,
+        "authors": authors,
+        "year": rec.get("year"),
+        "venue": venue,
+        "volume": None,
+        "issue": None,
+        "page": None,
+        "url": human_url,
+    }
+
+
+def _make_unresolvable(citation_id: int, reason: str, channel_a: dict, channel_b: dict) -> dict:
+    """Build an unresolvable entry. reason MUST start with a snake_case tag + ': '."""
+    if not re.match(r"^[a-z][a-z0-9_]*: .+", reason):
+        reason = f"untagged: {reason}"
+    ch_a_guess = None
+    if channel_a:
+        rec = channel_a.get("matched_record")
+        if rec:
+            ch_a_guess = {
+                "matched_source": channel_a.get("matched_source"),
+                "record": rec,
+                "title_similarity": channel_a.get("title_similarity"),
+                "author_overlap": channel_a.get("author_overlap"),
+            }
+    ch_b_guess = None
+    if channel_b:
+        b_verdict = channel_b.get("verdict")
+        b_expl = channel_b.get("explanation")
+        b_ident = channel_b.get("matched_identifier")
+        if b_verdict or b_expl or b_ident:
+            ch_b_guess = {
+                "verdict": b_verdict,
+                "explanation": b_expl,
+                "matched_identifier": b_ident,
+                "mismatches": channel_b.get("mismatches", []),
+            }
+    return {
+        "citation_id": citation_id,
+        "reason": reason,
+        "channel_a_best_guess": ch_a_guess,
+        "channel_b_best_guess": ch_b_guess,
+    }
+
+
+def _classify_uncertain(channel_a: dict, channel_b: dict) -> tuple[str, str]:
+    """Return (tag, detail) for a Stage-3 uncertain verdict, ready for unresolvable.reason."""
+    a_v = channel_a.get("verdict", "error") if channel_a else "error"
+    b_v = channel_b.get("verdict", "error") if channel_b else "error"
+    if b_v == "skipped":
+        return "channel_b_skipped", "Channel B unavailable; Channel A alone insufficient for a confident verdict"
+    if a_v == "error" or b_v == "error":
+        return "channel_error", f"A={a_v} B={b_v}; see channel records for context"
+    if a_v == "not_found" and b_v in ("valid", "partially_valid"):
+        return "channel_b_only_no_a_match", "Channel B asserts a match but no Channel A source confirmed it"
+    if a_v in ("valid", "partially_valid") and b_v == "hallucinated":
+        return "channel_disagreement", "Channel A matched a record but Channel B rejected it as hallucinated"
+    return "channel_disagreement", f"Channel A verdict={a_v}, Channel B verdict={b_v}"
+
+
+def step4b_build_corrections(
+    verdicts: list[dict],
+    replacements_by_id: dict[int, dict],
+    input_path: Path,
+    work_dir: Path,
+    *,
+    codex_available: bool,
+    max_workers: int = 4,
+) -> dict:
+    """Consume Stage 3 verdicts + Stage 4 replacements and emit the 3-bucket structured
+    output (corrections / replacements / unresolvable) plus a meta block. Invariant #6:
+    canonical_record.source is always one of Channel A's three APIs — if a Stage 3
+    bucket can't yield one, the citation goes to unresolvable. Invariant #7: Stage 3's
+    final_label is the source of truth for bucketing; 4b does not re-classify."""
+    corrections: list[dict] = []
+    replacements_out: list[dict] = []
+    unresolvable: list[dict] = []
+    correction_jobs: list[tuple[dict, dict, int]] = []
+
+    for v in verdicts:
+        label = v.get("final_label")
+        cit = v.get("citation", {})
+        cid = v.get("citation_id", cit.get("id"))
+        channel_a = v.get("channel_a", {}) or {}
+        channel_b = v.get("channel_b", {}) or {}
+
+        if label == "valid":
+            continue
+
+        if label == "partially_valid":
+            cr = _build_canonical_record(channel_a.get("matched_source"),
+                                         channel_a.get("matched_record"))
+            if cr is None:
+                unresolvable.append(_make_unresolvable(
+                    cid,
+                    "channel_a_no_canonical_record: partially_valid but Channel A match was absent or missing required fields",
+                    channel_a, channel_b))
+                continue
+            correction_jobs.append((cit, cr, cid))
+            continue
+
+        if label == "hallucinated":
+            rep = replacements_by_id.get(cid)
+            status = (rep or {}).get("status")
+            if status == "confirmed_replacement":
+                winner = rep["winner"]
+                reverify = rep["reverification"]
+                rev_a = reverify.get("channel_a", {}) or {}
+                cr = _build_canonical_record(rev_a.get("matched_source"),
+                                             rev_a.get("matched_record"))
+                if cr is None:
+                    unresolvable.append(_make_unresolvable(
+                        cid,
+                        "replacement_canonical_missing: re-verification passed but no Channel A canonical record captured",
+                        channel_a, channel_b))
+                    continue
+                replacements_out.append({
+                    "citation_id": cid,
+                    "original_citation": cit,
+                    "canonical_record": cr,
+                    "fit_score": int(winner.get("fit", {}).get("fit_score", 0)),
+                    "confidence": float(rev_a.get("confidence", 0.0)),
+                })
+                continue
+            tag_map = {
+                None: "no_replacement_attempted",
+                "skipped": "replacement_search_skipped",
+                "no_suitable_replacement": "no_suitable_replacement",
+                "re_verification_failed": "replacement_reverify_failed",
+                "error": "replacement_search_error",
+            }
+            tag = tag_map.get(status, "no_suitable_replacement")
+            detail = (rep or {}).get("reason") or "no replacement found for hallucinated citation"
+            unresolvable.append(_make_unresolvable(
+                cid, f"{tag}: {detail}", channel_a, channel_b))
+            continue
+
+        if label == "uncertain":
+            tag, detail = _classify_uncertain(channel_a, channel_b)
+            unresolvable.append(_make_unresolvable(
+                cid, f"{tag}: {detail}", channel_a, channel_b))
+            continue
+
+        unresolvable.append(_make_unresolvable(
+            cid,
+            f"unexpected_label: Stage 3 verdict '{label}' has no 4b handler",
+            channel_a, channel_b))
+
+    if correction_jobs:
+        if not codex_available:
+            for cit, cr, cid in correction_jobs:
+                unresolvable.append(_make_unresolvable(
+                    cid,
+                    "codex_unavailable: correction diff requires Codex",
+                    {"matched_source": cr["source"], "matched_record": cr}, {}))
+        else:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as ex:
+                futs = {}
+                for cit, cr, cid in correction_jobs:
+                    payload = {"original_citation": cit, "canonical_record": cr}
+                    p = work_dir / f"stage4b_input_{cid}.json"
+                    p.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+                    futs[ex.submit(_codex_atom,
+                                   PROMPTS / "build_correction.md",
+                                   SCHEMAS / "correction_diff.schema.json",
+                                   p,
+                                   f"build-correction-{cid}")] = (cit, cr, cid)
+                for fut in concurrent.futures.as_completed(futs):
+                    cit, cr, cid = futs[fut]
+                    try:
+                        diff_out = fut.result()
+                    except Exception as e:
+                        unresolvable.append(_make_unresolvable(
+                            cid,
+                            f"correction_build_failed: {e.__class__.__name__}: {e}",
+                            {"matched_source": cr["source"], "matched_record": cr}, {}))
+                        continue
+                    corrections.append({
+                        "citation_id": cid,
+                        "original_citation": cit,
+                        "canonical_record": cr,
+                        "field_diff": diff_out.get("field_diff", []),
+                        "confidence": float(diff_out.get("confidence", 0.0)),
+                        "requires_human_review": bool(diff_out.get("requires_human_review", False)),
+                    })
+
+    corrections.sort(key=lambda x: x["citation_id"])
+    replacements_out.sort(key=lambda x: x["citation_id"])
+    unresolvable.sort(key=lambda x: x["citation_id"])
+
+    meta = {
+        "schema_version": SCHEMA_VERSION,
+        "orchestrator_version": _read_orchestrator_version(),
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "input_doc_sha256": _sha256_file(input_path),
+        "input_doc_filename": input_path.name,
+        "codex_model": _detect_codex_model(),
+        "api_sources_enabled": list(API_SOURCES_ENABLED),
+    }
+    return {
+        "meta": meta,
+        "corrections": corrections,
+        "replacements": replacements_out,
+        "unresolvable": unresolvable,
+    }
+
+
 # --- codex invocation ---
 
 def _is_codex_available() -> bool:
@@ -539,13 +836,13 @@ def main() -> int:
     work_dir = out_dir / "_work"
     work_dir.mkdir(exist_ok=True)
 
-    sys.stderr.write(f"[1/5] parsing document: {input_path.name}\n")
+    sys.stderr.write(f"[1/6] parsing document: {input_path.name}\n")
     parsed = step1_parse_doc(input_path, work_dir)
     if parsed.get("warnings"):
         for w in parsed["warnings"]:
             sys.stderr.write(f"    warning: {w}\n")
 
-    sys.stderr.write("[2/5] atomizing citations\n")
+    sys.stderr.write("[2/6] atomizing citations\n")
     atomized = step2_atomize_citations(parsed, work_dir, codex_available=codex_available)
     citations = atomized.get("citations", [])
     if args.limit:
@@ -556,7 +853,7 @@ def main() -> int:
         sys.stderr.write("    no citations to verify — done.\n")
         return 0
 
-    sys.stderr.write(f"[3/5] verifying {len(citations)} citations (parallel={args.parallel})\n")
+    sys.stderr.write(f"[3/6] verifying {len(citations)} citations (parallel={args.parallel})\n")
     verdicts: list[dict] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.parallel) as ex:
         futures = {ex.submit(step3_verify_one, cit, work_dir, codex_available=codex_available): cit for cit in citations}
@@ -570,7 +867,7 @@ def main() -> int:
     replacements: list[dict] = []
     if not args.no_replace:
         hallucinated = [v for v in verdicts if v["final_label"] == "hallucinated"]
-        sys.stderr.write(f"[4/5] finding replacements for {len(hallucinated)} hallucinated citations\n")
+        sys.stderr.write(f"[4/6] finding replacements for {len(hallucinated)} hallucinated citations\n")
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.parallel) as ex:
             futures = {
                 ex.submit(step4_find_replacement, v, parsed["full_text"], work_dir,
@@ -588,7 +885,26 @@ def main() -> int:
     replacements.sort(key=lambda r: r["citation_id"])
     (out_dir / "replacements.json").write_text(json.dumps(replacements, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    sys.stderr.write("[5/5] rendering report\n")
+    sys.stderr.write("[5/6] building Stage 4b corrections.json\n")
+    replacements_by_id = {r["citation_id"]: r for r in replacements}
+    corrections_obj = step4b_build_corrections(
+        verdicts,
+        replacements_by_id,
+        input_path,
+        work_dir,
+        codex_available=codex_available,
+        max_workers=args.parallel,
+    )
+    (out_dir / "corrections.json").write_text(
+        json.dumps(corrections_obj, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    sys.stderr.write(
+        f"    corrections={len(corrections_obj['corrections'])} "
+        f"replacements={len(corrections_obj['replacements'])} "
+        f"unresolvable={len(corrections_obj['unresolvable'])}\n"
+    )
+
+    sys.stderr.write("[6/6] rendering report\n")
     render = subprocess.run(
         [sys.executable, str(SCRIPT_DIR / "render_report.py"),
          "--verdicts", str(out_dir / "verdicts.json"),
