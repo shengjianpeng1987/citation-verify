@@ -1,10 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Stage 4b output: corrections, replacements, and unresolvable citations",
+  "description": "Schema version 0.1.0. Bump the schema_version string in corrections.json meta per semver on any change (patch = clarification, minor = additive non-breaking, major = breaking).",
   "type": "object",
   "additionalProperties": false,
-  "required": ["corrections", "replacements", "unresolvable"],
+  "required": ["meta", "corrections", "replacements", "unresolvable"],
   "properties": {
+    "meta": {"$ref": "#/$defs/meta"},
     "corrections": {
       "type": "array",
       "items": {"$ref": "#/$defs/correction"}
@@ -19,6 +21,55 @@
     }
   },
   "$defs": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "orchestrator_version",
+        "generated_at",
+        "input_doc_sha256",
+        "input_doc_filename",
+        "codex_model",
+        "api_sources_enabled"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semver of corrections.schema.json this instance validates against."
+        },
+        "orchestrator_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semver of the orchestrator that produced this instance. Read from VERSION file at runtime."
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO-8601 UTC timestamp of when this instance was produced."
+        },
+        "input_doc_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 of the raw input document bytes (lowercase hex)."
+        },
+        "input_doc_filename": {
+          "type": "string",
+          "description": "Basename of the input document (no path)."
+        },
+        "codex_model": {
+          "type": "string",
+          "description": "Actual Codex model ID used for Channel B and Stage 4b calls."
+        },
+        "api_sources_enabled": {
+          "type": "array",
+          "items": {"enum": ["crossref", "openalex", "semantic_scholar"]},
+          "uniqueItems": true,
+          "description": "Which Channel A sources were active for this run."
+        }
+      }
+    },
     "citation": {
       "type": "object",
       "additionalProperties": false,
@@ -50,7 +101,10 @@
       "additionalProperties": false,
       "required": ["source", "raw_record_url", "doi", "title", "authors", "year", "venue"],
       "properties": {
-        "source": {"enum": ["crossref", "openalex", "semantic_scholar"]},
+        "source": {
+          "enum": ["crossref", "openalex", "semantic_scholar"],
+          "description": "Which Channel A source provided this record. Channel B web findings must be round-tripped through Channel A before landing here."
+        },
         "raw_record_url": {"type": "string", "format": "uri"},
         "doi": {"type": "string"},
         "title": {"type": "string"},
@@ -66,8 +120,14 @@
             }
           }
         },
-        "year": {"type": "integer"},
-        "venue": {"type": "string"},
+        "year": {
+          "type": ["integer", "null"],
+          "description": "Nullable to accommodate Crossref preprints/datasets with missing year metadata."
+        },
+        "venue": {
+          "type": ["string", "null"],
+          "description": "Nullable to accommodate standalone reports, datasets, etc."
+        },
         "volume": {"type": ["string", "null"]},
         "issue": {"type": ["string", "null"]},
         "page": {"type": ["string", "null"]},
@@ -79,7 +139,10 @@
       "additionalProperties": false,
       "required": ["field", "original", "corrected", "severity"],
       "properties": {
-        "field": {"enum": ["authors", "title", "year", "venue", "volume", "issue", "page", "doi"]},
+        "field": {
+          "enum": ["authors", "title", "year", "venue", "volume", "issue", "page", "doi"],
+          "description": "url intentionally omitted — url is derivative of doi, not separately verifiable."
+        },
         "original": {"type": ["string", "null"]},
         "corrected": {"type": ["string", "null"]},
         "severity": {"enum": ["high", "medium", "low"]}
@@ -98,7 +161,11 @@
           "items": {"$ref": "#/$defs/field_diff_entry"}
         },
         "confidence": {"type": "number", "minimum": 0, "maximum": 1},
-        "requires_human_review": {"type": "boolean"}
+        "requires_human_review": {
+          "type": "boolean",
+          "default": false,
+          "description": "Default false when omitted. Set true only when there is genuine risk: ambiguity, multiple plausible canonical records, or domain-sensitive claims."
+        }
       }
     },
     "replacement": {
@@ -119,7 +186,11 @@
       "required": ["citation_id", "reason", "channel_a_best_guess", "channel_b_best_guess"],
       "properties": {
         "citation_id": {"type": "integer"},
-        "reason": {"type": "string"},
+        "reason": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*: .+",
+          "description": "Free-form for now but MUST start with a snake_case tag followed by ': '. E.g. 'channel_b_only_no_a_match: Codex returned a candidate but no Channel A source confirmed it'. The tag prefix makes future enum migration mechanical."
+        },
         "channel_a_best_guess": {"type": ["object", "null"]},
         "channel_b_best_guess": {"type": ["object", "null"]}
       }

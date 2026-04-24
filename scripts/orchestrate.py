@@ -44,6 +44,7 @@ REQUIRED = {
     "docx": "python-docx",
     "requests": "requests",
     "rapidfuzz": "rapidfuzz",
+    "jsonschema": "jsonschema",
 }
 
 
