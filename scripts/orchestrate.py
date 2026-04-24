@@ -502,12 +502,35 @@ def _extract_claim(context: str) -> str:
 # --- step 4b: build Stage 4b corrections.json (3-bucket structured output) ---
 
 def _read_orchestrator_version() -> str:
+    """Read orchestrator_version from the repo-root VERSION file. On miss or malformed
+    contents, emit a stderr warning and fall back to a hardcoded default — never fall
+    back silently. Once Cowork's Phase 1 VERSION file is in place this warning path is
+    diagnostic-only; it should fire in real runs only if someone deleted or corrupted
+    the file."""
     vfile = SKILL_ROOT / "VERSION"
-    if vfile.exists():
-        val = vfile.read_text().strip()
-        if re.match(r"^\d+\.\d+\.\d+$", val):
-            return val
-    return "0.1.0"
+    fallback = "0.1.0"
+    if not vfile.exists():
+        sys.stderr.write(
+            f"[warn] VERSION file not found at {vfile}; "
+            f"falling back to orchestrator_version={fallback!r}. "
+            f"Restore the file to silence this warning.\n"
+        )
+        return fallback
+    try:
+        val = vfile.read_text(encoding="utf-8").strip()
+    except OSError as e:
+        sys.stderr.write(
+            f"[warn] could not read {vfile} ({e}); "
+            f"falling back to orchestrator_version={fallback!r}\n"
+        )
+        return fallback
+    if not re.match(r"^\d+\.\d+\.\d+$", val):
+        sys.stderr.write(
+            f"[warn] {vfile} contents {val!r} do not match semver ^\\d+\\.\\d+\\.\\d+$; "
+            f"falling back to orchestrator_version={fallback!r}\n"
+        )
+        return fallback
+    return val
 
 
 def _detect_codex_model() -> str:
