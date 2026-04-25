@@ -116,6 +116,15 @@ citation-verify/
 
 ## Phase 2 — Second case + test suite
 
+### Status
+Prep complete: #1 raw Channel A scores (`d155f9b`), #3 schema 0.2.0 + `valid_citation_ids` + shape-drift guard (`202561d`), #2 `requires_human_review` backstop (`511fdf7`), VERSION + orchestrator_version bumped to 0.2.0 (`707527c`). Three release-gate tests green: `test_skill_doc_parity.py`, `test_schema_shape_drift.py`, `test_review_override.py`. Snapshot harness work pending — see `### Claude Code tasks`.
+
+### Prerequisites (first harness pass)
+Pre-0.2.0 outputs at `/tmp/phase2-e2e/` and `/Users/shengjianpeng/Documents/citation verify/eif4enif1-phase2/run-output-formal/` are 0.1.0 schema instances missing `meta.valid_citation_ids` — they will not validate against the current `corrections.schema.json` and must not be frozen as fixtures. Refresh both before recording snapshots:
+- Re-run the nasal methylation case (`/Users/shengjianpeng/Documents/rrbs/过敏性鼻炎甲基化技术选型.docx`) through the current orchestrator.
+- Re-run the EIF4ENIF1 case (`/Users/shengjianpeng/Documents/citation verify/eif4enif1-phase2/EIF4ENIF1_LACE-seq_正式方案.docx`) the same way.
+- Persist refreshed outputs as the canonical baseline under `tests/snapshots/<case>/`. Do not freeze any prep-era artifact.
+
 ### Trigger
 User provides the second validation document (English or Chinese; user selects). Cowork/Claude runs it through the pipeline, not Claude Code.
 
@@ -163,12 +172,19 @@ User provides the second validation document (English or Chinese; user selects).
   - (c) DOCX content layout mirrors the current Markdown report: At-a-glance table + per-citation dual-channel detail blocks.
   - (d) `tests/` adds a smoke test asserting the generated `.docx` is a valid OOXML zip and contains at least one table.
   - (e) On completion, the two SKILL.md lines removed when this was deferred (the Stage 5 DOCX/PDF bullet and the `report.docx` Output-layout line) are restored in the same commit.
+- Channel A scoring recalibration — deferred from Phase 2 review of the EIF4ENIF1 case, where all 5 partials reported `author_overlap=0.95` while raw values were 0.0–0.4 because the DOI-exact-match override floors both similarity scores. `d155f9b` (Phase 2 prep #1) exposed the raw values for transparency; this deliverable makes them the verdict's input. Acceptance:
+  - (a) Replace `_author_overlap` (currently `|A∩B|/|A|`, asymmetric — biased toward citation-side coverage when the citation lists only first-author + et al.) with symmetric Jaccard (`|A∩B|/|A∪B|`); update `AUTHOR_OVERLAP_VALID` and any partial threshold accordingly.
+  - (b) Remove the DOI-exact-match score floor inside `_score_match`. Replace it with an explicit branch in the verdict classifier that consumes the existing `doi_exact_match` boolean as a structural signal, not a similarity-score override. Raw similarity values stop being mutated anywhere in the pipeline.
+  - (c) Re-tune classification thresholds against both Phase 2 cases (nasal methylation + EIF4ENIF1). Acceptance: ≥80% of pre-recalibration `valid` verdicts remain `valid` (no silent mass downgrades). Every flip — in either direction — is documented in the recalibration commit with a one-line per-citation justification.
+  - (d) Phase 4 `paper/paper.md` Limitations section gains a one-paragraph note covering the metric switch, the structural (rather than score-floored) DOI signal, and the residual limitation (Channel A still verifies existence + identifier match, not textual claim-to-source fidelity — that remains Channel B's job).
+  - (e) Phase 2 snapshot fixtures are deliberately re-baselined in the same commit; baseline diffs require user sign-off before the commit is considered complete (this is a Phase 3 user gate parallel to the Phase 5 release gates, not auto-applied).
 
 ### Exit criteria
 - A zero-context reader can follow README's Quickstart and run `examples/nasal_methylation/run.sh` successfully within 10 minutes of `git clone`.
 - CITATION.cff parses (test with `cffconvert` or `pip install cffconvert && cffconvert --validate`).
 - `docx_patch.py` deliverable acceptance criteria (a)–(f) all met.
 - `render_report.py --format docx` deliverable acceptance criteria (a)–(e) all met.
+- Channel A scoring recalibration deliverable acceptance criteria (a)–(e) all met.
 
 ---
 
