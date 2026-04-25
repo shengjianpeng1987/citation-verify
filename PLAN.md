@@ -24,7 +24,7 @@ These are fixed. Do not renegotiate without user sign-off.
 - **Repo:** `github.com/shengjianpeng1987/citation-verify`. Private through Phase 4; flipped public at start of Phase 5.
 - **License:** Apache-2.0. Root-level `LICENSE` (full text) + `NOTICE` (one-line copyright).
 - **Python:** 3.10+.
-- **Package layout:** `src/citation_verify/` as the canonical import path; `skill/` subdirectory holds `SKILL.md` + thin script wrappers that import from `src/`. There is one codebase, not two.
+- **Package layout:** `src/citation_verify/` as the canonical Python import path; `SKILL.md` at repo root (Claude Code/Cowork skill discovery convention requires `<skill_root>/SKILL.md`, with no precedent for nested layouts); `verify.sh` at repo root as the entry-point shim. There is one codebase: source in `src/`, declarative `SKILL.md` at root. **Phase 0 amendment 2026-04-25:** the original "`skill/` subdirectory" plan was incompatible with the actual skill loader convention; dropped after empirical verification against installed skill layouts (`citation-verify`, `docx`, `pdf`, `pptx`, `xlsx`, `grant-writing` all use flat `<root>/SKILL.md`).
 - **Author:** Sheng Jianpeng (NUAA). Single author on JOSS paper. AI contribution acknowledged in paper's Acknowledgements section; not listed as co-author (per JOSS policy).
 - **Release model:** semver; `VERSION` file at repo root is source of truth; `CHANGELOG.md` in Keep-a-Changelog format.
 
