@@ -1,4 +1,4 @@
-"""Capture/replay infrastructure for Phase 2 snapshot tests.
+"""Capture/replay infrastructure for Phase 2+ snapshot tests.
 
 The orchestrator drives every Channel A and Codex call via subprocess.run.
 For deterministic, no-network tests we intercept those subprocess.run
@@ -18,13 +18,23 @@ Two modes:
 
 Fixture naming:
 
-- api_verify.py invocations are keyed by the citation_id parsed out of
-  the `--citation-json` argv value. Path:
-  `tests/fixtures/api/<case>/citation_<id>.json`.
-
+- api_verify.py invocations are keyed by `citation_<id>_<sha8>.json`,
+  where sha8 is the first 8 hex chars of sha256(citation_json). The
+  hash discriminator is needed because Stage 4's replacement-search
+  flow re-verifies a winner candidate using the *same* citation_id but
+  different content; without the hash, both calls collide on one
+  fixture file.
 - codex_atom.sh invocations are keyed by the basename of the input
-  JSON file. Path:
-  `tests/fixtures/codex/<case>/<input_basename>.json`.
+  JSON file. The orchestrator already produces distinct filenames for
+  semantically-distinct calls (e.g., `stage3_input_5.json` vs
+  `stage3_input_5_reverify.json` — see orchestrate.py step3_verify_one
+  `label_suffix`).
+
+Backward compatibility: in replay mode, if the new hash-suffixed api
+fixture path is not found, fall back to the legacy `citation_<id>.json`
+path. This lets Phase 2 fixtures (recorded before the hash scheme was
+introduced) keep working without re-recording. New recordings always
+write at the hash-suffixed path.
 
 This module is imported by `conftest.py` (pytest fixtures) and
 `_record_fixtures.py` (CLI driver). It does not import pytest itself,
@@ -32,6 +42,7 @@ so it can be exercised standalone.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -46,8 +57,29 @@ Mode = Literal["record", "replay"]
 
 # --- fixture path resolution ---
 
+def _short_hash(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:8]
+
+
 def api_fixture_path(case: str, citation_json: str) -> Path:
-    """Resolve the fixture path for one api_verify.py invocation."""
+    """Resolve the fixture path for one api_verify.py invocation.
+
+    Returns the new hash-suffixed path: `citation_<id>_<sha8>.json`. Replay
+    callers should fall back to the legacy `citation_<id>.json` if the
+    hash-suffixed file is absent (see api_fixture_path_legacy)."""
+    try:
+        cit = json.loads(citation_json)
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"api_verify.py was passed un-parseable --citation-json: {e}")
+    cid = cit.get("id")
+    if not isinstance(cid, int):
+        raise RuntimeError(f"api_verify.py citation has no integer id: {cit}")
+    return FIXTURES_DIR / "api" / case / f"citation_{cid}_{_short_hash(citation_json)}.json"
+
+
+def api_fixture_path_legacy(case: str, citation_json: str) -> Path:
+    """Pre-hash-discriminator fixture path. Used as a replay-mode fallback for
+    Phase 2 fixtures recorded before the hash scheme."""
     try:
         cit = json.loads(citation_json)
     except json.JSONDecodeError as e:
@@ -98,19 +130,27 @@ def _handle_api_verify(cmd_list, kwargs, case, mode, real_run):
     fixture = api_fixture_path(case, citation_json)
 
     if mode == "replay":
-        if not fixture.exists():
-            raise FileNotFoundError(
-                f"missing api fixture: {fixture}. "
-                f"Run `python3 tests/_record_fixtures.py --case {case} ...` first."
-            )
+        if fixture.exists():
+            payload = fixture.read_text(encoding="utf-8")
+        else:
+            # Backward-compat: Phase 2 fixtures pre-date the hash discriminator.
+            legacy = api_fixture_path_legacy(case, citation_json)
+            if not legacy.exists():
+                raise FileNotFoundError(
+                    f"missing api fixture for case {case!r}: tried\n"
+                    f"  {fixture}\n  {legacy}\n"
+                    f"Run `python3 tests/_record_fixtures.py --case {case} ...` first, "
+                    f"or hand-craft the fixture if this is a synthetic case."
+                )
+            payload = legacy.read_text(encoding="utf-8")
         return subprocess.CompletedProcess(
             args=cmd_list,
             returncode=0,
-            stdout=fixture.read_text(encoding="utf-8"),
+            stdout=payload,
             stderr="",
         )
 
-    # record mode: real call, save stdout, return as-is
+    # record mode: real call, save stdout to the new hash-suffixed path
     result = real_run(cmd_list, **kwargs)
     if result.returncode == 0 and result.stdout:
         fixture.parent.mkdir(parents=True, exist_ok=True)

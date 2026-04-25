@@ -279,7 +279,14 @@ def _parse_apa_like(raw: str, i: int) -> dict:
 
 # --- step 3: per-citation verify (channel A + B → consensus) ---
 
-def step3_verify_one(cit: dict, work_dir: Path, *, codex_available: bool) -> dict:
+def step3_verify_one(cit: dict, work_dir: Path, *, codex_available: bool, label_suffix: str = "") -> dict:
+    """Run Stage 3 (Channel A + Channel B) for one citation.
+
+    `label_suffix` distinguishes calls that share the same citation_id but query
+    different content — currently used by Stage 4's re-verify to prevent
+    fixture-path collision with the initial verify call. Empty string for the
+    initial verify; "_reverify" when re-verifying a Stage-4 winner candidate.
+    """
     # Channel A: deterministic API lookup
     api_out = subprocess.run(
         [sys.executable, str(PACKAGE_DIR / "api_verify.py"), "--citation-json", json.dumps(cit)],
@@ -301,14 +308,14 @@ def step3_verify_one(cit: dict, work_dir: Path, *, codex_available: bool) -> dic
             "citation": cit,
             "api_evidence": channel_a,
         }
-        in_file = work_dir / f"stage3_input_{cit['id']}.json"
+        in_file = work_dir / f"stage3_input_{cit['id']}{label_suffix}.json"
         in_file.write_text(json.dumps(stage3_input, ensure_ascii=False), encoding="utf-8")
         try:
             channel_b = _codex_atom(
                 PROMPTS / "verify_citation.md",
                 SCHEMAS / "verdict.schema.json",
                 in_file,
-                label=f"verify-{cit['id']}",
+                label=f"verify-{cit['id']}{label_suffix}",
             )
         except subprocess.CalledProcessError as e:
             channel_b = {"verdict": "error", "reasons": [f"codex failed: {e}"]}
@@ -453,7 +460,7 @@ def step4_find_replacement(
         "url": top["candidate"].get("url"),
         "raw_text": f"{top['candidate']['title']} ({top['candidate'].get('year')})",
     }
-    reverify = step3_verify_one(winner_as_citation, work_dir, codex_available=codex_available)
+    reverify = step3_verify_one(winner_as_citation, work_dir, codex_available=codex_available, label_suffix="_reverify")
     if reverify["final_label"] != "valid":
         return {
             "status": "re_verification_failed",

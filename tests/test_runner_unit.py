@@ -23,18 +23,45 @@ from _runner import (
     NORMALIZED_CODEX_MODEL,
     NORMALIZED_GENERATED_AT,
     api_fixture_path,
+    api_fixture_path_legacy,
     codex_fixture_path,
     normalize_meta,
 )
 
 
-def test_api_fixture_path_uses_citation_id() -> None:
+def test_api_fixture_path_includes_id_and_content_hash() -> None:
     cit = {"id": 7, "title": "X", "authors": [], "year": 2020,
            "venue": None, "doi": None, "url": None, "raw_text": "X"}
     p = api_fixture_path("nasal_methylation", json.dumps(cit))
-    assert p.name == "citation_7.json"
+    # citation_<id>_<sha8>.json
+    assert p.name.startswith("citation_7_")
+    assert p.name.endswith(".json")
+    assert len(p.name) == len("citation_7_") + 8 + len(".json")
     assert p.parent.name == "nasal_methylation"
     assert p.parent.parent.name == "api"
+
+
+def test_api_fixture_path_distinguishes_same_id_different_content() -> None:
+    """Stage 4 re-verify uses the same citation_id with different content.
+    The fixture path must distinguish those two calls."""
+    cit_initial = {"id": 5, "title": "fake-hallucinated", "authors": [],
+                   "year": 2024, "venue": None, "doi": "fake", "url": None,
+                   "raw_text": "..."}
+    cit_winner = {"id": 5, "title": "real-paper-title", "authors": [],
+                  "year": 2016, "venue": "Real Venue", "doi": "10.1234/real",
+                  "url": None, "raw_text": "..."}
+    p_initial = api_fixture_path("c", json.dumps(cit_initial))
+    p_winner = api_fixture_path("c", json.dumps(cit_winner))
+    assert p_initial != p_winner, "same id with different content must yield distinct fixture paths"
+
+
+def test_api_fixture_path_legacy_uses_id_only() -> None:
+    """Backward-compat path used as fallback for Phase 2 fixtures."""
+    cit = {"id": 7, "title": "X", "authors": [], "year": 2020,
+           "venue": None, "doi": None, "url": None, "raw_text": "X"}
+    p = api_fixture_path_legacy("nasal_methylation", json.dumps(cit))
+    assert p.name == "citation_7.json"
+    assert p.parent.name == "nasal_methylation"
 
 
 def test_api_fixture_path_rejects_missing_id() -> None:
@@ -105,10 +132,12 @@ def test_normalize_meta_handles_missing_fields() -> None:
 
 
 if __name__ == "__main__":
-    test_api_fixture_path_uses_citation_id()
+    test_api_fixture_path_includes_id_and_content_hash()
+    test_api_fixture_path_distinguishes_same_id_different_content()
+    test_api_fixture_path_legacy_uses_id_only()
     test_api_fixture_path_rejects_missing_id()
     test_api_fixture_path_rejects_bad_json()
     test_codex_fixture_path_uses_input_basename()
     test_normalize_meta_replaces_volatile_fields()
     test_normalize_meta_handles_missing_fields()
-    print("PASS: all 6 runner-unit cases.")
+    print("PASS: all 8 runner-unit cases.")
