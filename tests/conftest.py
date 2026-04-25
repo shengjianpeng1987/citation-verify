@@ -26,6 +26,17 @@ def replay_subprocess(monkeypatch):
     codex_atom.sh invocations through pre-recorded fixtures under
     tests/fixtures/<case>/.
 
+    Also patches `_is_codex_available` to return True. Reason: on a host
+    where the `codex` CLI is not on PATH (every CI runner — Codex CLI is
+    not pip-installable), orchestrate.py would normally short-circuit to
+    a regex-based fallback parser in Stage 2 and to `verdict="skipped"`
+    in Stage 3, which produces completely different cit dicts and verdicts
+    than the hand-crafted / recorded fixtures encode. Replay mode
+    explicitly mocks every subprocess call that *would* have invoked
+    codex, so the binary's absence is irrelevant to test correctness —
+    we just need the orchestrator to *believe* codex is available so it
+    dispatches down the codex path.
+
     Usage in a test:
         def test_foo(replay_subprocess):
             replay_subprocess("nasal_methylation")
@@ -36,5 +47,6 @@ def replay_subprocess(monkeypatch):
 
     def _activate(case: str) -> None:
         monkeypatch.setattr(orchestrate.subprocess, "run", make_subprocess_run(case, "replay"))
+        monkeypatch.setattr(orchestrate, "_is_codex_available", lambda: True)
 
     return _activate
