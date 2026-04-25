@@ -16,9 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `pyproject.toml` skeleton; `VERSION` file.
 - `tests/test_skill_doc_parity.py` — release gate: scans SKILL.md for `--xxx` flags and Output-layout files, asserts each resolves to an argparse `add_argument` or an emitted file.
 - `tests/test_schema_shape_drift.py` — release gate: asserts `field_diff_entry` shape parity between `corrections.schema.json#/$defs` and the inline copy in `correction_diff.schema.json`.
+- `tests/test_review_override.py` — locks the deterministic backstop on `requires_human_review`: any `high`-severity diff in `{title, doi, year}` forces `True` regardless of Codex's per-call judgment.
 
 ### Changed
 - **BREAKING (schema 0.1.0 → 0.2.0):** `corrections.schema.json` requires `meta.valid_citation_ids` (sorted unique array of citation IDs whose Stage 3 verdict was `valid`). Pre-0.2.0 instances without this field will now fail validation. Lets a corrections.json reader enumerate silent-valid citations without cross-referencing verdicts.json.
+- `step4b_build_corrections` now ORs Codex's `requires_human_review` with a deterministic backstop (`_has_critical_high_diff`): any `high`-severity diff in `{title, doi, year}` flips the flag to `True` even if Codex returned `False`. Codex still drives the soft cases (multi-paper ambiguity, domain-sensitivity); this is purely a stricter floor to prevent a future model change from quietly under-flagging citation-integrity-critical drifts.
 
 ### Changed
 - Vancouver-format citation parser added to fallback path; junk-title guard (`_title_looks_usable`) prevents empty/punctuation-leading/<3-word titles from becoming API search queries.

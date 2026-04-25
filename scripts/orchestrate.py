@@ -51,6 +51,12 @@ SCHEMAS = SKILL_ROOT / "schemas"
 SCHEMA_VERSION = "0.2.0"  # corrections.schema.json version. Bump per semver on schema change.
 API_SOURCES_ENABLED = ["crossref", "openalex", "semantic_scholar"]
 
+# Stage 4b: deterministic backstop on requires_human_review. Any high-severity
+# diff in one of these citation-integrity-critical fields forces requires_human_review
+# = True regardless of Codex's judgment. Codex's prompt drives broader / softer
+# cases (ambiguity, domain-sensitivity) — this is purely a stricter backstop.
+CRITICAL_REVIEW_FIELDS = frozenset({"title", "doi", "year"})
+
 # --- dependency check ---
 
 REQUIRED = {
@@ -646,6 +652,17 @@ def _make_unresolvable(citation_id: int, reason: str, channel_a: dict, channel_b
     }
 
 
+def _has_critical_high_diff(field_diff: list[dict]) -> bool:
+    """Return True if `field_diff` contains any high-severity entry on a
+    citation-integrity-critical field (title / doi / year). Used as a
+    deterministic backstop on requires_human_review so a model regression
+    cannot let an obvious red-flag through."""
+    for d in field_diff or []:
+        if d.get("field") in CRITICAL_REVIEW_FIELDS and d.get("severity") == "high":
+            return True
+    return False
+
+
 def _classify_uncertain(channel_a: dict, channel_b: dict) -> tuple[str, str]:
     """Return (tag, detail) for a Stage-3 uncertain verdict, ready for unresolvable.reason."""
     a_v = channel_a.get("verdict", "error") if channel_a else "error"
@@ -778,13 +795,16 @@ def step4b_build_corrections(
                             f"correction_build_failed: {e.__class__.__name__}: {e}",
                             {"matched_source": cr["source"], "matched_record": cr}, {}))
                         continue
+                    field_diff = diff_out.get("field_diff", [])
+                    codex_review = bool(diff_out.get("requires_human_review", False))
+                    review = codex_review or _has_critical_high_diff(field_diff)
                     corrections.append({
                         "citation_id": cid,
                         "original_citation": cit,
                         "canonical_record": cr,
-                        "field_diff": diff_out.get("field_diff", []),
+                        "field_diff": field_diff,
                         "confidence": float(diff_out.get("confidence", 0.0)),
-                        "requires_human_review": bool(diff_out.get("requires_human_review", False)),
+                        "requires_human_review": review,
                     })
 
     corrections.sort(key=lambda x: x["citation_id"])
