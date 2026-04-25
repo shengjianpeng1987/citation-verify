@@ -150,10 +150,18 @@ User provides the second validation document (English or Chinese; user selects).
 - Write `CONTRIBUTING.md`: dev setup, how to run tests, schema-change bumping rules, PR checklist (tests pass, schema changes documented, CHANGELOG entry added).
 - Write `CITATION.cff` in CFF 1.2 format. Fields: `authors` (Sheng Jianpeng, NUAA), `title`, `version` (from VERSION), `license` (Apache-2.0), `repository-code`, `type: software`.
 - Fill out `pyproject.toml`: classifiers (`Development Status`, `Intended Audience :: Science/Research`, `License :: OSI Approved :: Apache Software License`, `Topic :: Scientific/Engineering`), keywords (`citations`, `hallucination`, `verification`, `bibliography`, `LLM`), optional extras (`[test]`, `[dev]`).
+- `docx_patch.py` — deferred from Phase 1 (formerly an unimplemented `--apply-replacements` promise in SKILL.md). Acceptance:
+  - (a) At least 1 Phase 3 case has non-empty `replacements[]` with a `confirmed_replacement` landing as `canonical_record`.
+  - (b) Implementation consumes `replacements[]` only; never touches `corrections[]` (field_diff requires human review).
+  - (c) `--apply-replacements` flag wired into `argparse` + `verify.sh`.
+  - (d) Output `<input>.patched.docx` differs in sha256 from the original input, but all non-citation paragraphs are byte-identical.
+  - (e) Idempotent — running the same `corrections.json` twice produces sha256-identical output.
+  - (f) The SKILL.md Stage 5 paragraph removed when this was deferred is restored in the same commit that completes (a)–(e).
 
 ### Exit criteria
 - A zero-context reader can follow README's Quickstart and run `examples/nasal_methylation/run.sh` successfully within 10 minutes of `git clone`.
 - CITATION.cff parses (test with `cffconvert` or `pip install cffconvert && cffconvert --validate`).
+- `docx_patch.py` deliverable acceptance criteria (a)–(f) all met.
 
 ---
 

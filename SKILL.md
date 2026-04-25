@@ -76,7 +76,6 @@ Reconcile the two:
 **Stage 5 — Render the report.** `scripts/render_report.py` produces:
 - A Markdown report (always) with per-citation verdicts, evidence links, and replacement rationale.
 - A DOCX/PDF report (optional, via `--format docx`) in table form.
-- A patched version of the original document with replacements applied, if `--apply-replacements` flag is set. Replacements are applied only to citations marked `hallucinated` with a confirmed replacement — never to `uncertain`.
 
 ## Output layout
 
@@ -86,8 +85,7 @@ Reconcile the two:
 ├── verdicts.json              # per-citation final labels + both channels' raw data
 ├── replacements.json          # hallucinated → replacement mapping with scores
 ├── report.md                  # human-readable report (always)
-├── report.docx                # optional, if --format docx
-└── <original>.patched.docx    # optional, if --apply-replacements
+└── report.docx                # optional, if --format docx
 ```
 
 ## Dependencies
