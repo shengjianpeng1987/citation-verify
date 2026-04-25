@@ -28,7 +28,7 @@ from pathlib import Path
 
 import pytest
 
-# conftest.py has already inserted scripts/ and tests/ into sys.path.
+# conftest.py has already inserted src/ and tests/ into sys.path.
 from _runner import SNAPSHOTS_DIR, normalize_meta  # noqa: E402
 
 CASES = [
@@ -52,7 +52,7 @@ def test_pipeline_snapshot(case, input_path, replay_subprocess, tmp_path):
 
     replay_subprocess(case)
 
-    import orchestrate
+    from citation_verify import orchestrate
 
     saved_argv = sys.argv[:]
     try:

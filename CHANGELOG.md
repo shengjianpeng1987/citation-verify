@@ -24,7 +24,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `tests/fixtures/api/<case>/citation_<id>.json` — recorded Channel A outputs (10 nasal + 20 EIF4ENIF1).
   - `tests/fixtures/codex/<case>/<input_basename>.json` — recorded Codex atomic outputs (15 nasal + 26 EIF4ENIF1).
   - `tests/snapshots/<case>/{corrections,verdicts,replacements}.json` — meta-normalized baseline outputs.
-- CI workflows: `.github/workflows/tests.yml` runs `pytest tests/` on Python 3.10 / 3.11 / 3.12. `.github/workflows/lint.yml` runs `ruff` and `mypy` non-blocking (PLAN Phase 2 phrasing). Coverage measurement deferred — see PLAN Phase 3 backlog item on `src/citation_verify/` migration.
+- CI workflows: `.github/workflows/tests.yml` runs `pytest tests/` on Python 3.10 / 3.11 / 3.12 with coverage measurement (`pytest-cov`, threshold currently `--cov-fail-under=0` to establish a baseline). `.github/workflows/lint.yml` runs `ruff` and `mypy` non-blocking (PLAN Phase 2 phrasing).
+
+### Changed
+- **Layout migration: `scripts/` → `src/citation_verify/`.** Phase 0's canonical-import-path lock is now reality. Six files moved under git-mv (history preserved): `orchestrate.py`, `api_verify.py`, `parse_doc.py`, `render_report.py`, `_parse_codex_events.py`, `codex_atom.sh`. New `src/citation_verify/__init__.py`. `orchestrate.py` path constants renamed (`SCRIPT_DIR` → `PACKAGE_DIR`, `SKILL_ROOT` → `REPO_ROOT`) and `REPO_ROOT` walks one extra level up. `verify.sh`, `pyproject.toml` `[tool.setuptools.packages.find]`, conftest's `sys.path`, the recorder, and the package-style imports in `test_review_override.py` / `test_pipeline_snapshots.py` all updated to match. SKILL.md path mentions follow. Snapshot tests are byte-identical pre/post migration (output is independent of source-file location), confirming this was a pure mechanical refactor.
 
 ### Changed
 - Vancouver-format citation parser added to fallback path; junk-title guard (`_title_looks_usable`) prevents empty/punctuation-leading/<3-word titles from becoming API search queries.

@@ -41,10 +41,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-SKILL_ROOT = SCRIPT_DIR.parent
-PROMPTS = SKILL_ROOT / "prompts"
-SCHEMAS = SKILL_ROOT / "schemas"
+PACKAGE_DIR = Path(__file__).resolve().parent  # src/citation_verify
+REPO_ROOT = PACKAGE_DIR.parent.parent          # repo root (above src/)
+PROMPTS = REPO_ROOT / "prompts"
+SCHEMAS = REPO_ROOT / "schemas"
 
 # --- Stage 4b constants ---
 
@@ -94,7 +94,7 @@ def _check_codex() -> None:
 def step1_parse_doc(input_path: Path, work_dir: Path) -> dict:
     parse_out = work_dir / "parsed.json"
     subprocess.run(
-        [sys.executable, str(SCRIPT_DIR / "parse_doc.py"), str(input_path), "--out", str(parse_out)],
+        [sys.executable, str(PACKAGE_DIR / "parse_doc.py"), str(input_path), "--out", str(parse_out)],
         check=True,
     )
     return json.loads(parse_out.read_text(encoding="utf-8"))
@@ -282,7 +282,7 @@ def _parse_apa_like(raw: str, i: int) -> dict:
 def step3_verify_one(cit: dict, work_dir: Path, *, codex_available: bool) -> dict:
     # Channel A: deterministic API lookup
     api_out = subprocess.run(
-        [sys.executable, str(SCRIPT_DIR / "api_verify.py"), "--citation-json", json.dumps(cit)],
+        [sys.executable, str(PACKAGE_DIR / "api_verify.py"), "--citation-json", json.dumps(cit)],
         capture_output=True,
         text=True,
         check=False,
@@ -513,7 +513,7 @@ def _read_orchestrator_version() -> str:
     back silently. Once Cowork's Phase 1 VERSION file is in place this warning path is
     diagnostic-only; it should fire in real runs only if someone deleted or corrupted
     the file."""
-    vfile = SKILL_ROOT / "VERSION"
+    vfile = REPO_ROOT / "VERSION"
     fallback = "0.1.0"
     if not vfile.exists():
         sys.stderr.write(
@@ -842,9 +842,9 @@ def _is_codex_available() -> bool:
 
 
 def _codex_atom(prompt: Path, schema: Path, input_file: Path, label: str) -> dict:
-    """Call scripts/codex_atom.sh and return parsed JSON."""
+    """Call src/citation_verify/codex_atom.sh and return parsed JSON."""
     result = subprocess.run(
-        [str(SCRIPT_DIR / "codex_atom.sh"), str(prompt), str(schema), str(input_file)],
+        [str(PACKAGE_DIR / "codex_atom.sh"), str(prompt), str(schema), str(input_file)],
         capture_output=True,
         text=True,
         check=False,
@@ -958,7 +958,7 @@ def main() -> int:
 
     sys.stderr.write("[6/6] rendering report\n")
     render = subprocess.run(
-        [sys.executable, str(SCRIPT_DIR / "render_report.py"),
+        [sys.executable, str(PACKAGE_DIR / "render_report.py"),
          "--verdicts", str(out_dir / "verdicts.json"),
          "--replacements", str(out_dir / "replacements.json"),
          "--source", str(input_path),

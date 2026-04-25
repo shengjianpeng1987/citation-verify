@@ -44,6 +44,7 @@ dependencies = [
 test = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
+    "coverage>=7.0",
     "jsonschema>=4.17.0",
 ]
 dev = [
@@ -60,6 +61,6 @@ Issues = "https://github.com/shengjianpeng1987/citation-verify/issues"
 version = { file = "VERSION" }
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["scripts*"]
-exclude = ["tests*", ".venv*", "examples*"]
+where = ["src"]
+include = ["citation_verify*"]
+exclude = ["tests*"]

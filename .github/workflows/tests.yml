@@ -25,16 +25,25 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
+          pip install pytest pytest-cov
 
       - name: Show installed versions
         run: |
           python --version
           pip list
 
-      - name: Run pytest
+      - name: Run pytest with coverage
         # Snapshot tests skip cleanly when the input docx files are not on
         # the CI runner — only the local-machine variant exercises them.
         # Unit-level guards (skill_doc_parity, schema_shape_drift,
-        # review_override, runner_unit) run on every commit.
-        run: pytest tests/ -v --tb=short
+        # review_override, runner_unit) run on every commit. Coverage is
+        # measured against the canonical package src/citation_verify/; this
+        # is the first run, so the threshold is intentionally loose
+        # (--cov-fail-under=0). Phase 2 prep deliverable: tighten as a
+        # baseline emerges, target >70% per PLAN once meaningful.
+        run: |
+          pytest tests/ -v --tb=short \
+            --cov=src/citation_verify \
+            --cov-report=term \
+            --cov-report=xml \
+            --cov-fail-under=0

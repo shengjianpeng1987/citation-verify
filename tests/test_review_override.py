@@ -18,9 +18,9 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from orchestrate import CRITICAL_REVIEW_FIELDS, _has_critical_high_diff
+from citation_verify.orchestrate import CRITICAL_REVIEW_FIELDS, _has_critical_high_diff
 
 
 def _diff(field: str, severity: str) -> dict:

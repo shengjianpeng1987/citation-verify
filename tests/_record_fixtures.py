@@ -28,10 +28,10 @@ from unittest import mock
 
 TESTS_DIR = Path(__file__).resolve().parent
 REPO = TESTS_DIR.parent
-sys.path.insert(0, str(REPO / "scripts"))
+sys.path.insert(0, str(REPO / "src"))
 sys.path.insert(0, str(TESTS_DIR))
 
-import orchestrate  # noqa: E402  (path setup must precede import)
+from citation_verify import orchestrate  # noqa: E402  (path setup must precede import)
 from _runner import (  # noqa: E402
     SNAPSHOTS_DIR,
     make_subprocess_run,

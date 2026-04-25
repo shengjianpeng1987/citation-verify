@@ -26,7 +26,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SKILL_MD = REPO / "SKILL.md"
-ORCHESTRATE = REPO / "scripts" / "orchestrate.py"
+ORCHESTRATE = REPO / "src" / "citation_verify" / "orchestrate.py"
 
 CODEX_PASSTHROUGH_FLAGS = {
     "--ephemeral",

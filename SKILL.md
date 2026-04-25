@@ -37,9 +37,9 @@ This matters because:
 2. Each task has a clean context — no contamination from earlier citations.
 3. Failures are isolated — one bad citation doesn't poison the run.
 
-The wrapper `scripts/codex_atom.sh` enforces these defaults. Call it like:
+The wrapper `src/citation_verify/codex_atom.sh` enforces these defaults. Call it like:
 ```
-scripts/codex_atom.sh <prompt_file> <schema_file> <json_input>
+src/citation_verify/codex_atom.sh <prompt_file> <schema_file> <json_input>
 ```
 It pipes `<json_input>` into the prompt template, calls Codex with the right flags, and returns the parsed JSON on stdout.
 
@@ -47,17 +47,17 @@ It pipes `<json_input>` into the prompt template, calls Codex with the right fla
 
 For any user invocation, run the orchestrator:
 ```
-python3 scripts/orchestrate.py <input.pdf|input.docx> [--output-dir <dir>] [--parallel N]
+python3 src/citation_verify/orchestrate.py <input.pdf|input.docx> [--output-dir <dir>] [--parallel N]
 ```
 
 The orchestrator implements this flow:
 
-**Stage 1 — Extract references text.** `scripts/parse_doc.py` pulls the "References" / "Bibliography" section from the file using pdfplumber (PDF) or python-docx (DOCX) and returns raw text.
+**Stage 1 — Extract references text.** `src/citation_verify/parse_doc.py` pulls the "References" / "Bibliography" section from the file using pdfplumber (PDF) or python-docx (DOCX) and returns raw text.
 
 **Stage 2 — Atomize citations.** One `codex exec` call (prompt: `prompts/parse_references.md`, schema: `schemas/citations.schema.json`) turns the raw text into a JSON list of structured citations: `{id, authors, title, year, venue, doi, raw_text}`. This is atomic but runs once, not per-citation.
 
 **Stage 3 — Verify each citation (parallel, two channels).** For each citation, run two independent checks:
-- **Channel A (deterministic API):** `scripts/api_verify.py` queries Crossref → OpenAlex → Semantic Scholar in that order. Returns a verdict (`valid` / `partially_valid` / `not_found`) plus the best-matching record.
+- **Channel A (deterministic API):** `src/citation_verify/api_verify.py` queries Crossref → OpenAlex → Semantic Scholar in that order. Returns a verdict (`valid` / `partially_valid` / `not_found`) plus the best-matching record.
 - **Channel B (atomic Codex):** `codex_atom.sh prompts/verify_citation.md schemas/verdict.schema.json` — Codex is given the citation and the Channel-A evidence, and asked to give an independent judgment with explanation.
 
 Reconcile the two:
@@ -73,7 +73,7 @@ Reconcile the two:
 4. Take the top-scoring candidate with `fit_score >= 7`. If none meets that bar, mark as `no_suitable_replacement`.
 5. Run Stage 3 on that winning candidate again. Only if the re-verification comes back `valid` AND the fit score was ≥7 do we mark it as a confirmed replacement.
 
-**Stage 5 — Render the report.** `scripts/render_report.py` produces:
+**Stage 5 — Render the report.** `src/citation_verify/render_report.py` produces:
 - A Markdown report (always) with per-citation verdicts, evidence links, and replacement rationale.
 
 ## Output layout

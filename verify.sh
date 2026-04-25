@@ -2,7 +2,7 @@
 # verify.sh — one-command launcher for the citation-verify skill.
 #
 # First run: auto-creates a .venv/ inside this folder, installs deps, checks codex.
-# Every run:  activates the venv and forwards everything to scripts/orchestrate.py.
+# Every run:  activates the venv and forwards everything to src/citation_verify/orchestrate.py.
 #
 # Usage:
 #   ./verify.sh <input.pdf|input.docx> [orchestrator-flags...]
@@ -17,7 +17,7 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 VENV="$HERE/.venv"
 REQS="$HERE/requirements.txt"
-ORCH="$HERE/scripts/orchestrate.py"
+ORCH="$HERE/src/citation_verify/orchestrate.py"
 READY_MARKER="$VENV/.deps-installed"
 
 color() { printf "\033[%sm%s\033[0m\n" "$1" "$2"; }
