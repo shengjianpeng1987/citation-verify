@@ -117,7 +117,7 @@ citation-verify/
 ## Phase 2 — Second case + test suite
 
 ### Status
-Prep complete: #1 raw Channel A scores (`d155f9b`), #3 schema 0.2.0 + `valid_citation_ids` + shape-drift guard (`202561d`), #2 `requires_human_review` backstop (`511fdf7`), VERSION + orchestrator_version bumped to 0.2.0 (`707527c`). Three release-gate tests green: `test_skill_doc_parity.py`, `test_schema_shape_drift.py`, `test_review_override.py`. Snapshot harness work pending — see `### Claude Code tasks`.
+Phase 2 complete. Prep trilogy: #1 raw Channel A scores (`d155f9b`), #3 schema 0.2.0 + `valid_citation_ids` + shape-drift guard (`202561d`), #2 `requires_human_review` backstop (`511fdf7`). VERSION + orchestrator_version bumped to 0.2.0 (`707527c`). Snapshot harness: H1 capture/replay infra (`03af07a`), H2 fixtures + baselines (`32fdf6a`), H3 replay tests (`980bd2c`), H4 CI workflows (`a6e84be`). Layout migration `scripts/` → `src/citation_verify/` per Phase 0 lock (`f093f19`). Six release-gate tests green: `skill_doc_parity`, `schema_shape_drift`, `review_override`, `runner_unit`, plus the two snapshot-replay tests (local only). CI green on Python 3.10 / 3.11 / 3.12.
 
 ### Prerequisites (first harness pass)
 Pre-0.2.0 outputs at `/tmp/phase2-e2e/` and `/Users/shengjianpeng/Documents/citation verify/eif4enif1-phase2/run-output-formal/` are 0.1.0 schema instances missing `meta.valid_citation_ids` — they will not validate against the current `corrections.schema.json` and must not be frozen as fixtures. Refresh both before recording snapshots:
@@ -172,6 +172,12 @@ User provides the second validation document (English or Chinese; user selects).
   - (c) DOCX content layout mirrors the current Markdown report: At-a-glance table + per-citation dual-channel detail blocks.
   - (d) `tests/` adds a smoke test asserting the generated `.docx` is a valid OOXML zip and contains at least one table.
   - (e) On completion, the two SKILL.md lines removed when this was deferred (the Stage 5 DOCX/PDF bullet and the `report.docx` Output-layout line) are restored in the same commit.
+- Synthetic docx fixtures for portable snapshot tests — deferred from Phase 2 H4. Today's `tests/test_pipeline_snapshots.py` cases skip when the real research docx files (nasal methylation, EIF4ENIF1) are not on the runner, which is most CI machines and every JOSS reviewer's laptop. Acceptance:
+  - (a) `tests/_make_synthetic_docx.py` generates deterministic minimal `.docx` files covering canonical citation shapes (Vancouver numbered, APA author-year, mixed Chinese-English, intentionally-hallucinated DOI, partially-valid metadata drift). Same script run = same bytes.
+  - (b) `tests/fixtures/inputs/synthetic_<scenario>.docx` committed to the repo. These ARE the canonical user-facing contract: "this is what a citation-verify-compatible bibliography looks like."
+  - (c) `tests/test_pipeline_snapshots.py` gains a `synthetic_*` case parametrization that runs unconditionally on CI (no local-docx skip). Real-case fixtures (`nasal_methylation`, `eif4enif1`) stay in place as a local fidelity check; their tests continue to skip on machines without the originals.
+  - (d) The Phase 3 README's "Quickstart" can run end-to-end against `tests/fixtures/inputs/synthetic_happy.docx` with no external setup.
+  - (e) JOSS reviewer running `pytest tests/` sees a deterministic, reproducible contract — not "happens to be this real research doc's output." This satisfies the JOSS review checklist's reproducibility requirement.
 - Channel A scoring recalibration — deferred from Phase 2 review of the EIF4ENIF1 case, where all 5 partials reported `author_overlap=0.95` while raw values were 0.0–0.4 because the DOI-exact-match override floors both similarity scores. `d155f9b` (Phase 2 prep #1) exposed the raw values for transparency; this deliverable makes them the verdict's input. Acceptance:
   - (a) Replace `_author_overlap` (currently `|A∩B|/|A|`, asymmetric — biased toward citation-side coverage when the citation lists only first-author + et al.) with symmetric Jaccard (`|A∩B|/|A∪B|`); update `AUTHOR_OVERLAP_VALID` and any partial threshold accordingly.
   - (b) Remove the DOI-exact-match score floor inside `_score_match`. Replace it with an explicit branch in the verdict classifier that consumes the existing `doi_exact_match` boolean as a structural signal, not a similarity-score override. Raw similarity values stop being mutated anywhere in the pipeline.
@@ -184,6 +190,7 @@ User provides the second validation document (English or Chinese; user selects).
 - CITATION.cff parses (test with `cffconvert` or `pip install cffconvert && cffconvert --validate`).
 - `docx_patch.py` deliverable acceptance criteria (a)–(f) all met.
 - `render_report.py --format docx` deliverable acceptance criteria (a)–(e) all met.
+- Synthetic docx fixtures deliverable acceptance criteria (a)–(e) all met.
 - Channel A scoring recalibration deliverable acceptance criteria (a)–(e) all met.
 
 ---
