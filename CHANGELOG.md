@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `tests/fixtures/api/<case>/citation_<id>.json` — recorded Channel A outputs (10 nasal + 20 EIF4ENIF1).
   - `tests/fixtures/codex/<case>/<input_basename>.json` — recorded Codex atomic outputs (15 nasal + 26 EIF4ENIF1).
   - `tests/snapshots/<case>/{corrections,verdicts,replacements}.json` — meta-normalized baseline outputs.
+- CI workflows: `.github/workflows/tests.yml` runs `pytest tests/` on Python 3.10 / 3.11 / 3.12. `.github/workflows/lint.yml` runs `ruff` and `mypy` non-blocking (PLAN Phase 2 phrasing). Coverage measurement deferred — see PLAN Phase 3 backlog item on `src/citation_verify/` migration.
 
 ### Changed
 - Vancouver-format citation parser added to fallback path; junk-title guard (`_title_looks_usable`) prevents empty/punctuation-leading/<3-word titles from becoming API search queries.
