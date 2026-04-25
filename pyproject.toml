@@ -34,10 +34,11 @@ classifiers = [
     "Topic :: Text Processing :: Linguistic",
 ]
 dependencies = [
-    "python-docx>=0.8.11",
-    "requests>=2.28.0",
-    "rapidfuzz>=3.0.0",
-    "jsonschema>=4.17.0",
+    "pdfplumber>=0.10.0",
+    "python-docx>=1.0.0",
+    "requests>=2.31.0",
+    "rapidfuzz>=3.5.0",
+    "jsonschema>=4.20.0",
 ]
 
 [project.optional-dependencies]
@@ -45,7 +46,6 @@ test = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
     "coverage>=7.0",
-    "jsonschema>=4.17.0",
 ]
 dev = [
     "ruff>=0.1.0",
@@ -56,6 +56,10 @@ dev = [
 Homepage = "https://github.com/shengjianpeng1987/citation-verify"
 Repository = "https://github.com/shengjianpeng1987/citation-verify"
 Issues = "https://github.com/shengjianpeng1987/citation-verify/issues"
+Changelog = "https://github.com/shengjianpeng1987/citation-verify/blob/main/CHANGELOG.md"
+
+[project.scripts]
+citation-verify = "citation_verify.orchestrate:main"
 
 [tool.setuptools.dynamic]
 version = { file = "VERSION" }

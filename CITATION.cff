@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata in this file."
+type: software
+title: "citation-verify: Dual-channel verification for AI-hallucinated citations in academic documents"
+abstract: >-
+  citation-verify is a Python pipeline that audits the references section
+  of academic documents (Word/PDF) for AI-hallucinated citations. It runs
+  a deterministic API channel (Crossref, OpenAlex, Semantic Scholar) and
+  an exploratory LLM channel (Codex CLI) in parallel, then reconciles
+  their verdicts under an invariant that prevents LLM outputs from
+  becoming canonical records without API confirmation. Stage 4b emits a
+  three-bucket structured output (corrections, replacements, unresolvable)
+  that auditors can act on without re-reading the raw evidence.
+authors:
+  - given-names: Jianpeng
+    family-names: Sheng
+    affiliation: "Nanjing University of Aeronautics and Astronautics"
+version: "0.2.0"
+license: Apache-2.0
+repository-code: "https://github.com/shengjianpeng1987/citation-verify"
+url: "https://github.com/shengjianpeng1987/citation-verify"
+keywords:
+  - citations
+  - hallucination
+  - bibliography
+  - large-language-models
+  - academic-integrity
+  - verification
+  - reverse-validation
