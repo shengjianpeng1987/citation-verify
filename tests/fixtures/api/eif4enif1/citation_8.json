@@ -1,0 +1,43 @@
+{
+  "verdict": "valid",
+  "confidence": 0.963,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "<i>Eif4enif1</i> haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility",
+    "authors": [
+      {
+        "family": "Ding",
+        "given": "Yuxi"
+      },
+      {
+        "family": "He",
+        "given": "Zequn"
+      },
+      {
+        "family": "Sha",
+        "given": "Yanwei"
+      },
+      {
+        "family": "Kee",
+        "given": "Kehkooi"
+      },
+      {
+        "family": "Li",
+        "given": "Lin"
+      }
+    ],
+    "year": 2023,
+    "venue": "Development",
+    "doi": "10.1242/dev.202151",
+    "url": "https://doi.org/10.1242/dev.202151"
+  },
+  "title_similarity": 0.964,
+  "author_overlap": 0.95,
+  "year_match": true,
+  "title_similarity_raw": 0.964,
+  "author_overlap_raw": 0.2,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=0.96 raw=0.96, author_overlap=0.95 raw=0.20, year_match=True, doi_exact_match=True)"
+  ]
+}

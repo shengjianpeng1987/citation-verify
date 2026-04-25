@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "schema_version": "0.2.0",
+    "orchestrator_version": "0.2.0",
+    "generated_at": "1970-01-01T00:00:00Z",
+    "input_doc_sha256": "732e634a51c4d4d49f0ae91f93301a45b476e19dde9f994a3c8430facfd3dcd2",
+    "input_doc_filename": "过敏性鼻炎甲基化技术选型.docx",
+    "codex_model": "<recorded-model>",
+    "api_sources_enabled": [
+      "crossref",
+      "openalex",
+      "semantic_scholar"
+    ],
+    "valid_citation_ids": [
+      1,
+      2,
+      3,
+      10
+    ]
+  },
+  "corrections": [
+    {
+      "citation_id": 4,
+      "original_citation": {
+        "id": 4,
+        "authors": [
+          {
+            "family": "Hui",
+            "given": "T"
+          }
+        ],
+        "title": "Extended representation bisulfite sequencing (XRBS)",
+        "year": 2021,
+        "venue": "Nat Commun",
+        "doi": null,
+        "url": null,
+        "raw_text": "Hui T et al. Extended representation bisulfite sequencing (XRBS). Nat Commun. 2021;12:5265."
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.6019/s-bsst613",
+        "doi": "10.6019/s-bsst613",
+        "title": "GENE-SWITCH Chicken DNA methylation with Reduced representation bisulfite sequencing (RRBS)",
+        "authors": [],
+        "year": null,
+        "venue": "BioStudies database",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.6019/s-bsst613"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Hui T",
+          "corrected": "",
+          "severity": "high"
+        },
+        {
+          "field": "title",
+          "original": "Extended representation bisulfite sequencing (XRBS)",
+          "corrected": "GENE-SWITCH Chicken DNA methylation with Reduced representation bisulfite sequencing (RRBS)",
+          "severity": "high"
+        },
+        {
+          "field": "year",
+          "original": "2021",
+          "corrected": null,
+          "severity": "medium"
+        },
+        {
+          "field": "venue",
+          "original": "Nat Commun",
+          "corrected": "BioStudies database",
+          "severity": "high"
+        },
+        {
+          "field": "doi",
+          "original": null,
+          "corrected": "10.6019/s-bsst613",
+          "severity": "high"
+        }
+      ],
+      "confidence": 0.18,
+      "requires_human_review": true
+    },
+    {
+      "citation_id": 5,
+      "original_citation": {
+        "id": 5,
+        "authors": [
+          {
+            "family": "Kaushal",
+            "given": "A"
+          }
+        ],
+        "title": "Empirical comparison of RRBS and Infinium BeadChip",
+        "year": 2017,
+        "venue": "npj Genom Med",
+        "doi": null,
+        "url": null,
+        "raw_text": "Kaushal A et al. Empirical comparison of RRBS and Infinium BeadChip. npj Genom Med. 2017;2:13."
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1093/bioinformatics/btx372",
+        "doi": "10.1093/bioinformatics/btx372",
+        "title": "Comparison of pre-processing methods for Infinium HumanMethylation450 BeadChip array",
+        "authors": [
+          {
+            "family": "Shiah",
+            "given": "Yu-Jia"
+          },
+          {
+            "family": "Fraser",
+            "given": "Michael"
+          },
+          {
+            "family": "Bristow",
+            "given": "Robert G"
+          },
+          {
+            "family": "Boutros",
+            "given": "Paul C"
+          }
+        ],
+        "year": 2017,
+        "venue": "Bioinformatics",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1093/bioinformatics/btx372"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Kaushal A",
+          "corrected": "Shiah Yu-Jia, Fraser Michael, Bristow Robert G, Boutros Paul C",
+          "severity": "high"
+        },
+        {
+          "field": "title",
+          "original": "Empirical comparison of RRBS and Infinium BeadChip",
+          "corrected": "Comparison of pre-processing methods for Infinium HumanMethylation450 BeadChip array",
+          "severity": "high"
+        },
+        {
+          "field": "venue",
+          "original": "npj Genom Med",
+          "corrected": "Bioinformatics",
+          "severity": "high"
+        },
+        {
+          "field": "doi",
+          "original": null,
+          "corrected": "10.1093/bioinformatics/btx372",
+          "severity": "high"
+        }
+      ],
+      "confidence": 0.2,
+      "requires_human_review": true
+    },
+    {
+      "citation_id": 6,
+      "original_citation": {
+        "id": 6,
+        "authors": [
+          {
+            "family": "Campagna",
+            "given": "MP"
+          }
+        ],
+        "title": "EWAS: knowledge, strategies, recommendations",
+        "year": 2018,
+        "venue": "Nat Rev Genet 相关综述",
+        "doi": null,
+        "url": null,
+        "raw_text": "Campagna MP et al. EWAS: knowledge, strategies, recommendations. Nat Rev Genet 相关综述（2018）."
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1186/s13148-021-01200-8",
+        "doi": "10.1186/s13148-021-01200-8",
+        "title": "Epigenome-wide association studies: current knowledge, strategies and recommendations",
+        "authors": [
+          {
+            "family": "Campagna",
+            "given": "Maria Pia"
+          },
+          {
+            "family": "Xavier",
+            "given": "Alexandre"
+          },
+          {
+            "family": "Lechner-Scott",
+            "given": "Jeannette"
+          },
+          {
+            "family": "Maltby",
+            "given": "Vicky"
+          },
+          {
+            "family": "Scott",
+            "given": "Rodney J."
+          },
+          {
+            "family": "Butzkueven",
+            "given": "Helmut"
+          },
+          {
+            "family": "Jokubaitis",
+            "given": "Vilija G."
+          },
+          {
+            "family": "Lea",
+            "given": "Rodney A."
+          }
+        ],
+        "year": 2021,
+        "venue": "Clinical Epigenetics",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1186/s13148-021-01200-8"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Campagna MP",
+          "corrected": "Campagna Maria Pia, Xavier Alexandre, Lechner-Scott Jeannette, Maltby Vicky, Scott Rodney J., Butzkueven Helmut, Jokubaitis Vilija G., Lea Rodney A.",
+          "severity": "medium"
+        },
+        {
+          "field": "title",
+          "original": "EWAS: knowledge, strategies, recommendations",
+          "corrected": "Epigenome-wide association studies: current knowledge, strategies and recommendations",
+          "severity": "high"
+        },
+        {
+          "field": "year",
+          "original": "2018",
+          "corrected": "2021",
+          "severity": "medium"
+        },
+        {
+          "field": "venue",
+          "original": "Nat Rev Genet 相关综述",
+          "corrected": "Clinical Epigenetics",
+          "severity": "medium"
+        },
+        {
+          "field": "doi",
+          "original": null,
+          "corrected": "10.1186/s13148-021-01200-8",
+          "severity": "high"
+        }
+      ],
+      "confidence": 0.88,
+      "requires_human_review": true
+    },
+    {
+      "citation_id": 9,
+      "original_citation": {
+        "id": 9,
+        "authors": [
+          {
+            "family": "Illumina",
+            "given": ""
+          }
+        ],
+        "title": "Infinium MethylationEPIC v2.0 BeadChip Data Sheet（935K）",
+        "year": null,
+        "venue": null,
+        "doi": null,
+        "url": null,
+        "raw_text": "Illumina. Infinium MethylationEPIC v2.0 BeadChip Data Sheet（935K）."
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1515/jib-2016-294",
+        "doi": "10.1515/jib-2016-294",
+        "title": "Jllumina - A comprehensive Java-based API for statistical Illumina Infinium HumanMethylation450 and Infinium MethylationEPIC BeadChip data processing",
+        "authors": [
+          {
+            "family": "Almeida",
+            "given": "Diogo"
+          },
+          {
+            "family": "Skov",
+            "given": "Ida"
+          },
+          {
+            "family": "Lund",
+            "given": "Jesper"
+          },
+          {
+            "family": "Mohammadnejad",
+            "given": "Afsaneh"
+          },
+          {
+            "family": "Silva",
+            "given": "Artur"
+          },
+          {
+            "family": "Vandin",
+            "given": "Fabio"
+          },
+          {
+            "family": "Tan",
+            "given": "Qihua"
+          },
+          {
+            "family": "Baumbach",
+            "given": "Jan"
+          },
+          {
+            "family": "Röttger",
+            "given": "Richard"
+          }
+        ],
+        "year": 2016,
+        "venue": "Journal of Integrative Bioinformatics",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1515/jib-2016-294"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Illumina",
+          "corrected": "Almeida Diogo, Skov Ida, Lund Jesper, Mohammadnejad Afsaneh, Silva Artur, Vandin Fabio, Tan Qihua, Baumbach Jan, Röttger Richard",
+          "severity": "high"
+        },
+        {
+          "field": "title",
+          "original": "Infinium MethylationEPIC v2.0 BeadChip Data Sheet（935K）",
+          "corrected": "Jllumina - A comprehensive Java-based API for statistical Illumina Infinium HumanMethylation450 and Infinium MethylationEPIC BeadChip data processing",
+          "severity": "high"
+        },
+        {
+          "field": "year",
+          "original": null,
+          "corrected": "2016",
+          "severity": "medium"
+        },
+        {
+          "field": "venue",
+          "original": null,
+          "corrected": "Journal of Integrative Bioinformatics",
+          "severity": "low"
+        },
+        {
+          "field": "doi",
+          "original": null,
+          "corrected": "10.1515/jib-2016-294",
+          "severity": "high"
+        }
+      ],
+      "confidence": 0.25,
+      "requires_human_review": true
+    }
+  ],
+  "replacements": [],
+  "unresolvable": [
+    {
+      "citation_id": 7,
+      "reason": "channel_b_only_no_a_match: Channel B asserts a match but no Channel A source confirmed it",
+      "channel_a_best_guess": {
+        "matched_source": "crossref",
+        "record": {
+          "title": "Reliability of DNA methylation measures using Illumina methylation BeadChip",
+          "authors": [
+            {
+              "family": "Xu",
+              "given": "Zongli"
+            },
+            {
+              "family": "Taylor",
+              "given": "Jack A."
+            }
+          ],
+          "year": 2021,
+          "venue": "Epigenetics",
+          "doi": "10.1080/15592294.2020.1805692",
+          "url": "https://doi.org/10.1080/15592294.2020.1805692"
+        },
+        "title_similarity": 0.685,
+        "author_overlap": 0.0,
+        "title_similarity_raw": 0.685,
+        "author_overlap_raw": 0.0,
+        "doi_exact_match": false
+      },
+      "channel_b_best_guess": {
+        "verdict": "partially_valid",
+        "explanation": "A real bioRxiv preprint exists with this MSA BeadChip title/year and DOI 10.1101/2024.05.17.594606, but its authors are Goldberg, Cloud, Lee, Barnes, and others, not Kaur D et al. The claimed author appears to be mismatched with a different DNA methylation BeadChip paper.",
+        "matched_identifier": "10.1101/2024.05.17.594606",
+        "mismatches": [
+          "authors: claimed first author Kaur D, actual first author David C. Goldberg",
+          "title: claimed shortened title, actual title includes 'for high-throughput trait association studies'"
+        ]
+      }
+    },
+    {
+      "citation_id": 8,
+      "reason": "channel_b_only_no_a_match: Channel B asserts a match but no Channel A source confirmed it",
+      "channel_a_best_guess": {
+        "matched_source": "crossref",
+        "record": {
+          "title": "The Illumina Infinium methylation assay for genome-wide methylation analyses",
+          "authors": [
+            {
+              "family": "Nakabayashi",
+              "given": "Kazuhiko"
+            }
+          ],
+          "year": 2020,
+          "venue": "Epigenetics Methods",
+          "doi": "10.1016/b978-0-12-819414-0.00007-0",
+          "url": "https://doi.org/10.1016/b978-0-12-819414-0.00007-0"
+        },
+        "title_similarity": 0.615,
+        "author_overlap": 0.0,
+        "title_similarity_raw": 0.615,
+        "author_overlap_raw": 0.0,
+        "doi_exact_match": false
+      },
+      "channel_b_best_guess": {
+        "verdict": "valid",
+        "explanation": "The exact item exists as an official Illumina product literature data sheet dated June 18, 2024. It is not indexed as an academic paper in Crossref/OpenAlex/Semantic Scholar, but the cited title, corporate author, and year substantively match the official document.",
+        "matched_identifier": "https://support.illumina.com/content/dam/illumina/gcs/assembled-assets/marketing-literature/infinium-methylation-screening-array-data-sheet-m-gl-01893/infinium-methylation-screening-array-data-sheet-m-gl-01893.pdf",
+        "mismatches": [
+          "publication_type: claimed as citation-like source; actual item is an Illumina product data sheet, not a journal article",
+          "title: claimed includes '(MSA) Data Sheet'; official listing shows 'Infinium Methylation Screening Array' with document type 'Data sheet'"
+        ]
+      }
+    }
+  ]
+}

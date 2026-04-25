@@ -1,0 +1,66 @@
+{
+  "verdict": "valid",
+  "confidence": 0.814,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Systematic assessment of reduced representation bisulfite sequencing to human blood samples: A promising method for large-sample-scale epigenomic studies",
+    "authors": [
+      {
+        "family": "Wang",
+        "given": "Li"
+      },
+      {
+        "family": "Sun",
+        "given": "Jihua"
+      },
+      {
+        "family": "Wu",
+        "given": "Honglong"
+      },
+      {
+        "family": "Liu",
+        "given": "Siyang"
+      },
+      {
+        "family": "Wang",
+        "given": "Junwen"
+      },
+      {
+        "family": "Wu",
+        "given": "Boxin"
+      },
+      {
+        "family": "Huang",
+        "given": "Shujia"
+      },
+      {
+        "family": "Li",
+        "given": "Ning"
+      },
+      {
+        "family": "Wang",
+        "given": "Jun"
+      },
+      {
+        "family": "Zhang",
+        "given": "Xiuqing"
+      }
+    ],
+    "year": 2012,
+    "venue": "Journal of Biotechnology",
+    "doi": "10.1016/j.jbiotec.2011.06.034",
+    "url": "https://doi.org/10.1016/j.jbiotec.2011.06.034"
+  },
+  "title_similarity": 0.857,
+  "author_overlap": 1.0,
+  "year_match": false,
+  "title_similarity_raw": 0.857,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: valid (title_sim=0.86 raw=0.86, author_overlap=1.00 raw=1.00, year_match=False, doi_exact_match=False)",
+    "openalex: best candidate title_sim=0.51, author_overlap=0.00 — too weak to call a match",
+    "openalex: not_found (title_sim=0.51 raw=0.51, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+    "semantic_scholar: no results"
+  ]
+}

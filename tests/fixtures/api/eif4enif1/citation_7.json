@@ -1,0 +1,75 @@
+{
+  "verdict": "valid",
+  "confidence": 0.955,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Selective Translation of Maternal mRNA by eIF4E1B Controls Oocyte to Embryo Transition",
+    "authors": [
+      {
+        "family": "Guo",
+        "given": "Jing"
+      },
+      {
+        "family": "Zhao",
+        "given": "Hailian"
+      },
+      {
+        "family": "Zhang",
+        "given": "Jue"
+      },
+      {
+        "family": "Lv",
+        "given": "Xiangjiang"
+      },
+      {
+        "family": "Zhang",
+        "given": "Shen"
+      },
+      {
+        "family": "Su",
+        "given": "Ruibao"
+      },
+      {
+        "family": "Zheng",
+        "given": "Wei"
+      },
+      {
+        "family": "Dai",
+        "given": "Jing"
+      },
+      {
+        "family": "Meng",
+        "given": "Fei"
+      },
+      {
+        "family": "Gong",
+        "given": "Fei"
+      },
+      {
+        "family": "Lu",
+        "given": "Guangxiu"
+      },
+      {
+        "family": "Xue",
+        "given": "Yuanchao"
+      },
+      {
+        "family": "Lin",
+        "given": "Ge"
+      }
+    ],
+    "year": 2023,
+    "venue": "Advanced Science",
+    "doi": "10.1002/advs.202205500",
+    "url": "https://doi.org/10.1002/advs.202205500"
+  },
+  "title_similarity": 0.95,
+  "author_overlap": 0.95,
+  "year_match": true,
+  "title_similarity_raw": 0.506,
+  "author_overlap_raw": 0.5,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=0.95 raw=0.51, author_overlap=0.95 raw=0.50, year_match=True, doi_exact_match=True)"
+  ]
+}

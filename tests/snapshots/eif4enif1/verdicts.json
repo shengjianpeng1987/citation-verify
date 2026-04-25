@@ -1,0 +1,2019 @@
+[
+  {
+    "citation_id": 1,
+    "citation": {
+      "id": 1,
+      "authors": [
+        {
+          "family": "Dostie",
+          "given": "J"
+        },
+        {
+          "family": "Ferraiuolo",
+          "given": "M"
+        },
+        {
+          "family": "Pause",
+          "given": "A"
+        },
+        {
+          "family": "Adam",
+          "given": "SA"
+        },
+        {
+          "family": "Sonenberg",
+          "given": "N"
+        }
+      ],
+      "title": "A novel shuttling protein, 4E-T, mediates the nuclear import of the mRNA 5′ cap-binding protein, eIF4E",
+      "year": 2000,
+      "venue": "EMBO J",
+      "doi": "10.1093/emboj/19.12.3142",
+      "url": null,
+      "raw_text": "Dostie J, Ferraiuolo M, Pause A, Adam SA, Sonenberg N. A novel shuttling protein, 4E-T, mediates the nuclear import of the mRNA 5′ cap-binding protein, eIF4E. EMBO J 19, 3142–3156 (2000). DOI: 10.1093/emboj/19.12.3142"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.978,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "A novel shuttling protein, 4E-T, mediates the nuclear import of the mRNA 5' cap-binding protein, eIF4E",
+        "authors": [
+          {
+            "family": "Dostie",
+            "given": "J."
+          }
+        ],
+        "year": 2000,
+        "venue": "The EMBO Journal",
+        "doi": "10.1093/emboj/19.12.3142",
+        "url": "https://doi.org/10.1093/emboj/19.12.3142"
+      },
+      "title_similarity": 0.989,
+      "author_overlap": 0.95,
+      "year_match": true,
+      "title_similarity_raw": 0.989,
+      "author_overlap_raw": 0.2,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=0.99 raw=0.99, author_overlap=0.95 raw=0.20, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.99,
+      "explanation": "The provided API evidence reports an exact DOI match in Crossref, with substantively matching title, year, venue, and author evidence. The title differs only in typographic apostrophe formatting, which is not a substantive discrepancy.",
+      "matched_identifier": "10.1093/emboj/19.12.3142",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 2,
+    "citation": {
+      "id": 2,
+      "authors": [
+        {
+          "family": "Kasippillai",
+          "given": "T"
+        },
+        {
+          "family": "MacArthur",
+          "given": "DG"
+        },
+        {
+          "family": "Kirby",
+          "given": "A"
+        },
+        {
+          "family": "Thomas",
+          "given": "B"
+        },
+        {
+          "family": "Lambalk",
+          "given": "CB"
+        },
+        {
+          "family": "Daly",
+          "given": "MJ"
+        },
+        {
+          "family": "Welt",
+          "given": "CK"
+        }
+      ],
+      "title": "Mutations in eIF4ENIF1 are associated with primary ovarian insufficiency",
+      "year": 2013,
+      "venue": "J Clin Endocrinol Metab",
+      "doi": "10.1210/jc.2013-1102",
+      "url": null,
+      "raw_text": "Kasippillai T, MacArthur DG, Kirby A, Thomas B, Lambalk CB, Daly MJ, Welt CK. Mutations in eIF4ENIF1 are associated with primary ovarian insufficiency. J Clin Endocrinol Metab 98, E1534–E1539 (2013). DOI: 10.1210/jc.2013-1102"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.97,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Mutations in<i>eIF4ENIF1</i>Are Associated With Primary Ovarian Insufficiency",
+        "authors": [
+          {
+            "family": "Kasippillai",
+            "given": "Thushiga"
+          },
+          {
+            "family": "MacArthur",
+            "given": "Daniel G."
+          },
+          {
+            "family": "Kirby",
+            "given": "Andrew"
+          },
+          {
+            "family": "Thomas",
+            "given": "Brett"
+          },
+          {
+            "family": "Lambalk",
+            "given": "Cornelius B."
+          },
+          {
+            "family": "Daly",
+            "given": "Mark J."
+          },
+          {
+            "family": "Welt",
+            "given": "Corrine K."
+          }
+        ],
+        "year": 2013,
+        "venue": "The Journal of Clinical Endocrinology &amp; Metabolism",
+        "doi": "10.1210/jc.2013-1102",
+        "url": "https://doi.org/10.1210/jc.2013-1102"
+      },
+      "title_similarity": 0.95,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 0.886,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=0.95 raw=0.89, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.99,
+      "explanation": "The API evidence from Crossref reports an exact DOI match and a record whose title, author list, and year substantively match the citation. Differences are limited to formatting/expanded given names and journal abbreviation versus full journal title.",
+      "matched_identifier": "10.1210/jc.2013-1102",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 3,
+    "citation": {
+      "id": 3,
+      "authors": [
+        {
+          "family": "Zhao",
+          "given": "S"
+        },
+        {
+          "family": "Li",
+          "given": "G"
+        },
+        {
+          "family": "Dalgleish",
+          "given": "R"
+        },
+        {
+          "family": "Vujovic",
+          "given": "S"
+        },
+        {
+          "family": "Jiao",
+          "given": "X"
+        },
+        {
+          "family": "Li",
+          "given": "J"
+        }
+      ],
+      "title": "A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing",
+      "year": 2019,
+      "venue": "J Ovarian Res",
+      "doi": "10.1186/s13048-019-0595-0",
+      "url": null,
+      "raw_text": "Zhao S, Li G, Dalgleish R, Vujovic S, Jiao X, Li J, et al. A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing. J Ovarian Res 12, 119 (2019). DOI: 10.1186/s13048-019-0595-0"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.985,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing",
+        "authors": [
+          {
+            "family": "Zhao",
+            "given": "Minying"
+          },
+          {
+            "family": "Feng",
+            "given": "Fan"
+          },
+          {
+            "family": "Chu",
+            "given": "Chunfang"
+          },
+          {
+            "family": "Yue",
+            "given": "Wentao"
+          },
+          {
+            "family": "Li",
+            "given": "Lin"
+          }
+        ],
+        "year": 2019,
+        "venue": "Journal of Ovarian Research",
+        "doi": "10.1186/s13048-019-0595-0",
+        "url": "https://doi.org/10.1186/s13048-019-0595-0"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 0.95,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 0.4,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=0.95 raw=0.40, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.98,
+      "explanation": "The DOI resolves to a real 2019 Journal of Ovarian Research article with the exact cited title. However, the official author list is Minying Zhao, Fan Feng, Chunfang Chu, Wentao Yue, and Lin Li, while the citation lists Zhao S, Li G, Dalgleish R, Vujovic S, Jiao X, and Li J. This is a real paper, but the cited author list appears to be incorrect.",
+      "matched_identifier": "https://doi.org/10.1186/s13048-019-0595-0",
+      "mismatches": [
+        "authors: claimed Zhao S, Li G, Dalgleish R, Vujovic S, Jiao X, Li J et al.; actual Minying Zhao, Fan Feng, Chunfang Chu, Wentao Yue, Lin Li"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing\"",
+        "web searched: \"10.1186/s13048-019-0595-0\"",
+        "web searched: \"Zhao S\" \"Li G\" \"Dalgleish\" \"EIF4ENIF1\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 4,
+    "citation": {
+      "id": 4,
+      "authors": [
+        {
+          "family": "França",
+          "given": "MM"
+        },
+        {
+          "family": "Mendonca",
+          "given": "BB"
+        }
+      ],
+      "title": "Genetics of ovarian insufficiency and defects of folliculogenesis",
+      "year": 2022,
+      "venue": "Best Pract Res Clin Endocrinol Metab",
+      "doi": "10.1016/j.beem.2021.101594",
+      "url": null,
+      "raw_text": "França MM, Mendonca BB. Genetics of ovarian insufficiency and defects of folliculogenesis. Best Pract Res Clin Endocrinol Metab 36, 101594 (2022). DOI: 10.1016/j.beem.2021.101594"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Genetics of ovarian insufficiency and defects of folliculogenesis",
+        "authors": [
+          {
+            "family": "França",
+            "given": "Monica Malheiros"
+          },
+          {
+            "family": "Mendonca",
+            "given": "Berenice Bilharinho"
+          }
+        ],
+        "year": 2022,
+        "venue": "Best Practice &amp; Research Clinical Endocrinology &amp; Metabolism",
+        "doi": "10.1016/j.beem.2021.101594",
+        "url": "https://doi.org/10.1016/j.beem.2021.101594"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "Crossref evidence reports an exact DOI match with the same title, matching authors, matching year, and the same journal venue. The citation points to a real paper.",
+      "matched_identifier": "10.1016/j.beem.2021.101594",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 5,
+    "citation": {
+      "id": 5,
+      "authors": [
+        {
+          "family": "Shang",
+          "given": "D"
+        },
+        {
+          "family": "Lian",
+          "given": "L"
+        },
+        {
+          "family": "Yang",
+          "given": "H"
+        }
+      ],
+      "title": "EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency",
+      "year": 2022,
+      "venue": "Eur J Med Genet",
+      "doi": "10.1016/j.ejmg.2022.104597",
+      "url": null,
+      "raw_text": "Shang D, Lian L, Yang H. EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency. Eur J Med Genet 65, 104597 (2022). DOI: 10.1016/j.ejmg.2022.104597"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.985,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency",
+        "authors": [
+          {
+            "family": "Shang",
+            "given": "Lingyue"
+          },
+          {
+            "family": "Ren",
+            "given": "Shuting"
+          },
+          {
+            "family": "Yang",
+            "given": "Xi"
+          },
+          {
+            "family": "Zhang",
+            "given": "Feng"
+          },
+          {
+            "family": "Jin",
+            "given": "Li"
+          },
+          {
+            "family": "Zhang",
+            "given": "Xiaojin"
+          },
+          {
+            "family": "Wu",
+            "given": "Yanhua"
+          }
+        ],
+        "year": 2022,
+        "venue": "European Journal of Medical Genetics",
+        "doi": "10.1016/j.ejmg.2022.104597",
+        "url": "https://doi.org/10.1016/j.ejmg.2022.104597"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 0.95,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 0.667,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=0.95 raw=0.67, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.94,
+      "explanation": "A real 2022 European Journal of Medical Genetics paper exists with the exact title and DOI, but the cited author list does not match the database and web-search metadata. The actual authors are Lingyue Shang, Shuting Ren, Xi Yang, Feng Zhang, Li Jin, Xiaojin Zhang, and Yanhua Wu.",
+      "matched_identifier": "10.1016/j.ejmg.2022.104597",
+      "mismatches": [
+        "authors: claimed Shang D, Lian L, Yang H; actual Lingyue Shang, Shuting Ren, Xi Yang, Feng Zhang, Li Jin, Xiaojin Zhang, Yanhua Wu"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency\"",
+        "web searched: \"10.1016/j.ejmg.2022.104597\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 6,
+    "citation": {
+      "id": 6,
+      "authors": [
+        {
+          "family": "Cheng",
+          "given": "S"
+        },
+        {
+          "family": "Altmeppen",
+          "given": "G"
+        },
+        {
+          "family": "So",
+          "given": "C"
+        },
+        {
+          "family": "Welp",
+          "given": "LM"
+        },
+        {
+          "family": "Penir",
+          "given": "S"
+        },
+        {
+          "family": "Ruhwedel",
+          "given": "T"
+        }
+      ],
+      "title": "Mammalian oocytes store mRNAs in a mitochondria-associated membraneless compartment",
+      "year": 2022,
+      "venue": "Science",
+      "doi": "10.1126/science.abq4835",
+      "url": null,
+      "raw_text": "Cheng S, Altmeppen G, So C, Welp LM, Penir S, Ruhwedel T, et al. Mammalian oocytes store mRNAs in a mitochondria-associated membraneless compartment. Science 378, eabq4835 (2022). DOI: 10.1126/science.abq4835"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Mammalian oocytes store mRNAs in a mitochondria-associated membraneless compartment",
+        "authors": [
+          {
+            "family": "Cheng",
+            "given": "Shiya"
+          },
+          {
+            "family": "Altmeppen",
+            "given": "Gerrit"
+          },
+          {
+            "family": "So",
+            "given": "Chun"
+          },
+          {
+            "family": "Welp",
+            "given": "Luisa M."
+          },
+          {
+            "family": "Penir",
+            "given": "Sarah"
+          },
+          {
+            "family": "Ruhwedel",
+            "given": "Torben"
+          },
+          {
+            "family": "Menelaou",
+            "given": "Katerina"
+          },
+          {
+            "family": "Harasimov",
+            "given": "Katarina"
+          },
+          {
+            "family": "Stützer",
+            "given": "Alexandra"
+          },
+          {
+            "family": "Blayney",
+            "given": "Martyn"
+          },
+          {
+            "family": "Elder",
+            "given": "Kay"
+          },
+          {
+            "family": "Möbius",
+            "given": "Wiebke"
+          },
+          {
+            "family": "Urlaub",
+            "given": "Henning"
+          },
+          {
+            "family": "Schuh",
+            "given": "Melina"
+          }
+        ],
+        "year": 2022,
+        "venue": "Science",
+        "doi": "10.1126/science.abq4835",
+        "url": "https://doi.org/10.1126/science.abq4835"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The Crossref record exactly matches the claimed title, year, venue, and DOI, and the listed citation authors are all present in the full author list. This is a real Science paper published in 2022.",
+      "matched_identifier": "10.1126/science.abq4835",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 7,
+    "citation": {
+      "id": 7,
+      "authors": [
+        {
+          "family": "Guo",
+          "given": "J"
+        },
+        {
+          "family": "Zhang",
+          "given": "T"
+        },
+        {
+          "family": "Guo",
+          "given": "Y"
+        },
+        {
+          "family": "Sun",
+          "given": "T"
+        },
+        {
+          "family": "Li",
+          "given": "H"
+        },
+        {
+          "family": "Zhang",
+          "given": "X"
+        }
+      ],
+      "title": "The eIF4E1B-eIF4ENIF1 complex is essential for mouse oocyte and early embryo development",
+      "year": 2023,
+      "venue": "Adv Sci (Weinh)",
+      "doi": "10.1002/advs.202205500",
+      "url": null,
+      "raw_text": "Guo J, Zhang T, Guo Y, Sun T, Li H, Zhang X, et al. The eIF4E1B-eIF4ENIF1 complex is essential for mouse oocyte and early embryo development. Adv Sci (Weinh) 10, e2205500 (2023). DOI: 10.1002/advs.202205500"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.955,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Selective Translation of Maternal mRNA by eIF4E1B Controls Oocyte to Embryo Transition",
+        "authors": [
+          {
+            "family": "Guo",
+            "given": "Jing"
+          },
+          {
+            "family": "Zhao",
+            "given": "Hailian"
+          },
+          {
+            "family": "Zhang",
+            "given": "Jue"
+          },
+          {
+            "family": "Lv",
+            "given": "Xiangjiang"
+          },
+          {
+            "family": "Zhang",
+            "given": "Shen"
+          },
+          {
+            "family": "Su",
+            "given": "Ruibao"
+          },
+          {
+            "family": "Zheng",
+            "given": "Wei"
+          },
+          {
+            "family": "Dai",
+            "given": "Jing"
+          },
+          {
+            "family": "Meng",
+            "given": "Fei"
+          },
+          {
+            "family": "Gong",
+            "given": "Fei"
+          },
+          {
+            "family": "Lu",
+            "given": "Guangxiu"
+          },
+          {
+            "family": "Xue",
+            "given": "Yuanchao"
+          },
+          {
+            "family": "Lin",
+            "given": "Ge"
+          }
+        ],
+        "year": 2023,
+        "venue": "Advanced Science",
+        "doi": "10.1002/advs.202205500",
+        "url": "https://doi.org/10.1002/advs.202205500"
+      },
+      "title_similarity": 0.95,
+      "author_overlap": 0.95,
+      "year_match": true,
+      "title_similarity_raw": 0.506,
+      "author_overlap_raw": 0.5,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=0.95 raw=0.51, author_overlap=0.95 raw=0.50, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.97,
+      "explanation": "The DOI, year, venue, and first author point to a real Advanced Science 2023 paper, but that paper is titled “Selective Translation of Maternal mRNA by eIF4E1B Controls Oocyte to Embryo Transition” and has a different author list. Web searches for the claimed exact title did not find a matching paper, suggesting the citation has real DOI metadata mixed with a fabricated or paraphrased title/authors.",
+      "matched_identifier": "10.1002/advs.202205500",
+      "mismatches": [
+        "title: claimed \"The eIF4E1B-eIF4ENIF1 complex is essential for mouse oocyte and early embryo development\", actual \"Selective Translation of Maternal mRNA by eIF4E1B Controls Oocyte to Embryo Transition\"",
+        "authors: claimed Guo J, Zhang T, Guo Y, Sun T, Li H, Zhang X, et al.; actual Guo J, Zhao H, Zhang J, Lv X, Zhang S, Su R, Zheng W, Dai J, Meng F, Gong F, Lu G, Xue Y, Lin G"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"The eIF4E1B-eIF4ENIF1 complex is essential for mouse oocyte and early embryo development\"",
+        "web searched: \"10.1002/advs.202205500\"",
+        "web searched: \"eIF4E1B-eIF4ENIF1\" \"oocyte\"",
+        "web searched: \"mouse oocyte and early embryo development\" \"eIF4E1B\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 8,
+    "citation": {
+      "id": 8,
+      "authors": [
+        {
+          "family": "Ding",
+          "given": "Y"
+        },
+        {
+          "family": "Wang",
+          "given": "T"
+        },
+        {
+          "family": "Chen",
+          "given": "T"
+        },
+        {
+          "family": "Xie",
+          "given": "C"
+        },
+        {
+          "family": "Zhang",
+          "given": "Q"
+        }
+      ],
+      "title": "Eif4enif1 haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility",
+      "year": 2023,
+      "venue": "Development",
+      "doi": "10.1242/dev.202151",
+      "url": null,
+      "raw_text": "Ding Y, Wang T, Chen T, Xie C, Zhang Q. Eif4enif1 haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility. Development 150, dev202151 (2023). DOI: 10.1242/dev.202151"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.963,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "<i>Eif4enif1</i> haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility",
+        "authors": [
+          {
+            "family": "Ding",
+            "given": "Yuxi"
+          },
+          {
+            "family": "He",
+            "given": "Zequn"
+          },
+          {
+            "family": "Sha",
+            "given": "Yanwei"
+          },
+          {
+            "family": "Kee",
+            "given": "Kehkooi"
+          },
+          {
+            "family": "Li",
+            "given": "Lin"
+          }
+        ],
+        "year": 2023,
+        "venue": "Development",
+        "doi": "10.1242/dev.202151",
+        "url": "https://doi.org/10.1242/dev.202151"
+      },
+      "title_similarity": 0.964,
+      "author_overlap": 0.95,
+      "year_match": true,
+      "title_similarity_raw": 0.964,
+      "author_overlap_raw": 0.2,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=0.96 raw=0.96, author_overlap=0.95 raw=0.20, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.96,
+      "explanation": "A real 2023 Development paper exists with the exact title and DOI 10.1242/dev.202151. However, the cited author list does not match the real paper: only Ding matches, while the actual authors are Ding, He, Sha, Kee, and Li.",
+      "matched_identifier": "10.1242/dev.202151",
+      "mismatches": [
+        "authors: claimed Ding Y, Wang T, Chen T, Xie C, Zhang Q; actual Ding Yuxi, He Zequn, Sha Yanwei, Kee Kehkooi, Li Lin"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"Eif4enif1 haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility\"",
+        "web searched: \"10.1242/dev.202151\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 9,
+    "citation": {
+      "id": 9,
+      "authors": [
+        {
+          "family": "Heim",
+          "given": "A"
+        },
+        {
+          "family": "Tolmachova",
+          "given": "T"
+        },
+        {
+          "family": "Raina",
+          "given": "VB"
+        },
+        {
+          "family": "Zigáčková",
+          "given": "D"
+        },
+        {
+          "family": "Baumgarten",
+          "given": "N"
+        },
+        {
+          "family": "Schoof",
+          "given": "M"
+        }
+      ],
+      "title": "Translational repression by 4E-T is crucial to maintain the prophase-I arrest in mouse oocytes",
+      "year": 2025,
+      "venue": "Nat Commun",
+      "doi": "10.1038/s41467-025-62971-9",
+      "url": null,
+      "raw_text": "Heim A, Tolmachova T, Raina VB, Zigáčková D, Baumgarten N, Schoof M, et al. Translational repression by 4E-T is crucial to maintain the prophase-I arrest in mouse oocytes. Nat Commun 16, 7789 (2025). DOI: 10.1038/s41467-025-62971-9"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.965,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Translational repression by 4E-T is crucial to maintain the prophase-I arrest in vertebrate oocytes",
+        "authors": [
+          {
+            "family": "Heim",
+            "given": "Andreas"
+          },
+          {
+            "family": "Cheng",
+            "given": "Shiya"
+          },
+          {
+            "family": "Orth",
+            "given": "Jan"
+          },
+          {
+            "family": "Stengel",
+            "given": "Florian"
+          },
+          {
+            "family": "Schuh",
+            "given": "Melina"
+          },
+          {
+            "family": "Mayer",
+            "given": "Thomas U."
+          }
+        ],
+        "year": 2025,
+        "venue": "Nature Communications",
+        "doi": "10.1038/s41467-025-62971-9",
+        "url": "https://doi.org/10.1038/s41467-025-62971-9"
+      },
+      "title_similarity": 0.967,
+      "author_overlap": 0.95,
+      "year_match": true,
+      "title_similarity_raw": 0.967,
+      "author_overlap_raw": 0.167,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=0.97 raw=0.97, author_overlap=0.95 raw=0.17, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.97,
+      "explanation": "The DOI resolves to a real 2025 Nature Communications paper with a very similar title, but the actual paper is titled with \"vertebrate oocytes\" and has a different author list. Because the DOI/year and core topic match but key citation metadata is wrong, this is partially valid rather than fully valid.",
+      "matched_identifier": "10.1038/s41467-025-62971-9",
+      "mismatches": [
+        "title: claimed \"Translational repression by 4E-T is crucial to maintain the prophase-I arrest in mouse oocytes\", actual \"Translational repression by 4E-T is crucial to maintain the prophase-I arrest in vertebrate oocytes\"",
+        "authors: claimed Heim, Tolmachova, Raina, Zigáčková, Baumgarten, Schoof et al.; actual Heim, Cheng, Orth, Stengel, Schuh, Mayer",
+        "article number: claimed 7789, actual 8051"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: 10.1038/s41467-025-62971-9",
+        "web searched: \"Translational repression by 4E-T is crucial to maintain the prophase-I arrest in mouse oocytes\"",
+        "web searched: \"Translational repression by 4E-T is crucial to maintain the prophase-I arrest in vertebrate oocytes\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 10,
+    "citation": {
+      "id": 10,
+      "authors": [
+        {
+          "family": "Su",
+          "given": "R"
+        },
+        {
+          "family": "Fan",
+          "given": "L-J"
+        },
+        {
+          "family": "Cao",
+          "given": "C"
+        },
+        {
+          "family": "Wang",
+          "given": "L"
+        },
+        {
+          "family": "Du",
+          "given": "Z"
+        },
+        {
+          "family": "Cai",
+          "given": "Z"
+        }
+      ],
+      "title": "Global profiling of RNA-binding protein target sites by LACE-seq",
+      "year": 2021,
+      "venue": "Nat Cell Biol",
+      "doi": "10.1038/s41556-021-00696-9",
+      "url": null,
+      "raw_text": "Su R, Fan L-J, Cao C, Wang L, Du Z, Cai Z, et al. Global profiling of RNA-binding protein target sites by LACE-seq. Nat Cell Biol 23, 664–675 (2021). DOI: 10.1038/s41556-021-00696-9"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Global profiling of RNA-binding protein target sites by LACE-seq",
+        "authors": [
+          {
+            "family": "Su",
+            "given": "Ruibao"
+          },
+          {
+            "family": "Fan",
+            "given": "Li-Hua"
+          },
+          {
+            "family": "Cao",
+            "given": "Changchang"
+          },
+          {
+            "family": "Wang",
+            "given": "Lei"
+          },
+          {
+            "family": "Du",
+            "given": "Zongchang"
+          },
+          {
+            "family": "Cai",
+            "given": "Zhaokui"
+          },
+          {
+            "family": "Ouyang",
+            "given": "Ying-Chun"
+          },
+          {
+            "family": "Wang",
+            "given": "Yue"
+          },
+          {
+            "family": "Zhou",
+            "given": "Qian"
+          },
+          {
+            "family": "Wu",
+            "given": "Ligang"
+          },
+          {
+            "family": "Zhang",
+            "given": "Nan"
+          },
+          {
+            "family": "Zhu",
+            "given": "Xiaoxiao"
+          },
+          {
+            "family": "Lei",
+            "given": "Wen-Long"
+          },
+          {
+            "family": "Zhao",
+            "given": "Hailian"
+          },
+          {
+            "family": "Tian",
+            "given": "Yong"
+          },
+          {
+            "family": "He",
+            "given": "Shunmin"
+          },
+          {
+            "family": "Wong",
+            "given": "Catherine C. L."
+          },
+          {
+            "family": "Sun",
+            "given": "Qing-Yuan"
+          },
+          {
+            "family": "Xue",
+            "given": "Yuanchao"
+          }
+        ],
+        "year": 2021,
+        "venue": "Nature Cell Biology",
+        "doi": "10.1038/s41556-021-00696-9",
+        "url": "https://doi.org/10.1038/s41556-021-00696-9"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "Crossref evidence exactly matches the cited title, year, and DOI, and the listed authors correspond to the beginning of the full author list. Venue abbreviation is consistent with Nature Cell Biology.",
+      "matched_identifier": "10.1038/s41556-021-00696-9",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 11,
+    "citation": {
+      "id": 11,
+      "authors": [
+        {
+          "family": "König",
+          "given": "J"
+        },
+        {
+          "family": "Zarnack",
+          "given": "K"
+        },
+        {
+          "family": "Rot",
+          "given": "G"
+        },
+        {
+          "family": "Curk",
+          "given": "T"
+        },
+        {
+          "family": "Kayikci",
+          "given": "M"
+        },
+        {
+          "family": "Zupan",
+          "given": "B"
+        }
+      ],
+      "title": "iCLIP reveals the function of hnRNP particles in splicing at individual nucleotide resolution",
+      "year": 2010,
+      "venue": "Nat Struct Mol Biol",
+      "doi": "10.1038/nsmb.1838",
+      "url": null,
+      "raw_text": "König J, Zarnack K, Rot G, Curk T, Kayikci M, Zupan B, et al. iCLIP reveals the function of hnRNP particles in splicing at individual nucleotide resolution. Nat Struct Mol Biol 17, 909–915 (2010). DOI: 10.1038/nsmb.1838"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "iCLIP reveals the function of hnRNP particles in splicing at individual nucleotide resolution",
+        "authors": [
+          {
+            "family": "König",
+            "given": "Julian"
+          },
+          {
+            "family": "Zarnack",
+            "given": "Kathi"
+          },
+          {
+            "family": "Rot",
+            "given": "Gregor"
+          },
+          {
+            "family": "Curk",
+            "given": "Tomaž"
+          },
+          {
+            "family": "Kayikci",
+            "given": "Melis"
+          },
+          {
+            "family": "Zupan",
+            "given": "Blaž"
+          },
+          {
+            "family": "Turner",
+            "given": "Daniel J"
+          },
+          {
+            "family": "Luscombe",
+            "given": "Nicholas M"
+          },
+          {
+            "family": "Ule",
+            "given": "Jernej"
+          }
+        ],
+        "year": 2010,
+        "venue": "Nature Structural &amp; Molecular Biology",
+        "doi": "10.1038/nsmb.1838",
+        "url": "https://doi.org/10.1038/nsmb.1838"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "Crossref evidence exactly matches the cited title, DOI, year, and the listed authors, with additional authors consistent with the citation's \"et al.\" abbreviation. The venue abbreviation also matches Nature Structural & Molecular Biology.",
+      "matched_identifier": "10.1038/nsmb.1838",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 12,
+    "citation": {
+      "id": 12,
+      "authors": [
+        {
+          "family": "Van Nostrand",
+          "given": "EL"
+        },
+        {
+          "family": "Pratt",
+          "given": "GA"
+        },
+        {
+          "family": "Shishkin",
+          "given": "AA"
+        },
+        {
+          "family": "Gelboin-Burkhart",
+          "given": "C"
+        },
+        {
+          "family": "Fang",
+          "given": "MY"
+        },
+        {
+          "family": "Sundararaman",
+          "given": "B"
+        }
+      ],
+      "title": "Robust transcriptome-wide discovery of RNA-binding protein binding sites with enhanced CLIP (eCLIP)",
+      "year": 2016,
+      "venue": "Nat Methods",
+      "doi": "10.1038/nmeth.3810",
+      "url": null,
+      "raw_text": "Van Nostrand EL, Pratt GA, Shishkin AA, Gelboin-Burkhart C, Fang MY, Sundararaman B, et al. Robust transcriptome-wide discovery of RNA-binding protein binding sites with enhanced CLIP (eCLIP). Nat Methods 13, 508–514 (2016). DOI: 10.1038/nmeth.3810"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Robust transcriptome-wide discovery of RNA-binding protein binding sites with enhanced CLIP (eCLIP)",
+        "authors": [
+          {
+            "family": "Van Nostrand",
+            "given": "Eric L"
+          },
+          {
+            "family": "Pratt",
+            "given": "Gabriel A"
+          },
+          {
+            "family": "Shishkin",
+            "given": "Alexander A"
+          },
+          {
+            "family": "Gelboin-Burkhart",
+            "given": "Chelsea"
+          },
+          {
+            "family": "Fang",
+            "given": "Mark Y"
+          },
+          {
+            "family": "Sundararaman",
+            "given": "Balaji"
+          },
+          {
+            "family": "Blue",
+            "given": "Steven M"
+          },
+          {
+            "family": "Nguyen",
+            "given": "Thai B"
+          },
+          {
+            "family": "Surka",
+            "given": "Christine"
+          },
+          {
+            "family": "Elkins",
+            "given": "Keri"
+          },
+          {
+            "family": "Stanton",
+            "given": "Rebecca"
+          },
+          {
+            "family": "Rigo",
+            "given": "Frank"
+          },
+          {
+            "family": "Guttman",
+            "given": "Mitchell"
+          },
+          {
+            "family": "Yeo",
+            "given": "Gene W"
+          }
+        ],
+        "year": 2016,
+        "venue": "Nature Methods",
+        "doi": "10.1038/nmeth.3810",
+        "url": "https://doi.org/10.1038/nmeth.3810"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The Crossref evidence exactly matches the cited title, year, DOI, and venue, and the listed citation authors match the first six authors of the indexed record. The additional indexed authors are consistent with the citation's use of \"et al.\"",
+      "matched_identifier": "10.1038/nmeth.3810",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 13,
+    "citation": {
+      "id": 13,
+      "authors": [
+        {
+          "family": "Zarnegar",
+          "given": "BJ"
+        },
+        {
+          "family": "Flynn",
+          "given": "RA"
+        },
+        {
+          "family": "Shen",
+          "given": "Y"
+        },
+        {
+          "family": "Do",
+          "given": "BT"
+        },
+        {
+          "family": "Chang",
+          "given": "HY"
+        },
+        {
+          "family": "Khavari",
+          "given": "PA"
+        }
+      ],
+      "title": "irCLIP platform for efficient characterization of protein-RNA interactions",
+      "year": 2016,
+      "venue": "Nat Methods",
+      "doi": "10.1038/nmeth.3840",
+      "url": null,
+      "raw_text": "Zarnegar BJ, Flynn RA, Shen Y, Do BT, Chang HY, Khavari PA. irCLIP platform for efficient characterization of protein-RNA interactions. Nat Methods 13, 489–492 (2016). DOI: 10.1038/nmeth.3840"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.992,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "irCLIP platform for efficient characterization of protein–RNA interactions",
+        "authors": [
+          {
+            "family": "Zarnegar",
+            "given": "Brian J"
+          },
+          {
+            "family": "Flynn",
+            "given": "Ryan A"
+          },
+          {
+            "family": "Shen",
+            "given": "Ying"
+          },
+          {
+            "family": "Do",
+            "given": "Brian T"
+          },
+          {
+            "family": "Chang",
+            "given": "Howard Y"
+          },
+          {
+            "family": "Khavari",
+            "given": "Paul A"
+          }
+        ],
+        "year": 2016,
+        "venue": "Nature Methods",
+        "doi": "10.1038/nmeth.3840",
+        "url": "https://doi.org/10.1038/nmeth.3840"
+      },
+      "title_similarity": 0.986,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 0.986,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=0.99 raw=0.99, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.99,
+      "explanation": "The supplied Crossref evidence exactly matches the claimed DOI and year, with the same author list and a substantively identical title. Venue abbreviation differences and expanded given names are normal formatting differences.",
+      "matched_identifier": "10.1038/nmeth.3840",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 14,
+    "citation": {
+      "id": 14,
+      "authors": [
+        {
+          "family": "Buchbender",
+          "given": "A"
+        },
+        {
+          "family": "Mutter",
+          "given": "H"
+        },
+        {
+          "family": "Sutandy",
+          "given": "FXR"
+        },
+        {
+          "family": "Körtel",
+          "given": "N"
+        },
+        {
+          "family": "Hänel",
+          "given": "H"
+        },
+        {
+          "family": "Busch",
+          "given": "A"
+        }
+      ],
+      "title": "Improved library preparation with the new iCLIP2 protocol",
+      "year": 2020,
+      "venue": "Methods",
+      "doi": "10.1016/j.ymeth.2019.10.003",
+      "url": null,
+      "raw_text": "Buchbender A, Mutter H, Sutandy FXR, Körtel N, Hänel H, Busch A, et al. Improved library preparation with the new iCLIP2 protocol. Methods 178, 33–48 (2020). DOI: 10.1016/j.ymeth.2019.10.003"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Improved library preparation with the new iCLIP2 protocol",
+        "authors": [
+          {
+            "family": "Buchbender",
+            "given": "Andreas"
+          },
+          {
+            "family": "Mutter",
+            "given": "Holger"
+          },
+          {
+            "family": "Sutandy",
+            "given": "F.X. Reymond"
+          },
+          {
+            "family": "Körtel",
+            "given": "Nadine"
+          },
+          {
+            "family": "Hänel",
+            "given": "Heike"
+          },
+          {
+            "family": "Busch",
+            "given": "Anke"
+          },
+          {
+            "family": "Ebersberger",
+            "given": "Stefanie"
+          },
+          {
+            "family": "König",
+            "given": "Julian"
+          }
+        ],
+        "year": 2020,
+        "venue": "Methods",
+        "doi": "10.1016/j.ymeth.2019.10.003",
+        "url": "https://doi.org/10.1016/j.ymeth.2019.10.003"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The Crossref record exactly matches the cited title, DOI, venue, and year, with the listed authors matching the cited author sequence and the raw citation using et al. for additional authors. This is a real Methods paper from 2020.",
+      "matched_identifier": "10.1016/j.ymeth.2019.10.003",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 15,
+    "citation": {
+      "id": 15,
+      "authors": [
+        {
+          "family": "Lee",
+          "given": "FCY"
+        },
+        {
+          "family": "Ule",
+          "given": "J"
+        }
+      ],
+      "title": "Advances in CLIP technologies for studies of protein–RNA interactions",
+      "year": 2018,
+      "venue": "Mol Cell",
+      "doi": "10.1016/j.molcel.2018.01.005",
+      "url": null,
+      "raw_text": "Lee FCY, Ule J. Advances in CLIP technologies for studies of protein–RNA interactions. Mol Cell 69, 354–369 (2018). DOI: 10.1016/j.molcel.2018.01.005"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.991,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Advances in CLIP Technologies for Studies of Protein-RNA Interactions",
+        "authors": [
+          {
+            "family": "Lee",
+            "given": "Flora C.Y."
+          },
+          {
+            "family": "Ule",
+            "given": "Jernej"
+          }
+        ],
+        "year": 2018,
+        "venue": "Molecular Cell",
+        "doi": "10.1016/j.molcel.2018.01.005",
+        "url": "https://doi.org/10.1016/j.molcel.2018.01.005"
+      },
+      "title_similarity": 0.986,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 0.986,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=0.99 raw=0.99, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.99,
+      "explanation": "The provided Crossref evidence exactly matches the DOI and year, with substantively matching title, authors, and venue. Differences are limited to capitalization, initials versus full given names, and hyphen/en dash formatting.",
+      "matched_identifier": "10.1016/j.molcel.2018.01.005",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 16,
+    "citation": {
+      "id": 16,
+      "authors": [
+        {
+          "family": "McMahon",
+          "given": "AC"
+        },
+        {
+          "family": "Rahman",
+          "given": "R"
+        },
+        {
+          "family": "Jin",
+          "given": "H"
+        },
+        {
+          "family": "Shen",
+          "given": "JL"
+        },
+        {
+          "family": "Fieldsend",
+          "given": "A"
+        },
+        {
+          "family": "Luo",
+          "given": "W"
+        },
+        {
+          "family": "Rosbash",
+          "given": "M"
+        }
+      ],
+      "title": "TRIBE: hijacking an RNA-editing enzyme to identify cell-specific targets of RNA-binding proteins",
+      "year": 2016,
+      "venue": "Cell",
+      "doi": "10.1016/j.cell.2016.03.007",
+      "url": null,
+      "raw_text": "McMahon AC, Rahman R, Jin H, Shen JL, Fieldsend A, Luo W, Rosbash M. TRIBE: hijacking an RNA-editing enzyme to identify cell-specific targets of RNA-binding proteins. Cell 165, 742–753 (2016). DOI: 10.1016/j.cell.2016.03.007"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "TRIBE: Hijacking an RNA-Editing Enzyme to Identify Cell-Specific Targets of RNA-Binding Proteins",
+        "authors": [
+          {
+            "family": "McMahon",
+            "given": "Aoife C."
+          },
+          {
+            "family": "Rahman",
+            "given": "Reazur"
+          },
+          {
+            "family": "Jin",
+            "given": "Hua"
+          },
+          {
+            "family": "Shen",
+            "given": "James L."
+          },
+          {
+            "family": "Fieldsend",
+            "given": "Allegra"
+          },
+          {
+            "family": "Luo",
+            "given": "Weifei"
+          },
+          {
+            "family": "Rosbash",
+            "given": "Michael"
+          }
+        ],
+        "year": 2016,
+        "venue": "Cell",
+        "doi": "10.1016/j.cell.2016.03.007",
+        "url": "https://doi.org/10.1016/j.cell.2016.03.007"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "Crossref evidence exactly matches the cited title, full author list, year, venue, and DOI. The citation points to a real Cell paper published in 2016.",
+      "matched_identifier": "10.1016/j.cell.2016.03.007",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 17,
+    "citation": {
+      "id": 17,
+      "authors": [
+        {
+          "family": "Brannan",
+          "given": "KW"
+        },
+        {
+          "family": "Chaim",
+          "given": "IA"
+        },
+        {
+          "family": "Marina",
+          "given": "RJ"
+        },
+        {
+          "family": "Yee",
+          "given": "BA"
+        },
+        {
+          "family": "Kofman",
+          "given": "ER"
+        },
+        {
+          "family": "Lorenz",
+          "given": "DA"
+        }
+      ],
+      "title": "Robust single-cell discovery of RNA targets of RNA-binding proteins and ribosomes by APOBEC-mediated RNA tagging (STAMP)",
+      "year": 2021,
+      "venue": "Nat Methods",
+      "doi": "10.1038/s41592-021-01128-0",
+      "url": null,
+      "raw_text": "Brannan KW, Chaim IA, Marina RJ, Yee BA, Kofman ER, Lorenz DA, et al. Robust single-cell discovery of RNA targets of RNA-binding proteins and ribosomes by APOBEC-mediated RNA tagging (STAMP). Nat Methods 18, 507–519 (2021). DOI: 10.1038/s41592-021-01128-0"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Robust single-cell discovery of RNA targets of RNA-binding proteins and ribosomes",
+        "authors": [
+          {
+            "family": "Brannan",
+            "given": "Kristopher W."
+          },
+          {
+            "family": "Chaim",
+            "given": "Isaac A."
+          },
+          {
+            "family": "Marina",
+            "given": "Ryan J."
+          },
+          {
+            "family": "Yee",
+            "given": "Brian A."
+          },
+          {
+            "family": "Kofman",
+            "given": "Eric R."
+          },
+          {
+            "family": "Lorenz",
+            "given": "Daniel A."
+          },
+          {
+            "family": "Jagannatha",
+            "given": "Pratibha"
+          },
+          {
+            "family": "Dong",
+            "given": "Kevin D."
+          },
+          {
+            "family": "Madrigal",
+            "given": "Assael A."
+          },
+          {
+            "family": "Underwood",
+            "given": "Jason G."
+          },
+          {
+            "family": "Yeo",
+            "given": "Gene W."
+          }
+        ],
+        "year": 2021,
+        "venue": "Nature Methods",
+        "doi": "10.1038/s41592-021-01128-0",
+        "url": "https://doi.org/10.1038/s41592-021-01128-0"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.99,
+      "explanation": "The provided Crossref evidence resolves the claimed DOI to a real 2021 Nature Methods paper with matching first authors, year, venue, pages, and substantively matching title. The claimed title adds a descriptive STAMP phrase that is omitted from the canonical Crossref title, but the citation clearly points to the same paper.",
+      "matched_identifier": "10.1038/s41592-021-01128-0",
+      "mismatches": [
+        "title: claimed includes 'by APOBEC-mediated RNA tagging (STAMP)', canonical Crossref title omits this phrase"
+      ],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 18,
+    "citation": {
+      "id": 18,
+      "authors": [
+        {
+          "family": "Kamenska",
+          "given": "A"
+        },
+        {
+          "family": "Lu",
+          "given": "W-T"
+        },
+        {
+          "family": "Kubacka",
+          "given": "D"
+        },
+        {
+          "family": "Broomhead",
+          "given": "H"
+        },
+        {
+          "family": "Minshall",
+          "given": "N"
+        },
+        {
+          "family": "Bushell",
+          "given": "M"
+        },
+        {
+          "family": "Standart",
+          "given": "N"
+        }
+      ],
+      "title": "Human 4E-T represses translation of bound mRNAs and enhances microRNA-mediated silencing",
+      "year": 2014,
+      "venue": "Nucleic Acids Res",
+      "doi": "10.1093/nar/gkt1265",
+      "url": null,
+      "raw_text": "Kamenska A, Lu W-T, Kubacka D, Broomhead H, Minshall N, Bushell M, Standart N. Human 4E-T represses translation of bound mRNAs and enhances microRNA-mediated silencing. Nucleic Acids Res 42, 3298–3313 (2014). DOI: 10.1093/nar/gkt1265"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Human 4E-T represses translation of bound mRNAs and enhances microRNA-mediated silencing",
+        "authors": [
+          {
+            "family": "Kamenska",
+            "given": "Anastasiia"
+          },
+          {
+            "family": "Lu",
+            "given": "Wei-Ting"
+          },
+          {
+            "family": "Kubacka",
+            "given": "Dorota"
+          },
+          {
+            "family": "Broomhead",
+            "given": "Helen"
+          },
+          {
+            "family": "Minshall",
+            "given": "Nicola"
+          },
+          {
+            "family": "Bushell",
+            "given": "Martin"
+          },
+          {
+            "family": "Standart",
+            "given": "Nancy"
+          }
+        ],
+        "year": 2014,
+        "venue": "Nucleic Acids Research",
+        "doi": "10.1093/nar/gkt1265",
+        "url": "https://doi.org/10.1093/nar/gkt1265"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The API evidence reports an exact Crossref match for the title, DOI, year, venue, and full author list, with only expanded given names compared to the citation initials. This is a real Nucleic Acids Research paper from 2014.",
+      "matched_identifier": "10.1093/nar/gkt1265",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 19,
+    "citation": {
+      "id": 19,
+      "authors": [
+        {
+          "family": "Räsch",
+          "given": "F"
+        },
+        {
+          "family": "Weber",
+          "given": "R"
+        },
+        {
+          "family": "Izaurralde",
+          "given": "E"
+        },
+        {
+          "family": "Igreja",
+          "given": "C"
+        }
+      ],
+      "title": "4E-T-bound mRNAs are stored in a silenced and deadenylated form",
+      "year": 2020,
+      "venue": "Genes Dev",
+      "doi": "10.1101/gad.336073.119",
+      "url": null,
+      "raw_text": "Räsch F, Weber R, Izaurralde E, Igreja C. 4E-T-bound mRNAs are stored in a silenced and deadenylated form. Genes Dev 34, 847–860 (2020). DOI: 10.1101/gad.336073.119"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "4E-T-bound mRNAs are stored in a silenced and deadenylated form",
+        "authors": [
+          {
+            "family": "Räsch",
+            "given": "Felix"
+          },
+          {
+            "family": "Weber",
+            "given": "Ramona"
+          },
+          {
+            "family": "Izaurralde",
+            "given": "Elisa"
+          },
+          {
+            "family": "Igreja",
+            "given": "Cátia"
+          }
+        ],
+        "year": 2020,
+        "venue": "Genes &amp; Development",
+        "doi": "10.1101/gad.336073.119",
+        "url": "https://doi.org/10.1101/gad.336073.119"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "Crossref returned an exact match for the cited title, author list, year, venue, and DOI. The expanded given names match the initials in the citation, and the venue abbreviation corresponds to Genes & Development.",
+      "matched_identifier": "10.1101/gad.336073.119",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 20,
+    "citation": {
+      "id": 20,
+      "authors": [
+        {
+          "family": "Minshall",
+          "given": "N"
+        },
+        {
+          "family": "Reiter",
+          "given": "M-H"
+        },
+        {
+          "family": "Weil",
+          "given": "D"
+        },
+        {
+          "family": "Standart",
+          "given": "N"
+        }
+      ],
+      "title": "CPEB interacts with an ovary-specific eIF4E and 4E-T in early Xenopus oocytes",
+      "year": 2007,
+      "venue": "J Biol Chem",
+      "doi": "10.1074/jbc.M704629200",
+      "url": null,
+      "raw_text": "Minshall N, Reiter M-H, Weil D, Standart N. CPEB interacts with an ovary-specific eIF4E and 4E-T in early Xenopus oocytes. J Biol Chem 282, 37389–37401 (2007). DOI: 10.1074/jbc.M704629200"
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "CPEB Interacts with an Ovary-specific eIF4E and 4E-T in Early Xenopus Oocytes",
+        "authors": [
+          {
+            "family": "Minshall",
+            "given": "Nicola"
+          },
+          {
+            "family": "Reiter",
+            "given": "Marie Helene"
+          },
+          {
+            "family": "Weil",
+            "given": "Dominique"
+          },
+          {
+            "family": "Standart",
+            "given": "Nancy"
+          }
+        ],
+        "year": 2007,
+        "venue": "Journal of Biological Chemistry",
+        "doi": "10.1074/jbc.m704629200",
+        "url": "https://doi.org/10.1074/jbc.m704629200"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": true,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "Crossref evidence contains a matching 2007 Journal of Biological Chemistry article with the same title, author list, year, and DOI. The only differences are formatting/capitalization and expanded given names, which are not substantive discrepancies.",
+      "matched_identifier": "10.1074/jbc.m704629200",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  }
+]

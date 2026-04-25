@@ -1,0 +1,31 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Genetics of ovarian insufficiency and defects of folliculogenesis",
+    "authors": [
+      {
+        "family": "França",
+        "given": "Monica Malheiros"
+      },
+      {
+        "family": "Mendonca",
+        "given": "Berenice Bilharinho"
+      }
+    ],
+    "year": 2022,
+    "venue": "Best Practice &amp; Research Clinical Endocrinology &amp; Metabolism",
+    "doi": "10.1016/j.beem.2021.101594",
+    "url": "https://doi.org/10.1016/j.beem.2021.101594"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

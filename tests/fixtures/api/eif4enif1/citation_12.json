@@ -1,0 +1,79 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Robust transcriptome-wide discovery of RNA-binding protein binding sites with enhanced CLIP (eCLIP)",
+    "authors": [
+      {
+        "family": "Van Nostrand",
+        "given": "Eric L"
+      },
+      {
+        "family": "Pratt",
+        "given": "Gabriel A"
+      },
+      {
+        "family": "Shishkin",
+        "given": "Alexander A"
+      },
+      {
+        "family": "Gelboin-Burkhart",
+        "given": "Chelsea"
+      },
+      {
+        "family": "Fang",
+        "given": "Mark Y"
+      },
+      {
+        "family": "Sundararaman",
+        "given": "Balaji"
+      },
+      {
+        "family": "Blue",
+        "given": "Steven M"
+      },
+      {
+        "family": "Nguyen",
+        "given": "Thai B"
+      },
+      {
+        "family": "Surka",
+        "given": "Christine"
+      },
+      {
+        "family": "Elkins",
+        "given": "Keri"
+      },
+      {
+        "family": "Stanton",
+        "given": "Rebecca"
+      },
+      {
+        "family": "Rigo",
+        "given": "Frank"
+      },
+      {
+        "family": "Guttman",
+        "given": "Mitchell"
+      },
+      {
+        "family": "Yeo",
+        "given": "Gene W"
+      }
+    ],
+    "year": 2016,
+    "venue": "Nature Methods",
+    "doi": "10.1038/nmeth.3810",
+    "url": "https://doi.org/10.1038/nmeth.3810"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

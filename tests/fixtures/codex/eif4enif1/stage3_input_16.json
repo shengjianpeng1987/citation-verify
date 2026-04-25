@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1, "explanation": "Crossref evidence exactly matches the cited title, full author list, year, venue, and DOI. The citation points to a real Cell paper published in 2016.", "matched_identifier": "10.1016/j.cell.2016.03.007", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

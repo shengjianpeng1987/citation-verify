@@ -1,0 +1,39 @@
+{
+  "verdict": "valid",
+  "confidence": 0.972,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Coverage recommendations for methylation analysis by whole-genome bisulfite sequencing",
+    "authors": [
+      {
+        "family": "Ziller",
+        "given": "Michael J"
+      },
+      {
+        "family": "Hansen",
+        "given": "Kasper D"
+      },
+      {
+        "family": "Meissner",
+        "given": "Alexander"
+      },
+      {
+        "family": "Aryee",
+        "given": "Martin J"
+      }
+    ],
+    "year": 2015,
+    "venue": "Nature Methods",
+    "doi": "10.1038/nmeth.3152",
+    "url": "https://doi.org/10.1038/nmeth.3152"
+  },
+  "title_similarity": 0.954,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 0.954,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: valid (title_sim=0.95 raw=0.95, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+  ]
+}

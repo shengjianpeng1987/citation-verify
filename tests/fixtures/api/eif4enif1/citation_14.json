@@ -1,0 +1,55 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Improved library preparation with the new iCLIP2 protocol",
+    "authors": [
+      {
+        "family": "Buchbender",
+        "given": "Andreas"
+      },
+      {
+        "family": "Mutter",
+        "given": "Holger"
+      },
+      {
+        "family": "Sutandy",
+        "given": "F.X. Reymond"
+      },
+      {
+        "family": "Körtel",
+        "given": "Nadine"
+      },
+      {
+        "family": "Hänel",
+        "given": "Heike"
+      },
+      {
+        "family": "Busch",
+        "given": "Anke"
+      },
+      {
+        "family": "Ebersberger",
+        "given": "Stefanie"
+      },
+      {
+        "family": "König",
+        "given": "Julian"
+      }
+    ],
+    "year": 2020,
+    "venue": "Methods",
+    "doi": "10.1016/j.ymeth.2019.10.003",
+    "url": "https://doi.org/10.1016/j.ymeth.2019.10.003"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

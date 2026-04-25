@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1, "explanation": "Crossref evidence reports an exact DOI match with the same title, matching authors, matching year, and the same journal venue. The citation points to a real paper.", "matched_identifier": "10.1016/j.beem.2021.101594", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

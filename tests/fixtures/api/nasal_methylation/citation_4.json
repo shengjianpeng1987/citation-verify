@@ -1,0 +1,25 @@
+{
+  "verdict": "partially_valid",
+  "confidence": 0.488,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "GENE-SWITCH Chicken DNA methylation with Reduced representation bisulfite sequencing (RRBS)",
+    "authors": [],
+    "year": null,
+    "venue": "BioStudies database",
+    "doi": "10.6019/s-bsst613",
+    "url": "https://doi.org/10.6019/s-bsst613"
+  },
+  "title_similarity": 0.814,
+  "author_overlap": 0.0,
+  "year_match": false,
+  "title_similarity_raw": 0.814,
+  "author_overlap_raw": 0.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: partially_valid (title_sim=0.81 raw=0.81, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+    "openalex: best candidate title_sim=0.56, author_overlap=0.00 — too weak to call a match",
+    "openalex: not_found (title_sim=0.56 raw=0.56, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)",
+    "semantic_scholar: no results"
+  ]
+}

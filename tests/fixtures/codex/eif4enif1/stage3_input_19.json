@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1, "explanation": "Crossref returned an exact match for the cited title, author list, year, venue, and DOI. The expanded given names match the initials in the citation, and the venue abbreviation corresponds to Genes & Development.", "matched_identifier": "10.1101/gad.336073.119", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

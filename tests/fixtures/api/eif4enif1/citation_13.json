@@ -1,0 +1,47 @@
+{
+  "verdict": "valid",
+  "confidence": 0.992,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "irCLIP platform for efficient characterization of protein–RNA interactions",
+    "authors": [
+      {
+        "family": "Zarnegar",
+        "given": "Brian J"
+      },
+      {
+        "family": "Flynn",
+        "given": "Ryan A"
+      },
+      {
+        "family": "Shen",
+        "given": "Ying"
+      },
+      {
+        "family": "Do",
+        "given": "Brian T"
+      },
+      {
+        "family": "Chang",
+        "given": "Howard Y"
+      },
+      {
+        "family": "Khavari",
+        "given": "Paul A"
+      }
+    ],
+    "year": 2016,
+    "venue": "Nature Methods",
+    "doi": "10.1038/nmeth.3840",
+    "url": "https://doi.org/10.1038/nmeth.3840"
+  },
+  "title_similarity": 0.986,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 0.986,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=0.99 raw=0.99, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

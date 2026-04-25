@@ -1,0 +1,59 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "iCLIP reveals the function of hnRNP particles in splicing at individual nucleotide resolution",
+    "authors": [
+      {
+        "family": "König",
+        "given": "Julian"
+      },
+      {
+        "family": "Zarnack",
+        "given": "Kathi"
+      },
+      {
+        "family": "Rot",
+        "given": "Gregor"
+      },
+      {
+        "family": "Curk",
+        "given": "Tomaž"
+      },
+      {
+        "family": "Kayikci",
+        "given": "Melis"
+      },
+      {
+        "family": "Zupan",
+        "given": "Blaž"
+      },
+      {
+        "family": "Turner",
+        "given": "Daniel J"
+      },
+      {
+        "family": "Luscombe",
+        "given": "Nicholas M"
+      },
+      {
+        "family": "Ule",
+        "given": "Jernej"
+      }
+    ],
+    "year": 2010,
+    "venue": "Nature Structural &amp; Molecular Biology",
+    "doi": "10.1038/nsmb.1838",
+    "url": "https://doi.org/10.1038/nsmb.1838"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

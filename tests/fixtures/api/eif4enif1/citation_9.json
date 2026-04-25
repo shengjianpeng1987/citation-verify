@@ -1,0 +1,47 @@
+{
+  "verdict": "valid",
+  "confidence": 0.965,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Translational repression by 4E-T is crucial to maintain the prophase-I arrest in vertebrate oocytes",
+    "authors": [
+      {
+        "family": "Heim",
+        "given": "Andreas"
+      },
+      {
+        "family": "Cheng",
+        "given": "Shiya"
+      },
+      {
+        "family": "Orth",
+        "given": "Jan"
+      },
+      {
+        "family": "Stengel",
+        "given": "Florian"
+      },
+      {
+        "family": "Schuh",
+        "given": "Melina"
+      },
+      {
+        "family": "Mayer",
+        "given": "Thomas U."
+      }
+    ],
+    "year": 2025,
+    "venue": "Nature Communications",
+    "doi": "10.1038/s41467-025-62971-9",
+    "url": "https://doi.org/10.1038/s41467-025-62971-9"
+  },
+  "title_similarity": 0.967,
+  "author_overlap": 0.95,
+  "year_match": true,
+  "title_similarity_raw": 0.967,
+  "author_overlap_raw": 0.167,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=0.97 raw=0.97, author_overlap=0.95 raw=0.17, year_match=True, doi_exact_match=True)"
+  ]
+}

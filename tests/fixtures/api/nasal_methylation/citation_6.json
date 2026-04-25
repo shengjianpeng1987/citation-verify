@@ -1,0 +1,58 @@
+{
+  "verdict": "partially_valid",
+  "confidence": 0.746,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Epigenome-wide association studies: current knowledge, strategies and recommendations",
+    "authors": [
+      {
+        "family": "Campagna",
+        "given": "Maria Pia"
+      },
+      {
+        "family": "Xavier",
+        "given": "Alexandre"
+      },
+      {
+        "family": "Lechner-Scott",
+        "given": "Jeannette"
+      },
+      {
+        "family": "Maltby",
+        "given": "Vicky"
+      },
+      {
+        "family": "Scott",
+        "given": "Rodney J."
+      },
+      {
+        "family": "Butzkueven",
+        "given": "Helmut"
+      },
+      {
+        "family": "Jokubaitis",
+        "given": "Vilija G."
+      },
+      {
+        "family": "Lea",
+        "given": "Rodney A."
+      }
+    ],
+    "year": 2021,
+    "venue": "Clinical Epigenetics",
+    "doi": "10.1186/s13148-021-01200-8",
+    "url": "https://doi.org/10.1186/s13148-021-01200-8"
+  },
+  "title_similarity": 0.743,
+  "author_overlap": 1.0,
+  "year_match": false,
+  "title_similarity_raw": 0.743,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: partially_valid (title_sim=0.74 raw=0.74, author_overlap=1.00 raw=1.00, year_match=False, doi_exact_match=False)",
+    "openalex: best candidate title_sim=0.35, author_overlap=0.00 — too weak to call a match",
+    "openalex: not_found (title_sim=0.35 raw=0.35, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+    "semantic_scholar: no results"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "DNA methylation biomarkers in asthma and rhinitis: Are we there yet?",
+    "authors": [
+      {
+        "family": "Legaki",
+        "given": "Evangelia"
+      },
+      {
+        "family": "Arsenis",
+        "given": "Christos"
+      },
+      {
+        "family": "Taka",
+        "given": "Styliani"
+      },
+      {
+        "family": "Papadopoulos",
+        "given": "Nikolaos G."
+      }
+    ],
+    "year": 2022,
+    "venue": "Clinical and Translational Allergy",
+    "doi": "10.1002/clt2.12131",
+    "url": "https://doi.org/10.1002/clt2.12131"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+  ]
+}

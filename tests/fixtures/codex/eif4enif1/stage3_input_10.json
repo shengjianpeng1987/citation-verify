@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1, "explanation": "Crossref evidence exactly matches the cited title, year, and DOI, and the listed authors correspond to the beginning of the full author list. Venue abbreviation is consistent with Nature Cell Biology.", "matched_identifier": "10.1038/s41556-021-00696-9", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

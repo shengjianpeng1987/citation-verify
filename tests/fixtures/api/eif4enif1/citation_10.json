@@ -1,0 +1,99 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Global profiling of RNA-binding protein target sites by LACE-seq",
+    "authors": [
+      {
+        "family": "Su",
+        "given": "Ruibao"
+      },
+      {
+        "family": "Fan",
+        "given": "Li-Hua"
+      },
+      {
+        "family": "Cao",
+        "given": "Changchang"
+      },
+      {
+        "family": "Wang",
+        "given": "Lei"
+      },
+      {
+        "family": "Du",
+        "given": "Zongchang"
+      },
+      {
+        "family": "Cai",
+        "given": "Zhaokui"
+      },
+      {
+        "family": "Ouyang",
+        "given": "Ying-Chun"
+      },
+      {
+        "family": "Wang",
+        "given": "Yue"
+      },
+      {
+        "family": "Zhou",
+        "given": "Qian"
+      },
+      {
+        "family": "Wu",
+        "given": "Ligang"
+      },
+      {
+        "family": "Zhang",
+        "given": "Nan"
+      },
+      {
+        "family": "Zhu",
+        "given": "Xiaoxiao"
+      },
+      {
+        "family": "Lei",
+        "given": "Wen-Long"
+      },
+      {
+        "family": "Zhao",
+        "given": "Hailian"
+      },
+      {
+        "family": "Tian",
+        "given": "Yong"
+      },
+      {
+        "family": "He",
+        "given": "Shunmin"
+      },
+      {
+        "family": "Wong",
+        "given": "Catherine C. L."
+      },
+      {
+        "family": "Sun",
+        "given": "Qing-Yuan"
+      },
+      {
+        "family": "Xue",
+        "given": "Yuanchao"
+      }
+    ],
+    "year": 2021,
+    "venue": "Nature Cell Biology",
+    "doi": "10.1038/s41556-021-00696-9",
+    "url": "https://doi.org/10.1038/s41556-021-00696-9"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

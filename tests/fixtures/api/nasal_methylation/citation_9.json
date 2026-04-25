@@ -1,0 +1,62 @@
+{
+  "verdict": "partially_valid",
+  "confidence": 0.49,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Jllumina - A comprehensive Java-based API for statistical Illumina Infinium HumanMethylation450 and Infinium MethylationEPIC BeadChip data processing",
+    "authors": [
+      {
+        "family": "Almeida",
+        "given": "Diogo"
+      },
+      {
+        "family": "Skov",
+        "given": "Ida"
+      },
+      {
+        "family": "Lund",
+        "given": "Jesper"
+      },
+      {
+        "family": "Mohammadnejad",
+        "given": "Afsaneh"
+      },
+      {
+        "family": "Silva",
+        "given": "Artur"
+      },
+      {
+        "family": "Vandin",
+        "given": "Fabio"
+      },
+      {
+        "family": "Tan",
+        "given": "Qihua"
+      },
+      {
+        "family": "Baumbach",
+        "given": "Jan"
+      },
+      {
+        "family": "Röttger",
+        "given": "Richard"
+      }
+    ],
+    "year": 2016,
+    "venue": "Journal of Integrative Bioinformatics",
+    "doi": "10.1515/jib-2016-294",
+    "url": "https://doi.org/10.1515/jib-2016-294"
+  },
+  "title_similarity": 0.817,
+  "author_overlap": 0.0,
+  "year_match": false,
+  "title_similarity_raw": 0.817,
+  "author_overlap_raw": 0.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: partially_valid (title_sim=0.82 raw=0.82, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+    "openalex: best candidate title_sim=0.37, author_overlap=0.00 — too weak to call a match",
+    "openalex: not_found (title_sim=0.37 raw=0.37, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+    "semantic_scholar: no results"
+  ]
+}

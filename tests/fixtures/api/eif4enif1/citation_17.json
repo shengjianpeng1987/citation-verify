@@ -1,0 +1,67 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Robust single-cell discovery of RNA targets of RNA-binding proteins and ribosomes",
+    "authors": [
+      {
+        "family": "Brannan",
+        "given": "Kristopher W."
+      },
+      {
+        "family": "Chaim",
+        "given": "Isaac A."
+      },
+      {
+        "family": "Marina",
+        "given": "Ryan J."
+      },
+      {
+        "family": "Yee",
+        "given": "Brian A."
+      },
+      {
+        "family": "Kofman",
+        "given": "Eric R."
+      },
+      {
+        "family": "Lorenz",
+        "given": "Daniel A."
+      },
+      {
+        "family": "Jagannatha",
+        "given": "Pratibha"
+      },
+      {
+        "family": "Dong",
+        "given": "Kevin D."
+      },
+      {
+        "family": "Madrigal",
+        "given": "Assael A."
+      },
+      {
+        "family": "Underwood",
+        "given": "Jason G."
+      },
+      {
+        "family": "Yeo",
+        "given": "Gene W."
+      }
+    ],
+    "year": 2021,
+    "venue": "Nature Methods",
+    "doi": "10.1038/s41592-021-01128-0",
+    "url": "https://doi.org/10.1038/s41592-021-01128-0"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

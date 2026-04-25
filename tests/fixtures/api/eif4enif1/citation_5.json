@@ -1,0 +1,51 @@
+{
+  "verdict": "valid",
+  "confidence": 0.985,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency",
+    "authors": [
+      {
+        "family": "Shang",
+        "given": "Lingyue"
+      },
+      {
+        "family": "Ren",
+        "given": "Shuting"
+      },
+      {
+        "family": "Yang",
+        "given": "Xi"
+      },
+      {
+        "family": "Zhang",
+        "given": "Feng"
+      },
+      {
+        "family": "Jin",
+        "given": "Li"
+      },
+      {
+        "family": "Zhang",
+        "given": "Xiaojin"
+      },
+      {
+        "family": "Wu",
+        "given": "Yanhua"
+      }
+    ],
+    "year": 2022,
+    "venue": "European Journal of Medical Genetics",
+    "doi": "10.1016/j.ejmg.2022.104597",
+    "url": "https://doi.org/10.1016/j.ejmg.2022.104597"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 0.95,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 0.667,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=0.95 raw=0.67, year_match=True, doi_exact_match=True)"
+  ]
+}

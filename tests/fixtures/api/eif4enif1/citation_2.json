@@ -1,0 +1,51 @@
+{
+  "verdict": "valid",
+  "confidence": 0.97,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Mutations in<i>eIF4ENIF1</i>Are Associated With Primary Ovarian Insufficiency",
+    "authors": [
+      {
+        "family": "Kasippillai",
+        "given": "Thushiga"
+      },
+      {
+        "family": "MacArthur",
+        "given": "Daniel G."
+      },
+      {
+        "family": "Kirby",
+        "given": "Andrew"
+      },
+      {
+        "family": "Thomas",
+        "given": "Brett"
+      },
+      {
+        "family": "Lambalk",
+        "given": "Cornelius B."
+      },
+      {
+        "family": "Daly",
+        "given": "Mark J."
+      },
+      {
+        "family": "Welt",
+        "given": "Corrine K."
+      }
+    ],
+    "year": 2013,
+    "venue": "The Journal of Clinical Endocrinology &amp; Metabolism",
+    "doi": "10.1210/jc.2013-1102",
+    "url": "https://doi.org/10.1210/jc.2013-1102"
+  },
+  "title_similarity": 0.95,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 0.886,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=0.95 raw=0.89, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

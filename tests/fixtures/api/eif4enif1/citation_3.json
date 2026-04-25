@@ -1,0 +1,43 @@
+{
+  "verdict": "valid",
+  "confidence": 0.985,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing",
+    "authors": [
+      {
+        "family": "Zhao",
+        "given": "Minying"
+      },
+      {
+        "family": "Feng",
+        "given": "Fan"
+      },
+      {
+        "family": "Chu",
+        "given": "Chunfang"
+      },
+      {
+        "family": "Yue",
+        "given": "Wentao"
+      },
+      {
+        "family": "Li",
+        "given": "Lin"
+      }
+    ],
+    "year": 2019,
+    "venue": "Journal of Ovarian Research",
+    "doi": "10.1186/s13048-019-0595-0",
+    "url": "https://doi.org/10.1186/s13048-019-0595-0"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 0.95,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 0.4,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=0.95 raw=0.40, year_match=True, doi_exact_match=True)"
+  ]
+}

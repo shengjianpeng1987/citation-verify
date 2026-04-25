@@ -1,0 +1,35 @@
+{
+  "verdict": "not_found",
+  "confidence": 0.411,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Reliability of DNA methylation measures using Illumina methylation BeadChip",
+    "authors": [
+      {
+        "family": "Xu",
+        "given": "Zongli"
+      },
+      {
+        "family": "Taylor",
+        "given": "Jack A."
+      }
+    ],
+    "year": 2021,
+    "venue": "Epigenetics",
+    "doi": "10.1080/15592294.2020.1805692",
+    "url": "https://doi.org/10.1080/15592294.2020.1805692"
+  },
+  "title_similarity": 0.685,
+  "author_overlap": 0.0,
+  "year_match": false,
+  "title_similarity_raw": 0.685,
+  "author_overlap_raw": 0.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: best candidate title_sim=0.68, author_overlap=0.00 — too weak to call a match",
+    "crossref: not_found (title_sim=0.68 raw=0.68, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+    "openalex: best candidate title_sim=0.40, author_overlap=0.00 — too weak to call a match",
+    "openalex: not_found (title_sim=0.40 raw=0.40, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)",
+    "semantic_scholar: no results"
+  ]
+}

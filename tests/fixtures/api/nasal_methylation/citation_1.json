@@ -1,0 +1,87 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "The nasal methylome as a biomarker of asthma and airway inflammation in children",
+    "authors": [
+      {
+        "family": "Cardenas",
+        "given": "Andres"
+      },
+      {
+        "family": "Sordillo",
+        "given": "Joanne E."
+      },
+      {
+        "family": "Rifas-Shiman",
+        "given": "Sheryl L."
+      },
+      {
+        "family": "Chung",
+        "given": "Wonil"
+      },
+      {
+        "family": "Liang",
+        "given": "Liming"
+      },
+      {
+        "family": "Coull",
+        "given": "Brent A."
+      },
+      {
+        "family": "Hivert",
+        "given": "Marie-France"
+      },
+      {
+        "family": "Lai",
+        "given": "Peggy S."
+      },
+      {
+        "family": "Forno",
+        "given": "Erick"
+      },
+      {
+        "family": "Celedón",
+        "given": "Juan C."
+      },
+      {
+        "family": "Litonjua",
+        "given": "Augusto A."
+      },
+      {
+        "family": "Brennan",
+        "given": "Kasey J."
+      },
+      {
+        "family": "DeMeo",
+        "given": "Dawn L."
+      },
+      {
+        "family": "Baccarelli",
+        "given": "Andrea A."
+      },
+      {
+        "family": "Oken",
+        "given": "Emily"
+      },
+      {
+        "family": "Gold",
+        "given": "Diane R."
+      }
+    ],
+    "year": 2019,
+    "venue": "Nature Communications",
+    "doi": "10.1038/s41467-019-11058-3",
+    "url": "https://doi.org/10.1038/s41467-019-11058-3"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+  ]
+}

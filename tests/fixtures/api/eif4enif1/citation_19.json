@@ -1,0 +1,39 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "4E-T-bound mRNAs are stored in a silenced and deadenylated form",
+    "authors": [
+      {
+        "family": "Räsch",
+        "given": "Felix"
+      },
+      {
+        "family": "Weber",
+        "given": "Ramona"
+      },
+      {
+        "family": "Izaurralde",
+        "given": "Elisa"
+      },
+      {
+        "family": "Igreja",
+        "given": "Cátia"
+      }
+    ],
+    "year": 2020,
+    "venue": "Genes &amp; Development",
+    "doi": "10.1101/gad.336073.119",
+    "url": "https://doi.org/10.1101/gad.336073.119"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

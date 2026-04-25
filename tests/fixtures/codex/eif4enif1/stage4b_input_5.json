@@ -1,0 +1,1 @@
+{"field_diff": [{"field": "authors", "original": "Shang D, Lian L, Yang H", "corrected": "Shang Lingyue, Ren Shuting, Yang Xi, Zhang Feng, Jin Li, Zhang Xiaojin, Wu Yanhua", "severity": "medium"}, {"field": "venue", "original": "Eur J Med Genet", "corrected": "European Journal of Medical Genetics", "severity": "low"}], "confidence": 0.98, "requires_human_review": false}

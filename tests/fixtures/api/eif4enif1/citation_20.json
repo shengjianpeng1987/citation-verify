@@ -1,0 +1,39 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "CPEB Interacts with an Ovary-specific eIF4E and 4E-T in Early Xenopus Oocytes",
+    "authors": [
+      {
+        "family": "Minshall",
+        "given": "Nicola"
+      },
+      {
+        "family": "Reiter",
+        "given": "Marie Helene"
+      },
+      {
+        "family": "Weil",
+        "given": "Dominique"
+      },
+      {
+        "family": "Standart",
+        "given": "Nancy"
+      }
+    ],
+    "year": 2007,
+    "venue": "Journal of Biological Chemistry",
+    "doi": "10.1074/jbc.m704629200",
+    "url": "https://doi.org/10.1074/jbc.m704629200"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

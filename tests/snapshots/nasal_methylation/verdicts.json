@@ -1,0 +1,824 @@
+[
+  {
+    "citation_id": 1,
+    "citation": {
+      "id": 1,
+      "authors": [
+        {
+          "family": "Forno",
+          "given": "E"
+        }
+      ],
+      "title": "Nasal methylome as biomarker of asthma and airway inflammation in children",
+      "year": 2019,
+      "venue": "Nat Commun",
+      "doi": null,
+      "url": null,
+      "raw_text": "Forno E et al. Nasal methylome as biomarker of asthma and airway inflammation in children. Nat Commun. 2019;10:3095."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "The nasal methylome as a biomarker of asthma and airway inflammation in children",
+        "authors": [
+          {
+            "family": "Cardenas",
+            "given": "Andres"
+          },
+          {
+            "family": "Sordillo",
+            "given": "Joanne E."
+          },
+          {
+            "family": "Rifas-Shiman",
+            "given": "Sheryl L."
+          },
+          {
+            "family": "Chung",
+            "given": "Wonil"
+          },
+          {
+            "family": "Liang",
+            "given": "Liming"
+          },
+          {
+            "family": "Coull",
+            "given": "Brent A."
+          },
+          {
+            "family": "Hivert",
+            "given": "Marie-France"
+          },
+          {
+            "family": "Lai",
+            "given": "Peggy S."
+          },
+          {
+            "family": "Forno",
+            "given": "Erick"
+          },
+          {
+            "family": "Celedón",
+            "given": "Juan C."
+          },
+          {
+            "family": "Litonjua",
+            "given": "Augusto A."
+          },
+          {
+            "family": "Brennan",
+            "given": "Kasey J."
+          },
+          {
+            "family": "DeMeo",
+            "given": "Dawn L."
+          },
+          {
+            "family": "Baccarelli",
+            "given": "Andrea A."
+          },
+          {
+            "family": "Oken",
+            "given": "Emily"
+          },
+          {
+            "family": "Gold",
+            "given": "Diane R."
+          }
+        ],
+        "year": 2019,
+        "venue": "Nature Communications",
+        "doi": "10.1038/s41467-019-11058-3",
+        "url": "https://doi.org/10.1038/s41467-019-11058-3"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.96,
+      "explanation": "A real 2019 Nature Communications paper matches the cited title, venue, and article number, with DOI 10.1038/s41467-019-11058-3. The cited author Forno is an actual coauthor, though the canonical first author is Andres Cardenas rather than Erick Forno.",
+      "matched_identifier": "10.1038/s41467-019-11058-3",
+      "mismatches": [
+        "author order: citation lists Forno E et al.; actual first author is Andres Cardenas and Erick Forno is a coauthor"
+      ],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 2,
+    "citation": {
+      "id": 2,
+      "authors": [
+        {
+          "family": "Legaki",
+          "given": "E"
+        }
+      ],
+      "title": "DNA methylation biomarkers in asthma and rhinitis: Are we there yet?",
+      "year": 2022,
+      "venue": "Clin Transl Allergy",
+      "doi": null,
+      "url": null,
+      "raw_text": "Legaki E et al. DNA methylation biomarkers in asthma and rhinitis: Are we there yet? Clin Transl Allergy. 2022;12:e12131."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "DNA methylation biomarkers in asthma and rhinitis: Are we there yet?",
+        "authors": [
+          {
+            "family": "Legaki",
+            "given": "Evangelia"
+          },
+          {
+            "family": "Arsenis",
+            "given": "Christos"
+          },
+          {
+            "family": "Taka",
+            "given": "Styliani"
+          },
+          {
+            "family": "Papadopoulos",
+            "given": "Nikolaos G."
+          }
+        ],
+        "year": 2022,
+        "venue": "Clinical and Translational Allergy",
+        "doi": "10.1002/clt2.12131",
+        "url": "https://doi.org/10.1002/clt2.12131"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The API evidence reports a Crossref record with the same title, first author Legaki, year 2022, and the same Clinical and Translational Allergy article identifier e12131. The expanded author list and journal name are consistent with the citation's abbreviated form.",
+      "matched_identifier": "10.1002/clt2.12131",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 3,
+    "citation": {
+      "id": 3,
+      "authors": [
+        {
+          "family": "Wang",
+          "given": "J"
+        }
+      ],
+      "title": "Systematic assessment of RRBS to human blood samples",
+      "year": null,
+      "venue": "PLoS One / 相关研究（PMID: 21763364）",
+      "doi": null,
+      "url": null,
+      "raw_text": "Wang J et al. Systematic assessment of RRBS to human blood samples. PLoS One / 相关研究（PMID: 21763364）."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.814,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Systematic assessment of reduced representation bisulfite sequencing to human blood samples: A promising method for large-sample-scale epigenomic studies",
+        "authors": [
+          {
+            "family": "Wang",
+            "given": "Li"
+          },
+          {
+            "family": "Sun",
+            "given": "Jihua"
+          },
+          {
+            "family": "Wu",
+            "given": "Honglong"
+          },
+          {
+            "family": "Liu",
+            "given": "Siyang"
+          },
+          {
+            "family": "Wang",
+            "given": "Junwen"
+          },
+          {
+            "family": "Wu",
+            "given": "Boxin"
+          },
+          {
+            "family": "Huang",
+            "given": "Shujia"
+          },
+          {
+            "family": "Li",
+            "given": "Ning"
+          },
+          {
+            "family": "Wang",
+            "given": "Jun"
+          },
+          {
+            "family": "Zhang",
+            "given": "Xiuqing"
+          }
+        ],
+        "year": 2012,
+        "venue": "Journal of Biotechnology",
+        "doi": "10.1016/j.jbiotec.2011.06.034",
+        "url": "https://doi.org/10.1016/j.jbiotec.2011.06.034"
+      },
+      "title_similarity": 0.857,
+      "author_overlap": 1.0,
+      "year_match": false,
+      "title_similarity_raw": 0.857,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=0.86 raw=0.86, author_overlap=1.00 raw=1.00, year_match=False, doi_exact_match=False)",
+        "openalex: best candidate title_sim=0.51, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.51 raw=0.51, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.92,
+      "explanation": "The cited PMID 21763364 resolves to a real PubMed record with a substantively matching title, where RRBS is the abbreviation for reduced representation bisulfite sequencing. The record and Crossref evidence identify the paper as Li Wang et al., published in Journal of Biotechnology in 2012 with DOI 10.1016/j.jbiotec.2011.06.034; the citation has venue/author shorthand inaccuracies but points to the real paper.",
+      "matched_identifier": "10.1016/j.jbiotec.2011.06.034",
+      "mismatches": [
+        "venue: claimed PLoS One / related research, actual Journal of Biotechnology",
+        "authors: claimed Wang J et al.; actual first author is Li Wang et al.",
+        "year: claimed not specified, actual 2012"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: PMID 21763364 Systematic assessment of RRBS to human blood samples",
+        "web searched: \"Systematic assessment of RRBS to human blood samples\"",
+        "web searched: \"Systematic assessment of reduced representation bisulfite sequencing\" \"21763364\""
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 4,
+    "citation": {
+      "id": 4,
+      "authors": [
+        {
+          "family": "Hui",
+          "given": "T"
+        }
+      ],
+      "title": "Extended representation bisulfite sequencing (XRBS)",
+      "year": 2021,
+      "venue": "Nat Commun",
+      "doi": null,
+      "url": null,
+      "raw_text": "Hui T et al. Extended representation bisulfite sequencing (XRBS). Nat Commun. 2021;12:5265."
+    },
+    "channel_a": {
+      "verdict": "partially_valid",
+      "confidence": 0.488,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "GENE-SWITCH Chicken DNA methylation with Reduced representation bisulfite sequencing (RRBS)",
+        "authors": [],
+        "year": null,
+        "venue": "BioStudies database",
+        "doi": "10.6019/s-bsst613",
+        "url": "https://doi.org/10.6019/s-bsst613"
+      },
+      "title_similarity": 0.814,
+      "author_overlap": 0.0,
+      "year_match": false,
+      "title_similarity_raw": 0.814,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: partially_valid (title_sim=0.81 raw=0.81, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "openalex: best candidate title_sim=0.56, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.56 raw=0.56, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.86,
+      "explanation": "A real 2021 XRBS paper exists, but it is Shareef et al. in Nature Biotechnology, not Hui T et al. in Nature Communications. The claimed Nat Commun 12:5265 citation points to a different paper, so this appears to be a mashed-up citation rather than a fully real one.",
+      "matched_identifier": "10.1038/s41587-021-00910-x",
+      "mismatches": [
+        "authors: claimed Hui T et al., actual Shareef S.J., Bevill S.M., Raman A.T. et al.",
+        "title: claimed Extended representation bisulfite sequencing (XRBS), actual Extended-representation bisulfite sequencing of gene regulatory elements in multiplexed samples and single cells",
+        "venue: claimed Nat Commun, actual Nat Biotechnol",
+        "volume/pages/article: claimed 12:5265, actual 39:1086-1094",
+        "Nat Commun 12:5265: actual paper is Regulation of functional groups on graphene quantum dots directs selective CO2 to CH4 conversion, DOI 10.1038/s41467-021-25640-1"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"Extended representation bisulfite sequencing\" XRBS Hui Nat Commun 2021 12 5265",
+        "web searched: \"Extended representation bisulfite sequencing (XRBS)\"",
+        "web searched: \"Nat Commun\" \"2021\" \"12\" \"5265\" \"Hui\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 5,
+    "citation": {
+      "id": 5,
+      "authors": [
+        {
+          "family": "Kaushal",
+          "given": "A"
+        }
+      ],
+      "title": "Empirical comparison of RRBS and Infinium BeadChip",
+      "year": 2017,
+      "venue": "npj Genom Med",
+      "doi": null,
+      "url": null,
+      "raw_text": "Kaushal A et al. Empirical comparison of RRBS and Infinium BeadChip. npj Genom Med. 2017;2:13."
+    },
+    "channel_a": {
+      "verdict": "partially_valid",
+      "confidence": 0.559,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Comparison of pre-processing methods for Infinium HumanMethylation450 BeadChip array",
+        "authors": [
+          {
+            "family": "Shiah",
+            "given": "Yu-Jia"
+          },
+          {
+            "family": "Fraser",
+            "given": "Michael"
+          },
+          {
+            "family": "Bristow",
+            "given": "Robert G"
+          },
+          {
+            "family": "Boutros",
+            "given": "Paul C"
+          }
+        ],
+        "year": 2017,
+        "venue": "Bioinformatics",
+        "doi": "10.1093/bioinformatics/btx372",
+        "url": "https://doi.org/10.1093/bioinformatics/btx372"
+      },
+      "title_similarity": 0.765,
+      "author_overlap": 0.0,
+      "year_match": true,
+      "title_similarity_raw": 0.765,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: partially_valid (title_sim=0.77 raw=0.77, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)",
+        "openalex: best candidate title_sim=0.48, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.48 raw=0.48, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.95,
+      "explanation": "A real npj Genomic Medicine article exists in 2017, volume 2, article 13, with a substantially matching title and DOI 10.1038/s41525-017-0012-9. However, its authors are Carmona, Accomando, Binder, et al., not Kaushal A et al., so the citation has a major author mismatch.",
+      "matched_identifier": "10.1038/s41525-017-0012-9",
+      "mismatches": [
+        "authors: claimed Kaushal A et al., actual Carmona JJ, Accomando WP Jr, Binder AM et al.",
+        "title: claimed abbreviated title, actual title is \"Empirical comparison of reduced representation bisulfite sequencing and Infinium BeadChip reproducibility and coverage of DNA methylation in humans\""
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"Empirical comparison of RRBS and Infinium BeadChip\"",
+        "web searched: \"Kaushal\" \"Empirical comparison\" \"RRBS\" \"Infinium BeadChip\"",
+        "web searched: \"npj Genom Med\" \"2017\" \"2:13\" \"Kaushal\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 6,
+    "citation": {
+      "id": 6,
+      "authors": [
+        {
+          "family": "Campagna",
+          "given": "MP"
+        }
+      ],
+      "title": "EWAS: knowledge, strategies, recommendations",
+      "year": 2018,
+      "venue": "Nat Rev Genet 相关综述",
+      "doi": null,
+      "url": null,
+      "raw_text": "Campagna MP et al. EWAS: knowledge, strategies, recommendations. Nat Rev Genet 相关综述（2018）."
+    },
+    "channel_a": {
+      "verdict": "partially_valid",
+      "confidence": 0.746,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Epigenome-wide association studies: current knowledge, strategies and recommendations",
+        "authors": [
+          {
+            "family": "Campagna",
+            "given": "Maria Pia"
+          },
+          {
+            "family": "Xavier",
+            "given": "Alexandre"
+          },
+          {
+            "family": "Lechner-Scott",
+            "given": "Jeannette"
+          },
+          {
+            "family": "Maltby",
+            "given": "Vicky"
+          },
+          {
+            "family": "Scott",
+            "given": "Rodney J."
+          },
+          {
+            "family": "Butzkueven",
+            "given": "Helmut"
+          },
+          {
+            "family": "Jokubaitis",
+            "given": "Vilija G."
+          },
+          {
+            "family": "Lea",
+            "given": "Rodney A."
+          }
+        ],
+        "year": 2021,
+        "venue": "Clinical Epigenetics",
+        "doi": "10.1186/s13148-021-01200-8",
+        "url": "https://doi.org/10.1186/s13148-021-01200-8"
+      },
+      "title_similarity": 0.743,
+      "author_overlap": 1.0,
+      "year_match": false,
+      "title_similarity_raw": 0.743,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: partially_valid (title_sim=0.74 raw=0.74, author_overlap=1.00 raw=1.00, year_match=False, doi_exact_match=False)",
+        "openalex: best candidate title_sim=0.35, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.35 raw=0.35, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.91,
+      "explanation": "A real review by Maria Pia Campagna et al. exists with a substantially related full title, but it was published in Clinical Epigenetics in 2021, not Nature Reviews Genetics in 2018. Web search also surfaced Nature Reviews Genetics epigenetics reviews from 2018, but not this Campagna citation in that venue/year.",
+      "matched_identifier": "https://doi.org/10.1186/s13148-021-01200-8",
+      "mismatches": [
+        "title: claimed \"EWAS: knowledge, strategies, recommendations\", actual \"Epigenome-wide association studies: current knowledge, strategies and recommendations\"",
+        "year: claimed 2018, actual 2021",
+        "venue: claimed Nat Rev Genet, actual Clinical Epigenetics"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"EWAS: knowledge, strategies, recommendations\" \"Campagna\"",
+        "web searched: \"Campagna\" \"EWAS\" \"knowledge\" \"strategies\" \"recommendations\" \"2018\"",
+        "web searched: \"Epigenome-wide association studies: current knowledge, strategies and recommendations\" Campagna",
+        "web searched: \"Campagna MP\" \"Nat Rev Genet\" EWAS 2018",
+        "web searched: \"Nature Reviews Genetics\" \"Epigenome-wide association studies\" \"2018\""
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 7,
+    "citation": {
+      "id": 7,
+      "authors": [
+        {
+          "family": "Kaur",
+          "given": "D"
+        }
+      ],
+      "title": "MSA: scalable DNA methylation screening BeadChip",
+      "year": 2024,
+      "venue": "bioRxiv",
+      "doi": null,
+      "url": null,
+      "raw_text": "Kaur D et al. MSA: scalable DNA methylation screening BeadChip. bioRxiv. 2024-05-21."
+    },
+    "channel_a": {
+      "verdict": "not_found",
+      "confidence": 0.411,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Reliability of DNA methylation measures using Illumina methylation BeadChip",
+        "authors": [
+          {
+            "family": "Xu",
+            "given": "Zongli"
+          },
+          {
+            "family": "Taylor",
+            "given": "Jack A."
+          }
+        ],
+        "year": 2021,
+        "venue": "Epigenetics",
+        "doi": "10.1080/15592294.2020.1805692",
+        "url": "https://doi.org/10.1080/15592294.2020.1805692"
+      },
+      "title_similarity": 0.685,
+      "author_overlap": 0.0,
+      "year_match": false,
+      "title_similarity_raw": 0.685,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: best candidate title_sim=0.68, author_overlap=0.00 — too weak to call a match",
+        "crossref: not_found (title_sim=0.68 raw=0.68, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "openalex: best candidate title_sim=0.40, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.40 raw=0.40, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.93,
+      "explanation": "A real bioRxiv preprint exists with this MSA BeadChip title/year and DOI 10.1101/2024.05.17.594606, but its authors are Goldberg, Cloud, Lee, Barnes, and others, not Kaur D et al. The claimed author appears to be mismatched with a different DNA methylation BeadChip paper.",
+      "matched_identifier": "10.1101/2024.05.17.594606",
+      "mismatches": [
+        "authors: claimed first author Kaur D, actual first author David C. Goldberg",
+        "title: claimed shortened title, actual title includes 'for high-throughput trait association studies'"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"MSA: scalable DNA methylation screening BeadChip\"",
+        "web searched: \"10.1101/2024.05.17.594606\""
+      ]
+    },
+    "final_label": "uncertain"
+  },
+  {
+    "citation_id": 8,
+    "citation": {
+      "id": 8,
+      "authors": [
+        {
+          "family": "Illumina",
+          "given": ""
+        }
+      ],
+      "title": "Infinium Methylation Screening Array (MSA) Data Sheet",
+      "year": 2024,
+      "venue": null,
+      "doi": null,
+      "url": null,
+      "raw_text": "Illumina. Infinium Methylation Screening Array (MSA) Data Sheet. 2024."
+    },
+    "channel_a": {
+      "verdict": "not_found",
+      "confidence": 0.369,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "The Illumina Infinium methylation assay for genome-wide methylation analyses",
+        "authors": [
+          {
+            "family": "Nakabayashi",
+            "given": "Kazuhiko"
+          }
+        ],
+        "year": 2020,
+        "venue": "Epigenetics Methods",
+        "doi": "10.1016/b978-0-12-819414-0.00007-0",
+        "url": "https://doi.org/10.1016/b978-0-12-819414-0.00007-0"
+      },
+      "title_similarity": 0.615,
+      "author_overlap": 0.0,
+      "year_match": false,
+      "title_similarity_raw": 0.615,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: best candidate title_sim=0.62, author_overlap=0.00 — too weak to call a match",
+        "crossref: not_found (title_sim=0.62 raw=0.62, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "openalex: best candidate title_sim=0.35, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.35 raw=0.35, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.92,
+      "explanation": "The exact item exists as an official Illumina product literature data sheet dated June 18, 2024. It is not indexed as an academic paper in Crossref/OpenAlex/Semantic Scholar, but the cited title, corporate author, and year substantively match the official document.",
+      "matched_identifier": "https://support.illumina.com/content/dam/illumina/gcs/assembled-assets/marketing-literature/infinium-methylation-screening-array-data-sheet-m-gl-01893/infinium-methylation-screening-array-data-sheet-m-gl-01893.pdf",
+      "mismatches": [
+        "publication_type: claimed as citation-like source; actual item is an Illumina product data sheet, not a journal article",
+        "title: claimed includes '(MSA) Data Sheet'; official listing shows 'Infinium Methylation Screening Array' with document type 'Data sheet'"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"Infinium Methylation Screening Array (MSA) Data Sheet\" Illumina 2024",
+        "web searched: \"Infinium Methylation Screening Array\" \"Data Sheet\" \"Illumina\" \"2024\""
+      ]
+    },
+    "final_label": "uncertain"
+  },
+  {
+    "citation_id": 9,
+    "citation": {
+      "id": 9,
+      "authors": [
+        {
+          "family": "Illumina",
+          "given": ""
+        }
+      ],
+      "title": "Infinium MethylationEPIC v2.0 BeadChip Data Sheet（935K）",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "url": null,
+      "raw_text": "Illumina. Infinium MethylationEPIC v2.0 BeadChip Data Sheet（935K）."
+    },
+    "channel_a": {
+      "verdict": "partially_valid",
+      "confidence": 0.49,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Jllumina - A comprehensive Java-based API for statistical Illumina Infinium HumanMethylation450 and Infinium MethylationEPIC BeadChip data processing",
+        "authors": [
+          {
+            "family": "Almeida",
+            "given": "Diogo"
+          },
+          {
+            "family": "Skov",
+            "given": "Ida"
+          },
+          {
+            "family": "Lund",
+            "given": "Jesper"
+          },
+          {
+            "family": "Mohammadnejad",
+            "given": "Afsaneh"
+          },
+          {
+            "family": "Silva",
+            "given": "Artur"
+          },
+          {
+            "family": "Vandin",
+            "given": "Fabio"
+          },
+          {
+            "family": "Tan",
+            "given": "Qihua"
+          },
+          {
+            "family": "Baumbach",
+            "given": "Jan"
+          },
+          {
+            "family": "Röttger",
+            "given": "Richard"
+          }
+        ],
+        "year": 2016,
+        "venue": "Journal of Integrative Bioinformatics",
+        "doi": "10.1515/jib-2016-294",
+        "url": "https://doi.org/10.1515/jib-2016-294"
+      },
+      "title_similarity": 0.817,
+      "author_overlap": 0.0,
+      "year_match": false,
+      "title_similarity_raw": 0.817,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: partially_valid (title_sim=0.82 raw=0.82, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "openalex: best candidate title_sim=0.37, author_overlap=0.00 — too weak to call a match",
+        "openalex: not_found (title_sim=0.37 raw=0.37, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.93,
+      "explanation": "The API match from Crossref is a different journal article, but an exact web search finds Illumina's official Infinium MethylationEPIC v2.0 BeadChip data sheet/download page. The corporate author and title substantively match the citation; this is a real Illumina data sheet rather than a journal article.",
+      "matched_identifier": "https://www.illumina.com/downloads/infinium-methylation-epic-data-sheet-m-gl-01156.html",
+      "mismatches": [
+        "publication type: cited item is a corporate product data sheet, not an academic journal paper",
+        "year: citation omitted; Illumina page lists date posted 11/16/2022"
+      ],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"Infinium MethylationEPIC v2.0 BeadChip Data Sheet\" \"935K\"",
+        "web searched: \"Infinium MethylationEPIC v2.0 BeadChip Data Sheet\" Illumina"
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 10,
+    "citation": {
+      "id": 10,
+      "authors": [
+        {
+          "family": "Ziller",
+          "given": "MJ"
+        }
+      ],
+      "title": "Coverage recommendations for methylation analysis by WGBS",
+      "year": 2015,
+      "venue": "Nat Methods",
+      "doi": null,
+      "url": null,
+      "raw_text": "Ziller MJ et al. Coverage recommendations for methylation analysis by WGBS. Nat Methods. 2015;12:230–232."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 0.972,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Coverage recommendations for methylation analysis by whole-genome bisulfite sequencing",
+        "authors": [
+          {
+            "family": "Ziller",
+            "given": "Michael J"
+          },
+          {
+            "family": "Hansen",
+            "given": "Kasper D"
+          },
+          {
+            "family": "Meissner",
+            "given": "Alexander"
+          },
+          {
+            "family": "Aryee",
+            "given": "Martin J"
+          }
+        ],
+        "year": 2015,
+        "venue": "Nature Methods",
+        "doi": "10.1038/nmeth.3152",
+        "url": "https://doi.org/10.1038/nmeth.3152"
+      },
+      "title_similarity": 0.954,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 0.954,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=0.95 raw=0.95, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 0.98,
+      "explanation": "The Crossref evidence identifies a real 2015 Nature Methods paper by Michael J. Ziller et al. with a substantively matching title; the citation uses the abbreviation WGBS where the canonical title spells out whole-genome bisulfite sequencing. Year, venue, and lead author match.",
+      "matched_identifier": "10.1038/nmeth.3152",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  }
+]

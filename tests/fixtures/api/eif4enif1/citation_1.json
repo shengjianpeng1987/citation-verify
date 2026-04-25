@@ -1,0 +1,27 @@
+{
+  "verdict": "valid",
+  "confidence": 0.978,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "A novel shuttling protein, 4E-T, mediates the nuclear import of the mRNA 5' cap-binding protein, eIF4E",
+    "authors": [
+      {
+        "family": "Dostie",
+        "given": "J."
+      }
+    ],
+    "year": 2000,
+    "venue": "The EMBO Journal",
+    "doi": "10.1093/emboj/19.12.3142",
+    "url": "https://doi.org/10.1093/emboj/19.12.3142"
+  },
+  "title_similarity": 0.989,
+  "author_overlap": 0.95,
+  "year_match": true,
+  "title_similarity_raw": 0.989,
+  "author_overlap_raw": 0.2,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=0.99 raw=0.99, author_overlap=0.95 raw=0.20, year_match=True, doi_exact_match=True)"
+  ]
+}

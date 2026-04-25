@@ -1,0 +1,31 @@
+{
+  "verdict": "valid",
+  "confidence": 0.991,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Advances in CLIP Technologies for Studies of Protein-RNA Interactions",
+    "authors": [
+      {
+        "family": "Lee",
+        "given": "Flora C.Y."
+      },
+      {
+        "family": "Ule",
+        "given": "Jernej"
+      }
+    ],
+    "year": 2018,
+    "venue": "Molecular Cell",
+    "doi": "10.1016/j.molcel.2018.01.005",
+    "url": "https://doi.org/10.1016/j.molcel.2018.01.005"
+  },
+  "title_similarity": 0.986,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 0.986,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=0.99 raw=0.99, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

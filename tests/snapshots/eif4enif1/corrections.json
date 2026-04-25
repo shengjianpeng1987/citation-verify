@@ -1,0 +1,510 @@
+{
+  "meta": {
+    "schema_version": "0.2.0",
+    "orchestrator_version": "0.2.0",
+    "generated_at": "1970-01-01T00:00:00Z",
+    "input_doc_sha256": "e54cdb0f47f5c9a05897def18ef04db0a3bc67f86737a4305b2aa7bb15d0197a",
+    "input_doc_filename": "EIF4ENIF1_LACE-seq_正式方案.docx",
+    "codex_model": "<recorded-model>",
+    "api_sources_enabled": [
+      "crossref",
+      "openalex",
+      "semantic_scholar"
+    ],
+    "valid_citation_ids": [
+      1,
+      2,
+      4,
+      6,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "corrections": [
+    {
+      "citation_id": 3,
+      "original_citation": {
+        "id": 3,
+        "authors": [
+          {
+            "family": "Zhao",
+            "given": "S"
+          },
+          {
+            "family": "Li",
+            "given": "G"
+          },
+          {
+            "family": "Dalgleish",
+            "given": "R"
+          },
+          {
+            "family": "Vujovic",
+            "given": "S"
+          },
+          {
+            "family": "Jiao",
+            "given": "X"
+          },
+          {
+            "family": "Li",
+            "given": "J"
+          }
+        ],
+        "title": "A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing",
+        "year": 2019,
+        "venue": "J Ovarian Res",
+        "doi": "10.1186/s13048-019-0595-0",
+        "url": null,
+        "raw_text": "Zhao S, Li G, Dalgleish R, Vujovic S, Jiao X, Li J, et al. A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing. J Ovarian Res 12, 119 (2019). DOI: 10.1186/s13048-019-0595-0"
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1186/s13048-019-0595-0",
+        "doi": "10.1186/s13048-019-0595-0",
+        "title": "A novel EIF4ENIF1 mutation associated with a diminished ovarian reserve and premature ovarian insufficiency identified by whole-exome sequencing",
+        "authors": [
+          {
+            "family": "Zhao",
+            "given": "Minying"
+          },
+          {
+            "family": "Feng",
+            "given": "Fan"
+          },
+          {
+            "family": "Chu",
+            "given": "Chunfang"
+          },
+          {
+            "family": "Yue",
+            "given": "Wentao"
+          },
+          {
+            "family": "Li",
+            "given": "Lin"
+          }
+        ],
+        "year": 2019,
+        "venue": "Journal of Ovarian Research",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1186/s13048-019-0595-0"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Zhao S, Li G, Dalgleish R, Vujovic S, Jiao X, Li J",
+          "corrected": "Zhao Minying, Feng Fan, Chu Chunfang, Yue Wentao, Li Lin",
+          "severity": "medium"
+        },
+        {
+          "field": "venue",
+          "original": "J Ovarian Res",
+          "corrected": "Journal of Ovarian Research",
+          "severity": "low"
+        }
+      ],
+      "confidence": 0.97,
+      "requires_human_review": false
+    },
+    {
+      "citation_id": 5,
+      "original_citation": {
+        "id": 5,
+        "authors": [
+          {
+            "family": "Shang",
+            "given": "D"
+          },
+          {
+            "family": "Lian",
+            "given": "L"
+          },
+          {
+            "family": "Yang",
+            "given": "H"
+          }
+        ],
+        "title": "EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency",
+        "year": 2022,
+        "venue": "Eur J Med Genet",
+        "doi": "10.1016/j.ejmg.2022.104597",
+        "url": null,
+        "raw_text": "Shang D, Lian L, Yang H. EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency. Eur J Med Genet 65, 104597 (2022). DOI: 10.1016/j.ejmg.2022.104597"
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1016/j.ejmg.2022.104597",
+        "doi": "10.1016/j.ejmg.2022.104597",
+        "title": "EIF4ENIF1 variants in two patients with non-syndromic premature ovarian insufficiency",
+        "authors": [
+          {
+            "family": "Shang",
+            "given": "Lingyue"
+          },
+          {
+            "family": "Ren",
+            "given": "Shuting"
+          },
+          {
+            "family": "Yang",
+            "given": "Xi"
+          },
+          {
+            "family": "Zhang",
+            "given": "Feng"
+          },
+          {
+            "family": "Jin",
+            "given": "Li"
+          },
+          {
+            "family": "Zhang",
+            "given": "Xiaojin"
+          },
+          {
+            "family": "Wu",
+            "given": "Yanhua"
+          }
+        ],
+        "year": 2022,
+        "venue": "European Journal of Medical Genetics",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1016/j.ejmg.2022.104597"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Shang D, Lian L, Yang H",
+          "corrected": "Shang Lingyue, Ren Shuting, Yang Xi, Zhang Feng, Jin Li, Zhang Xiaojin, Wu Yanhua",
+          "severity": "medium"
+        },
+        {
+          "field": "venue",
+          "original": "Eur J Med Genet",
+          "corrected": "European Journal of Medical Genetics",
+          "severity": "low"
+        }
+      ],
+      "confidence": 0.98,
+      "requires_human_review": false
+    },
+    {
+      "citation_id": 7,
+      "original_citation": {
+        "id": 7,
+        "authors": [
+          {
+            "family": "Guo",
+            "given": "J"
+          },
+          {
+            "family": "Zhang",
+            "given": "T"
+          },
+          {
+            "family": "Guo",
+            "given": "Y"
+          },
+          {
+            "family": "Sun",
+            "given": "T"
+          },
+          {
+            "family": "Li",
+            "given": "H"
+          },
+          {
+            "family": "Zhang",
+            "given": "X"
+          }
+        ],
+        "title": "The eIF4E1B-eIF4ENIF1 complex is essential for mouse oocyte and early embryo development",
+        "year": 2023,
+        "venue": "Adv Sci (Weinh)",
+        "doi": "10.1002/advs.202205500",
+        "url": null,
+        "raw_text": "Guo J, Zhang T, Guo Y, Sun T, Li H, Zhang X, et al. The eIF4E1B-eIF4ENIF1 complex is essential for mouse oocyte and early embryo development. Adv Sci (Weinh) 10, e2205500 (2023). DOI: 10.1002/advs.202205500"
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1002/advs.202205500",
+        "doi": "10.1002/advs.202205500",
+        "title": "Selective Translation of Maternal mRNA by eIF4E1B Controls Oocyte to Embryo Transition",
+        "authors": [
+          {
+            "family": "Guo",
+            "given": "Jing"
+          },
+          {
+            "family": "Zhao",
+            "given": "Hailian"
+          },
+          {
+            "family": "Zhang",
+            "given": "Jue"
+          },
+          {
+            "family": "Lv",
+            "given": "Xiangjiang"
+          },
+          {
+            "family": "Zhang",
+            "given": "Shen"
+          },
+          {
+            "family": "Su",
+            "given": "Ruibao"
+          },
+          {
+            "family": "Zheng",
+            "given": "Wei"
+          },
+          {
+            "family": "Dai",
+            "given": "Jing"
+          },
+          {
+            "family": "Meng",
+            "given": "Fei"
+          },
+          {
+            "family": "Gong",
+            "given": "Fei"
+          },
+          {
+            "family": "Lu",
+            "given": "Guangxiu"
+          },
+          {
+            "family": "Xue",
+            "given": "Yuanchao"
+          },
+          {
+            "family": "Lin",
+            "given": "Ge"
+          }
+        ],
+        "year": 2023,
+        "venue": "Advanced Science",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1002/advs.202205500"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Guo J, Zhang T, Guo Y, Sun T, Li H, Zhang X",
+          "corrected": "Guo Jing, Zhao Hailian, Zhang Jue, Lv Xiangjiang, Zhang Shen, Su Ruibao, Zheng Wei, Dai Jing, Meng Fei, Gong Fei, Lu Guangxiu, Xue Yuanchao, Lin Ge",
+          "severity": "medium"
+        },
+        {
+          "field": "title",
+          "original": "The eIF4E1B-eIF4ENIF1 complex is essential for mouse oocyte and early embryo development",
+          "corrected": "Selective Translation of Maternal mRNA by eIF4E1B Controls Oocyte to Embryo Transition",
+          "severity": "high"
+        },
+        {
+          "field": "venue",
+          "original": "Adv Sci (Weinh)",
+          "corrected": "Advanced Science",
+          "severity": "low"
+        }
+      ],
+      "confidence": 0.88,
+      "requires_human_review": true
+    },
+    {
+      "citation_id": 8,
+      "original_citation": {
+        "id": 8,
+        "authors": [
+          {
+            "family": "Ding",
+            "given": "Y"
+          },
+          {
+            "family": "Wang",
+            "given": "T"
+          },
+          {
+            "family": "Chen",
+            "given": "T"
+          },
+          {
+            "family": "Xie",
+            "given": "C"
+          },
+          {
+            "family": "Zhang",
+            "given": "Q"
+          }
+        ],
+        "title": "Eif4enif1 haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility",
+        "year": 2023,
+        "venue": "Development",
+        "doi": "10.1242/dev.202151",
+        "url": null,
+        "raw_text": "Ding Y, Wang T, Chen T, Xie C, Zhang Q. Eif4enif1 haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility. Development 150, dev202151 (2023). DOI: 10.1242/dev.202151"
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1242/dev.202151",
+        "doi": "10.1242/dev.202151",
+        "title": "<i>Eif4enif1</i> haploinsufficiency disrupts oocyte mitochondrial dynamics and leads to subfertility",
+        "authors": [
+          {
+            "family": "Ding",
+            "given": "Yuxi"
+          },
+          {
+            "family": "He",
+            "given": "Zequn"
+          },
+          {
+            "family": "Sha",
+            "given": "Yanwei"
+          },
+          {
+            "family": "Kee",
+            "given": "Kehkooi"
+          },
+          {
+            "family": "Li",
+            "given": "Lin"
+          }
+        ],
+        "year": 2023,
+        "venue": "Development",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1242/dev.202151"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Ding Y, Wang T, Chen T, Xie C, Zhang Q",
+          "corrected": "Ding Yuxi, He Zequn, Sha Yanwei, Kee Kehkooi, Li Lin",
+          "severity": "medium"
+        }
+      ],
+      "confidence": 0.97,
+      "requires_human_review": false
+    },
+    {
+      "citation_id": 9,
+      "original_citation": {
+        "id": 9,
+        "authors": [
+          {
+            "family": "Heim",
+            "given": "A"
+          },
+          {
+            "family": "Tolmachova",
+            "given": "T"
+          },
+          {
+            "family": "Raina",
+            "given": "VB"
+          },
+          {
+            "family": "Zigáčková",
+            "given": "D"
+          },
+          {
+            "family": "Baumgarten",
+            "given": "N"
+          },
+          {
+            "family": "Schoof",
+            "given": "M"
+          }
+        ],
+        "title": "Translational repression by 4E-T is crucial to maintain the prophase-I arrest in mouse oocytes",
+        "year": 2025,
+        "venue": "Nat Commun",
+        "doi": "10.1038/s41467-025-62971-9",
+        "url": null,
+        "raw_text": "Heim A, Tolmachova T, Raina VB, Zigáčková D, Baumgarten N, Schoof M, et al. Translational repression by 4E-T is crucial to maintain the prophase-I arrest in mouse oocytes. Nat Commun 16, 7789 (2025). DOI: 10.1038/s41467-025-62971-9"
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1038/s41467-025-62971-9",
+        "doi": "10.1038/s41467-025-62971-9",
+        "title": "Translational repression by 4E-T is crucial to maintain the prophase-I arrest in vertebrate oocytes",
+        "authors": [
+          {
+            "family": "Heim",
+            "given": "Andreas"
+          },
+          {
+            "family": "Cheng",
+            "given": "Shiya"
+          },
+          {
+            "family": "Orth",
+            "given": "Jan"
+          },
+          {
+            "family": "Stengel",
+            "given": "Florian"
+          },
+          {
+            "family": "Schuh",
+            "given": "Melina"
+          },
+          {
+            "family": "Mayer",
+            "given": "Thomas U."
+          }
+        ],
+        "year": 2025,
+        "venue": "Nature Communications",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1038/s41467-025-62971-9"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Heim A, Tolmachova T, Raina VB, Zigáčková D, Baumgarten N, Schoof M",
+          "corrected": "Heim Andreas, Cheng Shiya, Orth Jan, Stengel Florian, Schuh Melina, Mayer Thomas U.",
+          "severity": "medium"
+        },
+        {
+          "field": "title",
+          "original": "Translational repression by 4E-T is crucial to maintain the prophase-I arrest in mouse oocytes",
+          "corrected": "Translational repression by 4E-T is crucial to maintain the prophase-I arrest in vertebrate oocytes",
+          "severity": "high"
+        },
+        {
+          "field": "venue",
+          "original": "Nat Commun",
+          "corrected": "Nature Communications",
+          "severity": "low"
+        }
+      ],
+      "confidence": 0.95,
+      "requires_human_review": true
+    }
+  ],
+  "replacements": [],
+  "unresolvable": []
+}

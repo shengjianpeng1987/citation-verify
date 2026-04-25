@@ -1,0 +1,51 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Human 4E-T represses translation of bound mRNAs and enhances microRNA-mediated silencing",
+    "authors": [
+      {
+        "family": "Kamenska",
+        "given": "Anastasiia"
+      },
+      {
+        "family": "Lu",
+        "given": "Wei-Ting"
+      },
+      {
+        "family": "Kubacka",
+        "given": "Dorota"
+      },
+      {
+        "family": "Broomhead",
+        "given": "Helen"
+      },
+      {
+        "family": "Minshall",
+        "given": "Nicola"
+      },
+      {
+        "family": "Bushell",
+        "given": "Martin"
+      },
+      {
+        "family": "Standart",
+        "given": "Nancy"
+      }
+    ],
+    "year": 2014,
+    "venue": "Nucleic Acids Research",
+    "doi": "10.1093/nar/gkt1265",
+    "url": "https://doi.org/10.1093/nar/gkt1265"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": true,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=True)"
+  ]
+}

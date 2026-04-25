@@ -1,0 +1,42 @@
+{
+  "verdict": "partially_valid",
+  "confidence": 0.559,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Comparison of pre-processing methods for Infinium HumanMethylation450 BeadChip array",
+    "authors": [
+      {
+        "family": "Shiah",
+        "given": "Yu-Jia"
+      },
+      {
+        "family": "Fraser",
+        "given": "Michael"
+      },
+      {
+        "family": "Bristow",
+        "given": "Robert G"
+      },
+      {
+        "family": "Boutros",
+        "given": "Paul C"
+      }
+    ],
+    "year": 2017,
+    "venue": "Bioinformatics",
+    "doi": "10.1093/bioinformatics/btx372",
+    "url": "https://doi.org/10.1093/bioinformatics/btx372"
+  },
+  "title_similarity": 0.765,
+  "author_overlap": 0.0,
+  "year_match": true,
+  "title_similarity_raw": 0.765,
+  "author_overlap_raw": 0.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: partially_valid (title_sim=0.77 raw=0.77, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)",
+    "openalex: best candidate title_sim=0.48, author_overlap=0.00 — too weak to call a match",
+    "openalex: not_found (title_sim=0.48 raw=0.48, author_overlap=0.00 raw=0.00, year_match=False, doi_exact_match=False)",
+    "semantic_scholar: no results"
+  ]
+}
