@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1, "explanation": "The API evidence reports a Crossref match with identical title, matching authors, year, venue, and page details for the Nature paper. The canonical DOI is 10.1038/nature14539.", "matched_identifier": "10.1038/nature14539", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

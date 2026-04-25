@@ -31,7 +31,13 @@ import pytest
 # conftest.py has already inserted src/ and tests/ into sys.path.
 from _runner import SNAPSHOTS_DIR, normalize_meta  # noqa: E402
 
+REPO = Path(__file__).resolve().parent.parent
+SYNTHETIC_INPUTS = REPO / "tests" / "fixtures" / "inputs"
+
 CASES = [
+    # Real-research cases — input docx files are not committed (real research
+    # documents). Tests skip on machines without the originals; on the local
+    # workstation they exercise the full Codex/API recording fidelity.
     pytest.param(
         "nasal_methylation",
         "/Users/shengjianpeng/Documents/rrbs/过敏性鼻炎甲基化技术选型.docx",
@@ -41,6 +47,20 @@ CASES = [
         "eif4enif1",
         "/Users/shengjianpeng/Documents/citation verify/eif4enif1-phase2/EIF4ENIF1_LACE-seq_正式方案.docx",
         id="eif4enif1",
+    ),
+    # Synthetic cases — input docx files committed under tests/fixtures/inputs/,
+    # fixtures are hand-crafted in tests/_build_synthetic_mixed_fixtures.py and
+    # tests/_make_synthetic_docx.py. These run unconditionally on every CI
+    # invocation; they are the JOSS-reproducibility contract.
+    pytest.param(
+        "synthetic_happy",
+        str(SYNTHETIC_INPUTS / "synthetic_happy.docx"),
+        id="synthetic_happy",
+    ),
+    pytest.param(
+        "synthetic_mixed",
+        str(SYNTHETIC_INPUTS / "synthetic_mixed.docx"),
+        id="synthetic_mixed",
     ),
 ]
 

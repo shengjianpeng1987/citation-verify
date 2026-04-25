@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "schema_version": "0.2.0",
+    "orchestrator_version": "0.2.0",
+    "generated_at": "1970-01-01T00:00:00Z",
+    "input_doc_sha256": "a1258f2ece49da80beba9744e67ad646fea3c308966478c9d259566d43080397",
+    "input_doc_filename": "synthetic_mixed.docx",
+    "codex_model": "<recorded-model>",
+    "api_sources_enabled": [
+      "crossref",
+      "openalex",
+      "semantic_scholar"
+    ],
+    "valid_citation_ids": [
+      1,
+      2
+    ]
+  },
+  "corrections": [
+    {
+      "citation_id": 3,
+      "original_citation": {
+        "id": 3,
+        "authors": [
+          {
+            "family": "Smith",
+            "given": "P"
+          },
+          {
+            "family": "Jones",
+            "given": "K"
+          }
+        ],
+        "title": "RNA-guided human genome engineering via Cas9",
+        "year": 2013,
+        "venue": "Science",
+        "doi": null,
+        "url": null,
+        "raw_text": "3. Smith P, Jones K. RNA-guided human genome engineering via Cas9. Science. 2013;339(6121):823-826."
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1126/science.1232033",
+        "doi": "10.1126/science.1232033",
+        "title": "RNA-Guided Human Genome Engineering via Cas9",
+        "authors": [
+          {
+            "family": "Mali",
+            "given": "Prashant"
+          },
+          {
+            "family": "Yang",
+            "given": "Luhan"
+          },
+          {
+            "family": "Esvelt",
+            "given": "Kevin M."
+          },
+          {
+            "family": "Aach",
+            "given": "John"
+          },
+          {
+            "family": "Guell",
+            "given": "Marc"
+          },
+          {
+            "family": "DiCarlo",
+            "given": "James E."
+          },
+          {
+            "family": "Norville",
+            "given": "Julie E."
+          },
+          {
+            "family": "Church",
+            "given": "George M."
+          }
+        ],
+        "year": 2013,
+        "venue": "Science",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1126/science.1232033"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Smith P, Jones K",
+          "corrected": "Mali Prashant, Yang Luhan, Esvelt Kevin M., Aach John, Guell Marc, DiCarlo James E., Norville Julie E., Church George M.",
+          "severity": "high"
+        }
+      ],
+      "confidence": 0.95,
+      "requires_human_review": true
+    },
+    {
+      "citation_id": 4,
+      "original_citation": {
+        "id": 4,
+        "authors": [
+          {
+            "family": "Patel",
+            "given": "R"
+          },
+          {
+            "family": "Kumar",
+            "given": "S"
+          }
+        ],
+        "title": "Genetic screens in human cells using the CRISPR-Cas9 system",
+        "year": 2014,
+        "venue": "Science",
+        "doi": null,
+        "url": null,
+        "raw_text": "4. Patel R, Kumar S. Genetic screens in human cells using the CRISPR-Cas9 system. Science. 2014;343(6166):80-84."
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1126/science.1246981",
+        "doi": "10.1126/science.1246981",
+        "title": "Genetic Screens in Human Cells Using the CRISPR-Cas9 System",
+        "authors": [
+          {
+            "family": "Wang",
+            "given": "Tim"
+          },
+          {
+            "family": "Wei",
+            "given": "Jenny J."
+          },
+          {
+            "family": "Sabatini",
+            "given": "David M."
+          },
+          {
+            "family": "Lander",
+            "given": "Eric S."
+          }
+        ],
+        "year": 2014,
+        "venue": "Science",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1126/science.1246981"
+      },
+      "field_diff": [
+        {
+          "field": "authors",
+          "original": "Patel R, Kumar S",
+          "corrected": "Wang Tim, Wei Jenny J., Sabatini David M., Lander Eric S.",
+          "severity": "high"
+        }
+      ],
+      "confidence": 0.95,
+      "requires_human_review": true
+    }
+  ],
+  "replacements": [
+    {
+      "citation_id": 5,
+      "original_citation": {
+        "id": 5,
+        "authors": [
+          {
+            "family": "Lee",
+            "given": "J"
+          },
+          {
+            "family": "Wang",
+            "given": "K"
+          }
+        ],
+        "title": "Universal off-target prediction model for CRISPR-Cas9 systems",
+        "year": 2020,
+        "venue": "Nature Biotechnology",
+        "doi": "10.1038/nbt.fakefake2020",
+        "url": null,
+        "raw_text": "5. Lee J, Wang K. Universal off-target prediction model for CRISPR-Cas9 systems. Nature Biotechnology. 2020;38:1234-1242. doi:10.1038/nbt.fakefake2020"
+      },
+      "canonical_record": {
+        "source": "crossref",
+        "raw_record_url": "https://api.crossref.org/works/10.1038/nbt.3437",
+        "doi": "10.1038/nbt.3437",
+        "title": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9",
+        "authors": [
+          {
+            "family": "Doench",
+            "given": "John G"
+          },
+          {
+            "family": "Fusi",
+            "given": "Nicolo"
+          },
+          {
+            "family": "Sullender",
+            "given": "Meagan"
+          },
+          {
+            "family": "Hegde",
+            "given": "Mudra"
+          },
+          {
+            "family": "Vaimberg",
+            "given": "Emma W"
+          },
+          {
+            "family": "Donovan",
+            "given": "Katherine F"
+          },
+          {
+            "family": "Smith",
+            "given": "Ian"
+          },
+          {
+            "family": "Tothova",
+            "given": "Zuzana"
+          },
+          {
+            "family": "Wilen",
+            "given": "Craig"
+          },
+          {
+            "family": "Orchard",
+            "given": "Robert"
+          },
+          {
+            "family": "Virgin",
+            "given": "Herbert W"
+          },
+          {
+            "family": "Listgarten",
+            "given": "Jennifer"
+          },
+          {
+            "family": "Root",
+            "given": "David E"
+          }
+        ],
+        "year": 2016,
+        "venue": "Nature Biotechnology",
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "url": "https://doi.org/10.1038/nbt.3437"
+      },
+      "fit_score": 8,
+      "confidence": 1.0
+    }
+  ],
+  "unresolvable": [
+    {
+      "citation_id": 6,
+      "reason": "no_suitable_replacement: No published paper matches the claimed title 'A novel framework for citation hallucination detection in academic literature' in Nature Methods 2024. The topic exists in adjacent venues but no candidate is close enough on title, venue, and year to recommend.",
+      "channel_a_best_guess": null,
+      "channel_b_best_guess": {
+        "verdict": "hallucinated",
+        "explanation": "The supplied DOI (10.1038/nmeth.fakefake2024) does not resolve, and the claimed title 'A novel framework for citation hallucination detection in academic literature' does not appear in any indexed Nature Methods 2024 issue. Web searches returned no matching paper. The citation is fabricated.",
+        "matched_identifier": null,
+        "mismatches": []
+      }
+    }
+  ]
+}

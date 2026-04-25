@@ -1,0 +1,424 @@
+[
+  {
+    "citation_id": 1,
+    "citation": {
+      "id": 1,
+      "authors": [
+        {
+          "family": "Jinek",
+          "given": "M"
+        },
+        {
+          "family": "Chylinski",
+          "given": "K"
+        },
+        {
+          "family": "Fonfara",
+          "given": "I"
+        },
+        {
+          "family": "Hauer",
+          "given": "M"
+        },
+        {
+          "family": "Doudna",
+          "given": "JA"
+        },
+        {
+          "family": "Charpentier",
+          "given": "E"
+        }
+      ],
+      "title": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+      "year": 2012,
+      "venue": "Science",
+      "doi": null,
+      "url": null,
+      "raw_text": "1. Jinek M, Chylinski K, Fonfara I, Hauer M, Doudna JA, Charpentier E. A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity. Science. 2012;337(6096):816-821."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "A Programmable Dual-RNA–Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+        "authors": [
+          {
+            "family": "Jinek",
+            "given": "M."
+          },
+          {
+            "family": "Chylinski",
+            "given": "K."
+          },
+          {
+            "family": "Fonfara",
+            "given": "I."
+          },
+          {
+            "family": "Hauer",
+            "given": "M."
+          },
+          {
+            "family": "Doudna",
+            "given": "J. A."
+          },
+          {
+            "family": "Charpentier",
+            "given": "E."
+          }
+        ],
+        "year": 2012,
+        "venue": "Science",
+        "doi": "10.1126/science.1225829",
+        "url": "https://doi.org/10.1126/science.1225829"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "explanation": "Crossref returned an exact match for title, author sequence, year, and venue. The canonical DOI is 10.1126/science.1225829.",
+      "matched_identifier": "10.1126/science.1225829",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 2,
+    "citation": {
+      "id": 2,
+      "authors": [
+        {
+          "family": "Takahashi",
+          "given": "K"
+        },
+        {
+          "family": "Yamanaka",
+          "given": "S"
+        }
+      ],
+      "title": "Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors",
+      "year": 2006,
+      "venue": "Cell",
+      "doi": null,
+      "url": null,
+      "raw_text": "2. Takahashi K, Yamanaka S. Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors. Cell. 2006;126(4):663-676."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Induction of Pluripotent Stem Cells from Mouse Embryonic and Adult Fibroblast Cultures by Defined Factors",
+        "authors": [
+          {
+            "family": "Takahashi",
+            "given": "Kazutoshi"
+          },
+          {
+            "family": "Yamanaka",
+            "given": "Shinya"
+          }
+        ],
+        "year": 2006,
+        "venue": "Cell",
+        "doi": "10.1016/j.cell.2006.07.024",
+        "url": "https://doi.org/10.1016/j.cell.2006.07.024"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "explanation": "Crossref returned the canonical Takahashi & Yamanaka 2006 record. Title, authors, year, and venue all match.",
+      "matched_identifier": "10.1016/j.cell.2006.07.024",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 3,
+    "citation": {
+      "id": 3,
+      "authors": [
+        {
+          "family": "Smith",
+          "given": "P"
+        },
+        {
+          "family": "Jones",
+          "given": "K"
+        }
+      ],
+      "title": "RNA-guided human genome engineering via Cas9",
+      "year": 2013,
+      "venue": "Science",
+      "doi": null,
+      "url": null,
+      "raw_text": "3. Smith P, Jones K. RNA-guided human genome engineering via Cas9. Science. 2013;339(6121):823-826."
+    },
+    "channel_a": {
+      "verdict": "partially_valid",
+      "confidence": 0.7,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "RNA-Guided Human Genome Engineering via Cas9",
+        "authors": [
+          {
+            "family": "Mali",
+            "given": "Prashant"
+          },
+          {
+            "family": "Yang",
+            "given": "Luhan"
+          },
+          {
+            "family": "Esvelt",
+            "given": "Kevin M."
+          },
+          {
+            "family": "Aach",
+            "given": "John"
+          },
+          {
+            "family": "Guell",
+            "given": "Marc"
+          },
+          {
+            "family": "DiCarlo",
+            "given": "James E."
+          },
+          {
+            "family": "Norville",
+            "given": "Julie E."
+          },
+          {
+            "family": "Church",
+            "given": "George M."
+          }
+        ],
+        "year": 2013,
+        "venue": "Science",
+        "doi": "10.1126/science.1232033",
+        "url": "https://doi.org/10.1126/science.1232033"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 0.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: partially_valid (title_sim=1.00 raw=1.00, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.95,
+      "explanation": "A real 2013 Science paper titled 'RNA-Guided Human Genome Engineering via Cas9' exists at this exact venue, year, and page range, but the byline is Mali, Yang, Esvelt et al., not Smith and Jones. The citation conflates real metadata with a fabricated author list.",
+      "matched_identifier": "10.1126/science.1232033",
+      "mismatches": [
+        "authors: claimed Smith P, Jones K; actual lead author Prashant Mali with 8 authors total"
+      ],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 4,
+    "citation": {
+      "id": 4,
+      "authors": [
+        {
+          "family": "Patel",
+          "given": "R"
+        },
+        {
+          "family": "Kumar",
+          "given": "S"
+        }
+      ],
+      "title": "Genetic screens in human cells using the CRISPR-Cas9 system",
+      "year": 2014,
+      "venue": "Science",
+      "doi": null,
+      "url": null,
+      "raw_text": "4. Patel R, Kumar S. Genetic screens in human cells using the CRISPR-Cas9 system. Science. 2014;343(6166):80-84."
+    },
+    "channel_a": {
+      "verdict": "partially_valid",
+      "confidence": 0.7,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Genetic Screens in Human Cells Using the CRISPR-Cas9 System",
+        "authors": [
+          {
+            "family": "Wang",
+            "given": "Tim"
+          },
+          {
+            "family": "Wei",
+            "given": "Jenny J."
+          },
+          {
+            "family": "Sabatini",
+            "given": "David M."
+          },
+          {
+            "family": "Lander",
+            "given": "Eric S."
+          }
+        ],
+        "year": 2014,
+        "venue": "Science",
+        "doi": "10.1126/science.1246981",
+        "url": "https://doi.org/10.1126/science.1246981"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 0.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: partially_valid (title_sim=1.00 raw=1.00, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "partially_valid",
+      "confidence": 0.95,
+      "explanation": "A real 2014 Science paper titled 'Genetic Screens in Human Cells Using the CRISPR-Cas9 System' exists at this exact venue, year, volume, issue, and page range, but the byline is Wang, Wei, Sabatini, Lander, not Patel and Kumar. Author attribution drift on otherwise correct metadata.",
+      "matched_identifier": "10.1126/science.1246981",
+      "mismatches": [
+        "authors: claimed Patel R, Kumar S; actual authors Tim Wang, Jenny J. Wei, David M. Sabatini, Eric S. Lander"
+      ],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "partially_valid"
+  },
+  {
+    "citation_id": 5,
+    "citation": {
+      "id": 5,
+      "authors": [
+        {
+          "family": "Lee",
+          "given": "J"
+        },
+        {
+          "family": "Wang",
+          "given": "K"
+        }
+      ],
+      "title": "Universal off-target prediction model for CRISPR-Cas9 systems",
+      "year": 2020,
+      "venue": "Nature Biotechnology",
+      "doi": "10.1038/nbt.fakefake2020",
+      "url": null,
+      "raw_text": "5. Lee J, Wang K. Universal off-target prediction model for CRISPR-Cas9 systems. Nature Biotechnology. 2020;38:1234-1242. doi:10.1038/nbt.fakefake2020"
+    },
+    "channel_a": {
+      "verdict": "not_found",
+      "confidence": 0.0,
+      "matched_source": null,
+      "matched_record": null,
+      "title_similarity": 0.0,
+      "author_overlap": 0.0,
+      "year_match": false,
+      "title_similarity_raw": 0.0,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: DOI 10.1038/nbt.fakefake2020 does not resolve",
+        "openalex: no results",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "hallucinated",
+      "confidence": 0.95,
+      "explanation": "The supplied DOI (10.1038/nbt.fakefake2020) is non-resolving and the API evidence found no record. A web search for the exact title and the claimed author pair returned no Nature Biotechnology paper matching this citation. The paper appears fabricated.",
+      "matched_identifier": null,
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"Universal off-target prediction model for CRISPR-Cas9 systems\" Lee Wang"
+      ]
+    },
+    "final_label": "hallucinated"
+  },
+  {
+    "citation_id": 6,
+    "citation": {
+      "id": 6,
+      "authors": [
+        {
+          "family": "Anonymous",
+          "given": ""
+        }
+      ],
+      "title": "A novel framework for citation hallucination detection in academic literature",
+      "year": 2024,
+      "venue": "Nature Methods",
+      "doi": "10.1038/nmeth.fakefake2024",
+      "url": null,
+      "raw_text": "6. Anonymous. A novel framework for citation hallucination detection in academic literature. Nature Methods. 2024;21:9999-10001. doi:10.1038/nmeth.fakefake2024"
+    },
+    "channel_a": {
+      "verdict": "not_found",
+      "confidence": 0.0,
+      "matched_source": null,
+      "matched_record": null,
+      "title_similarity": 0.0,
+      "author_overlap": 0.0,
+      "year_match": false,
+      "title_similarity_raw": 0.0,
+      "author_overlap_raw": 0.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: DOI 10.1038/nmeth.fakefake2024 does not resolve",
+        "openalex: no results",
+        "semantic_scholar: no results"
+      ]
+    },
+    "channel_b": {
+      "verdict": "hallucinated",
+      "confidence": 0.95,
+      "explanation": "The supplied DOI (10.1038/nmeth.fakefake2024) does not resolve, and the claimed title 'A novel framework for citation hallucination detection in academic literature' does not appear in any indexed Nature Methods 2024 issue. Web searches returned no matching paper. The citation is fabricated.",
+      "matched_identifier": null,
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence",
+        "web searched: \"citation hallucination detection\" \"Nature Methods\" 2024"
+      ]
+    },
+    "final_label": "hallucinated"
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "verdict": "valid",
+  "confidence": 1.0,
+  "matched_source": "semantic_scholar",
+  "matched_record": {
+    "title": "Attention is All you Need",
+    "authors": [
+      {
+        "family": "Vaswani",
+        "given": "Ashish"
+      },
+      {
+        "family": "Shazeer",
+        "given": "Noam"
+      },
+      {
+        "family": "Parmar",
+        "given": "Niki"
+      },
+      {
+        "family": "Uszkoreit",
+        "given": "Jakob"
+      },
+      {
+        "family": "Jones",
+        "given": "Llion"
+      },
+      {
+        "family": "Gomez",
+        "given": "Aidan N."
+      },
+      {
+        "family": "Kaiser",
+        "given": "Lukasz"
+      },
+      {
+        "family": "Polosukhin",
+        "given": "I."
+      }
+    ],
+    "year": 2017,
+    "venue": "Neural Information Processing Systems",
+    "doi": null,
+    "url": "https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 1.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 1.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=0.83 raw=0.83, year_match=False, doi_exact_match=False)",
+    "openalex: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=False, doi_exact_match=False)",
+    "semantic_scholar: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "verdict": "partially_valid",
+  "confidence": 0.7,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "Genetic Screens in Human Cells Using the CRISPR-Cas9 System",
+    "authors": [
+      {
+        "family": "Wang",
+        "given": "Tim"
+      },
+      {
+        "family": "Wei",
+        "given": "Jenny J."
+      },
+      {
+        "family": "Sabatini",
+        "given": "David M."
+      },
+      {
+        "family": "Lander",
+        "given": "Eric S."
+      }
+    ],
+    "year": 2014,
+    "venue": "Science",
+    "doi": "10.1126/science.1246981",
+    "url": "https://doi.org/10.1126/science.1246981"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 0.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 0.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: partially_valid (title_sim=1.00 raw=1.00, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)"
+  ]
+}

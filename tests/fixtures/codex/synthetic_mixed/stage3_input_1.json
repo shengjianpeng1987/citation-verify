@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1.0, "explanation": "Crossref returned an exact match for title, author sequence, year, and venue. The canonical DOI is 10.1126/science.1225829.", "matched_identifier": "10.1126/science.1225829", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "schema_version": "0.2.0",
+    "orchestrator_version": "0.2.0",
+    "generated_at": "1970-01-01T00:00:00Z",
+    "input_doc_sha256": "5006e511571e97a43d319a1eefdd79d2da5be400812af62b2aacf04e4fa04c71",
+    "input_doc_filename": "synthetic_happy.docx",
+    "codex_model": "<recorded-model>",
+    "api_sources_enabled": [
+      "crossref",
+      "openalex",
+      "semantic_scholar"
+    ],
+    "valid_citation_ids": [
+      1,
+      2,
+      3
+    ]
+  },
+  "corrections": [],
+  "replacements": [],
+  "unresolvable": []
+}

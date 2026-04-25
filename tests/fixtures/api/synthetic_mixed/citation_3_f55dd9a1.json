@@ -1,0 +1,55 @@
+{
+  "verdict": "partially_valid",
+  "confidence": 0.7,
+  "matched_source": "crossref",
+  "matched_record": {
+    "title": "RNA-Guided Human Genome Engineering via Cas9",
+    "authors": [
+      {
+        "family": "Mali",
+        "given": "Prashant"
+      },
+      {
+        "family": "Yang",
+        "given": "Luhan"
+      },
+      {
+        "family": "Esvelt",
+        "given": "Kevin M."
+      },
+      {
+        "family": "Aach",
+        "given": "John"
+      },
+      {
+        "family": "Guell",
+        "given": "Marc"
+      },
+      {
+        "family": "DiCarlo",
+        "given": "James E."
+      },
+      {
+        "family": "Norville",
+        "given": "Julie E."
+      },
+      {
+        "family": "Church",
+        "given": "George M."
+      }
+    ],
+    "year": 2013,
+    "venue": "Science",
+    "doi": "10.1126/science.1232033",
+    "url": "https://doi.org/10.1126/science.1232033"
+  },
+  "title_similarity": 1.0,
+  "author_overlap": 0.0,
+  "year_match": true,
+  "title_similarity_raw": 1.0,
+  "author_overlap_raw": 0.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: partially_valid (title_sim=1.00 raw=1.00, author_overlap=0.00 raw=0.00, year_match=True, doi_exact_match=False)"
+  ]
+}

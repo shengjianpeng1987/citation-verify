@@ -1,0 +1,260 @@
+[
+  {
+    "citation_id": 1,
+    "citation": {
+      "id": 1,
+      "authors": [
+        {
+          "family": "Vaswani",
+          "given": "A"
+        },
+        {
+          "family": "Shazeer",
+          "given": "N"
+        },
+        {
+          "family": "Parmar",
+          "given": "N"
+        },
+        {
+          "family": "Uszkoreit",
+          "given": "J"
+        },
+        {
+          "family": "Jones",
+          "given": "L"
+        },
+        {
+          "family": "Gomez",
+          "given": "AN"
+        }
+      ],
+      "title": "Attention is all you need",
+      "year": 2017,
+      "venue": "Adv Neural Inf Process Syst",
+      "doi": null,
+      "url": null,
+      "raw_text": "Vaswani A, Shazeer N, Parmar N, Uszkoreit J, Jones L, Gomez AN, et al. Attention is all you need. Adv Neural Inf Process Syst. 2017;30:5998-6008."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "semantic_scholar",
+      "matched_record": {
+        "title": "Attention is All you Need",
+        "authors": [
+          {
+            "family": "Vaswani",
+            "given": "Ashish"
+          },
+          {
+            "family": "Shazeer",
+            "given": "Noam"
+          },
+          {
+            "family": "Parmar",
+            "given": "Niki"
+          },
+          {
+            "family": "Uszkoreit",
+            "given": "Jakob"
+          },
+          {
+            "family": "Jones",
+            "given": "Llion"
+          },
+          {
+            "family": "Gomez",
+            "given": "Aidan N."
+          },
+          {
+            "family": "Kaiser",
+            "given": "Lukasz"
+          },
+          {
+            "family": "Polosukhin",
+            "given": "I."
+          }
+        ],
+        "year": 2017,
+        "venue": "Neural Information Processing Systems",
+        "doi": null,
+        "url": "https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=0.83 raw=0.83, year_match=False, doi_exact_match=False)",
+        "openalex: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=False, doi_exact_match=False)",
+        "semantic_scholar: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The API evidence identifies the well-known 2017 Neural Information Processing Systems paper \"Attention is All You Need\" with matching title, year, venue, and the cited lead authors; the remaining authors are covered by the citation's \"et al.\" No substantive discrepancies were found.",
+      "matched_identifier": "https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 2,
+    "citation": {
+      "id": 2,
+      "authors": [
+        {
+          "family": "He",
+          "given": "K"
+        },
+        {
+          "family": "Zhang",
+          "given": "X"
+        },
+        {
+          "family": "Ren",
+          "given": "S"
+        },
+        {
+          "family": "Sun",
+          "given": "J"
+        }
+      ],
+      "title": "Deep residual learning for image recognition",
+      "year": 2016,
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": null,
+      "url": null,
+      "raw_text": "He K, Zhang X, Ren S, Sun J. Deep residual learning for image recognition. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR). 2016. p. 770-778."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Deep Residual Learning for Image Recognition",
+        "authors": [
+          {
+            "family": "He",
+            "given": "Kaiming"
+          },
+          {
+            "family": "Zhang",
+            "given": "Xiangyu"
+          },
+          {
+            "family": "Ren",
+            "given": "Shaoqing"
+          },
+          {
+            "family": "Sun",
+            "given": "Jian"
+          }
+        ],
+        "year": 2016,
+        "venue": "2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "10.1109/cvpr.2016.90",
+        "url": "https://doi.org/10.1109/cvpr.2016.90"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The API evidence reports a Crossref match with the same title, author list, year, and CVPR venue. The DOI resolves to the canonical CVPR 2016 paper by He, Zhang, Ren, and Sun.",
+      "matched_identifier": "10.1109/cvpr.2016.90",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  },
+  {
+    "citation_id": 3,
+    "citation": {
+      "id": 3,
+      "authors": [
+        {
+          "family": "LeCun",
+          "given": "Y"
+        },
+        {
+          "family": "Bengio",
+          "given": "Y"
+        },
+        {
+          "family": "Hinton",
+          "given": "G"
+        }
+      ],
+      "title": "Deep learning",
+      "year": 2015,
+      "venue": "Nature",
+      "doi": null,
+      "url": null,
+      "raw_text": "LeCun Y, Bengio Y, Hinton G. Deep learning. Nature. 2015;521(7553):436-444."
+    },
+    "channel_a": {
+      "verdict": "valid",
+      "confidence": 1.0,
+      "matched_source": "crossref",
+      "matched_record": {
+        "title": "Deep learning",
+        "authors": [
+          {
+            "family": "LeCun",
+            "given": "Yann"
+          },
+          {
+            "family": "Bengio",
+            "given": "Yoshua"
+          },
+          {
+            "family": "Hinton",
+            "given": "Geoffrey"
+          }
+        ],
+        "year": 2015,
+        "venue": "Nature",
+        "doi": "10.1038/nature14539",
+        "url": "https://doi.org/10.1038/nature14539"
+      },
+      "title_similarity": 1.0,
+      "author_overlap": 1.0,
+      "year_match": true,
+      "title_similarity_raw": 1.0,
+      "author_overlap_raw": 1.0,
+      "doi_exact_match": false,
+      "reasons": [
+        "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+      ]
+    },
+    "channel_b": {
+      "verdict": "valid",
+      "confidence": 1,
+      "explanation": "The API evidence reports a Crossref match with identical title, matching authors, year, venue, and page details for the Nature paper. The canonical DOI is 10.1038/nature14539.",
+      "matched_identifier": "10.1038/nature14539",
+      "mismatches": [],
+      "search_attempts": [
+        "reviewed API evidence"
+      ]
+    },
+    "final_label": "valid"
+  }
+]

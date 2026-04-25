@@ -1,0 +1,315 @@
+[
+  {
+    "citation_id": 5,
+    "status": "confirmed_replacement",
+    "winner": {
+      "candidate": {
+        "rank": 1,
+        "title": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9",
+        "authors": [
+          {
+            "family": "Doench",
+            "given": "John G"
+          },
+          {
+            "family": "Fusi",
+            "given": "Nicolo"
+          },
+          {
+            "family": "Sullender",
+            "given": "Meagan"
+          },
+          {
+            "family": "Hegde",
+            "given": "Mudra"
+          },
+          {
+            "family": "Vaimberg",
+            "given": "Emma W"
+          },
+          {
+            "family": "Donovan",
+            "given": "Katherine F"
+          },
+          {
+            "family": "Smith",
+            "given": "Ian"
+          },
+          {
+            "family": "Tothova",
+            "given": "Zuzana"
+          },
+          {
+            "family": "Wilen",
+            "given": "Craig"
+          },
+          {
+            "family": "Orchard",
+            "given": "Robert"
+          },
+          {
+            "family": "Virgin",
+            "given": "Herbert W"
+          },
+          {
+            "family": "Listgarten",
+            "given": "Jennifer"
+          },
+          {
+            "family": "Root",
+            "given": "David E"
+          }
+        ],
+        "year": 2016,
+        "venue": "Nature Biotechnology",
+        "doi": "10.1038/nbt.3437",
+        "url": "https://doi.org/10.1038/nbt.3437",
+        "one_line_summary": "A widely-cited Nature Biotechnology paper (Doench et al. 2016) that introduces an optimized sgRNA scoring model for CRISPR-Cas9, with explicit off-target activity prediction.",
+        "relevance_note": "The fabricated citation claims a 'universal off-target prediction model' for CRISPR-Cas9; this real paper provides exactly that — sgRNA design rules optimized to minimize off-target effects. Topic, venue, and method match the claim."
+      },
+      "fit": {
+        "fit_score": 8,
+        "rationale": "The original (fabricated) citation claims a CRISPR-Cas9 off-target prediction model. Doench et al. 2016 is the canonical paper for that exact claim — sgRNA design rules with off-target minimization are the paper's headline contribution. The fit is direct and well-supported.",
+        "supports_claim": true,
+        "confidence": 0.92,
+        "concerns": [
+          "The fabricated citation specified Nature Biotechnology 2020; the real Doench paper is Nature Biotechnology 2016 — same venue, four years earlier. Author should confirm the year shift is acceptable for the claim being supported."
+        ]
+      }
+    },
+    "reverification": {
+      "citation_id": 5,
+      "citation": {
+        "id": 5,
+        "authors": [
+          {
+            "family": "Doench",
+            "given": "John G"
+          },
+          {
+            "family": "Fusi",
+            "given": "Nicolo"
+          },
+          {
+            "family": "Sullender",
+            "given": "Meagan"
+          },
+          {
+            "family": "Hegde",
+            "given": "Mudra"
+          },
+          {
+            "family": "Vaimberg",
+            "given": "Emma W"
+          },
+          {
+            "family": "Donovan",
+            "given": "Katherine F"
+          },
+          {
+            "family": "Smith",
+            "given": "Ian"
+          },
+          {
+            "family": "Tothova",
+            "given": "Zuzana"
+          },
+          {
+            "family": "Wilen",
+            "given": "Craig"
+          },
+          {
+            "family": "Orchard",
+            "given": "Robert"
+          },
+          {
+            "family": "Virgin",
+            "given": "Herbert W"
+          },
+          {
+            "family": "Listgarten",
+            "given": "Jennifer"
+          },
+          {
+            "family": "Root",
+            "given": "David E"
+          }
+        ],
+        "title": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9",
+        "year": 2016,
+        "venue": "Nature Biotechnology",
+        "doi": "10.1038/nbt.3437",
+        "url": "https://doi.org/10.1038/nbt.3437",
+        "raw_text": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9 (2016)"
+      },
+      "channel_a": {
+        "verdict": "valid",
+        "confidence": 1.0,
+        "matched_source": "crossref",
+        "matched_record": {
+          "title": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9",
+          "authors": [
+            {
+              "family": "Doench",
+              "given": "John G"
+            },
+            {
+              "family": "Fusi",
+              "given": "Nicolo"
+            },
+            {
+              "family": "Sullender",
+              "given": "Meagan"
+            },
+            {
+              "family": "Hegde",
+              "given": "Mudra"
+            },
+            {
+              "family": "Vaimberg",
+              "given": "Emma W"
+            },
+            {
+              "family": "Donovan",
+              "given": "Katherine F"
+            },
+            {
+              "family": "Smith",
+              "given": "Ian"
+            },
+            {
+              "family": "Tothova",
+              "given": "Zuzana"
+            },
+            {
+              "family": "Wilen",
+              "given": "Craig"
+            },
+            {
+              "family": "Orchard",
+              "given": "Robert"
+            },
+            {
+              "family": "Virgin",
+              "given": "Herbert W"
+            },
+            {
+              "family": "Listgarten",
+              "given": "Jennifer"
+            },
+            {
+              "family": "Root",
+              "given": "David E"
+            }
+          ],
+          "year": 2016,
+          "venue": "Nature Biotechnology",
+          "doi": "10.1038/nbt.3437",
+          "url": "https://doi.org/10.1038/nbt.3437"
+        },
+        "title_similarity": 1.0,
+        "author_overlap": 1.0,
+        "year_match": true,
+        "title_similarity_raw": 1.0,
+        "author_overlap_raw": 1.0,
+        "doi_exact_match": false,
+        "reasons": [
+          "crossref: valid (title_sim=1.00 raw=1.00, author_overlap=1.00 raw=1.00, year_match=True, doi_exact_match=False)"
+        ]
+      },
+      "channel_b": {
+        "verdict": "valid",
+        "confidence": 1.0,
+        "explanation": "Channel A confirmed an exact Crossref match for the candidate (Doench et al. 2016, Nat Biotechnol, DOI 10.1038/nbt.3437). The winner's metadata aligns with the original citation's claim about off-target prediction, so the replacement is sound.",
+        "matched_identifier": "10.1038/nbt.3437",
+        "mismatches": [],
+        "search_attempts": [
+          "reviewed API evidence"
+        ]
+      },
+      "final_label": "valid"
+    },
+    "candidates_considered": [
+      {
+        "candidate": {
+          "rank": 1,
+          "title": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9",
+          "authors": [
+            {
+              "family": "Doench",
+              "given": "John G"
+            },
+            {
+              "family": "Fusi",
+              "given": "Nicolo"
+            },
+            {
+              "family": "Sullender",
+              "given": "Meagan"
+            },
+            {
+              "family": "Hegde",
+              "given": "Mudra"
+            },
+            {
+              "family": "Vaimberg",
+              "given": "Emma W"
+            },
+            {
+              "family": "Donovan",
+              "given": "Katherine F"
+            },
+            {
+              "family": "Smith",
+              "given": "Ian"
+            },
+            {
+              "family": "Tothova",
+              "given": "Zuzana"
+            },
+            {
+              "family": "Wilen",
+              "given": "Craig"
+            },
+            {
+              "family": "Orchard",
+              "given": "Robert"
+            },
+            {
+              "family": "Virgin",
+              "given": "Herbert W"
+            },
+            {
+              "family": "Listgarten",
+              "given": "Jennifer"
+            },
+            {
+              "family": "Root",
+              "given": "David E"
+            }
+          ],
+          "year": 2016,
+          "venue": "Nature Biotechnology",
+          "doi": "10.1038/nbt.3437",
+          "url": "https://doi.org/10.1038/nbt.3437",
+          "one_line_summary": "A widely-cited Nature Biotechnology paper (Doench et al. 2016) that introduces an optimized sgRNA scoring model for CRISPR-Cas9, with explicit off-target activity prediction.",
+          "relevance_note": "The fabricated citation claims a 'universal off-target prediction model' for CRISPR-Cas9; this real paper provides exactly that — sgRNA design rules optimized to minimize off-target effects. Topic, venue, and method match the claim."
+        },
+        "fit": {
+          "fit_score": 8,
+          "rationale": "The original (fabricated) citation claims a CRISPR-Cas9 off-target prediction model. Doench et al. 2016 is the canonical paper for that exact claim — sgRNA design rules with off-target minimization are the paper's headline contribution. The fit is direct and well-supported.",
+          "supports_claim": true,
+          "confidence": 0.92,
+          "concerns": [
+            "The fabricated citation specified Nature Biotechnology 2020; the real Doench paper is Nature Biotechnology 2016 — same venue, four years earlier. Author should confirm the year shift is acceptable for the claim being supported."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "citation_id": 6,
+    "status": "no_suitable_replacement",
+    "reason": "No published paper matches the claimed title 'A novel framework for citation hallucination detection in academic literature' in Nature Methods 2024. The topic exists in adjacent venues but no candidate is close enough on title, venue, and year to recommend."
+  }
+]

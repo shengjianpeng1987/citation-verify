@@ -31,6 +31,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Vancouver-format citation parser added to fallback path; junk-title guard (`_title_looks_usable`) prevents empty/punctuation-leading/<3-word titles from becoming API search queries.
+- **Phase 2 H4 reordered into Phase 3** (PLAN amendment 2026-04-25): the synthetic-fixtures backlog item promoted to a Phase 3 prerequisite so README's Quickstart can target a committed-in-repo input, and so CI runs the full snapshot path (not just unit guards) without needing the user's research documents.
+- **Synthetic fixture architecture: hand-crafted, not recorded.** The first attempt at recording synthetic_mixed via real Codex/API hit three different external-system flakes (Codex error, Channel A network timeouts, quota exhaustion). Architectural pivot: synthetic fixtures' authority is the schema, not the live Codex — they're a deterministic contract written against `verdict.schema.json` / `alternatives.schema.json` / `fit_score.schema.json` / `correction_diff.schema.json` and `citations.schema.json`. Recorded corpus (nasal/eif4enif1) keeps catching real Codex regressions; hand-crafted corpus (synthetic_*) catches orchestrator-internal logic regressions. See `tests/fixtures/README.md`.
+
+### Added (Phase 3 H4 — synthetic fixtures)
+- `tests/_make_synthetic_docx.py` — deterministic generator for the two synthetic docx files; same script run produces byte-identical output via zip-envelope normalization (timestamps zeroed, entries sorted).
+- `tests/fixtures/inputs/synthetic_happy.docx` — 3 valid Vancouver-numbered citations (Vaswani 2017, He 2016, LeCun 2015) committed to the repo. Used by README's Quickstart.
+- `tests/fixtures/inputs/synthetic_mixed.docx` — 6 citations covering all four Stage-4b states: 2 valid (silent), 2 partially-valid → corrections (Mali 2013 / Wang 2014 attributed to wrong authors), 1 hallucinated → confirmed_replacement (fake "Lee J Wang K" off-target paper, replacement is Doench 2016), 1 hallucinated → unresolvable (fake "Anonymous citation hallucination detection paper").
+- `tests/_build_synthetic_mixed_fixtures.py` — explicit builder for the 7 api fixtures + 13 codex fixtures behind synthetic_mixed. Source of truth for canonical records (paste-from-Crossref) and Channel B / Stage 4 responses.
+- `tests/snapshots/synthetic_{happy,mixed}/` — meta-normalized baseline outputs produced by replaying the orchestrator against the hand-crafted fixtures. corrections=2 / replacements=1 / unresolvable=1 / valid_citation_ids=[1,2] for synthetic_mixed.
+- `tests/test_fixture_schema_parity.py` — validates every committed codex fixture against the schema its `codex exec --output-schema` invocation would have enforced. 58 fixtures across 4 cases all pass; future schema drift goes red here before pipeline tests do.
+- `tests/fixtures/README.md` — explains the recorded-vs-hand-crafted split and how to add new cases without conflating them.
+
+### Infrastructure changes (commit `132bc11`)
+- `src/citation_verify/orchestrate.py`: `step3_verify_one` gains an optional `label_suffix` keyword. Stage 4's replacement re-verify now writes `stage3_input_<id>_reverify.json` (was overwriting `stage3_input_<id>.json` from the initial verify, causing fixture-path collision in synthetic_mixed's replacement scenario).
+- `tests/_runner.py`: api fixture path now includes a content hash (`citation_<id>_<sha8>.json`) so two api_verify calls with the same id but different content resolve to distinct fixtures. Backward-compat fallback to the legacy `citation_<id>.json` keeps Phase 2 fixtures working without re-recording.
 
 ## [0.2.0] — 2026-04-25
 

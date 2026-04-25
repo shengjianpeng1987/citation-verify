@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1, "explanation": "The API evidence reports a Crossref match with the same title, author list, year, and CVPR venue. The DOI resolves to the canonical CVPR 2016 paper by He, Zhang, Ren, and Sun.", "matched_identifier": "10.1109/cvpr.2016.90", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

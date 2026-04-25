@@ -1,0 +1,1 @@
+{"verdict": "valid", "confidence": 1.0, "explanation": "Crossref returned the canonical Takahashi & Yamanaka 2006 record. Title, authors, year, and venue all match.", "matched_identifier": "10.1016/j.cell.2006.07.024", "mismatches": [], "search_attempts": ["reviewed API evidence"]}

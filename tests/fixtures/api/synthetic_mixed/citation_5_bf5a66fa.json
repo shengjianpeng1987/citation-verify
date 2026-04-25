@@ -1,0 +1,17 @@
+{
+  "verdict": "not_found",
+  "confidence": 0.0,
+  "matched_source": null,
+  "matched_record": null,
+  "title_similarity": 0.0,
+  "author_overlap": 0.0,
+  "year_match": false,
+  "title_similarity_raw": 0.0,
+  "author_overlap_raw": 0.0,
+  "doi_exact_match": false,
+  "reasons": [
+    "crossref: DOI 10.1038/nbt.fakefake2020 does not resolve",
+    "openalex: no results",
+    "semantic_scholar: no results"
+  ]
+}
