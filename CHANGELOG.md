@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Vancouver-format citation parser added to fallback path; junk-title guard (`_title_looks_usable`) prevents empty/punctuation-leading/<3-word titles from becoming API search queries.
+- `api_verify.py` now surfaces three new diagnostic fields on every Channel A verdict: `title_similarity_raw`, `author_overlap_raw`, and `doi_exact_match`. The post-DOI-override values (`title_similarity`, `author_overlap`) remain the inputs to verdict classification and confidence scoring; raw values are advisory and audit-friendly. Phase 2 review of the EIF4ENIF1 case showed all 5 partials reporting overlap=0.95 while raw values were 0.0–0.4 — surfaced now to make the asymmetry visible without changing verdict semantics.
 
 ## [0.1.0] — Unreleased
 

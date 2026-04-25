@@ -293,9 +293,19 @@ def _first_author_family(authors: list) -> str:
 
 # -------------- reconciliation --------------
 
-def _score_match(citation: dict, record: dict) -> tuple[float, float, bool]:
-    title_sim = _title_sim(citation.get("title") or "", record.get("title") or "")
-    author_ov = _author_overlap(citation.get("authors") or [], record.get("authors") or [])
+def _score_match(citation: dict, record: dict) -> tuple[float, float, bool, float, float, bool]:
+    """Score a candidate record against a citation.
+
+    Returns (title_sim, author_overlap, year_match, title_sim_raw, author_overlap_raw,
+    doi_exact_match). The first three are the values used by the verdict classifier
+    (post-DOI-override); the last three are unmodified diagnostic values exposed in
+    the JSON output for auditors. Note `_author_overlap` is asymmetric — `|A∩B|/|A|`,
+    not Jaccard — so it is biased toward citation-side coverage and will overstate
+    similarity when the citation lists only first author + et al. against a multi-
+    author canonical record.
+    """
+    title_sim_raw = _title_sim(citation.get("title") or "", record.get("title") or "")
+    author_ov_raw = _author_overlap(citation.get("authors") or [], record.get("authors") or [])
     year_match = False
     cy = citation.get("year")
     ry = record.get("year")
@@ -309,15 +319,20 @@ def _score_match(citation: dict, record: dict) -> tuple[float, float, bool]:
     # carries the same DOI, we found the paper by direct identifier lookup — the
     # query didn't depend on title/author similarity. Treat as strong evidence so a
     # citation with null title (e.g. from the regex fallback parser) still gets a
-    # valid verdict instead of being dragged down by title_sim=0.
+    # valid verdict instead of being dragged down by title_sim=0. Raw scores remain
+    # available alongside the post-override values so downstream consumers and
+    # auditors can see what the textual similarity actually was.
     cd = (citation.get("doi") or "").lower().strip()
     rd = (record.get("doi") or "").lower().strip()
-    if cd and rd and cd == rd:
+    doi_exact_match = bool(cd and rd and cd == rd)
+    title_sim = title_sim_raw
+    author_ov = author_ov_raw
+    if doi_exact_match:
         if title_sim < 0.95:
             title_sim = 0.95
         if author_ov < 0.95:
             author_ov = 0.95
-    return title_sim, author_ov, year_match
+    return title_sim, author_ov, year_match, title_sim_raw, author_ov_raw, doi_exact_match
 
 
 def verify_one(citation: dict) -> dict:
@@ -330,6 +345,9 @@ def verify_one(citation: dict) -> dict:
     best_title_sim = 0.0
     best_author_ov = 0.0
     best_year_match = False
+    best_title_sim_raw = 0.0
+    best_author_ov_raw = 0.0
+    best_doi_exact_match = False
 
     for source_name, fn in (
         ("crossref", _crossref_search),
@@ -348,7 +366,8 @@ def verify_one(citation: dict) -> dict:
             reasons.append(f"{source_name}: DOI {rec['_not_found_for_doi']} does not resolve")
             continue
 
-        title_sim, author_ov, year_match = _score_match(citation, rec)
+        title_sim, author_ov, year_match, title_sim_raw, author_ov_raw, doi_match = \
+            _score_match(citation, rec)
 
         # Build a composite confidence
         conf = 0.6 * title_sim + 0.3 * author_ov + 0.1 * (1.0 if year_match else 0.0)
@@ -367,7 +386,9 @@ def verify_one(citation: dict) -> dict:
 
         reasons.append(
             f"{source_name}: {verdict} "
-            f"(title_sim={title_sim:.2f}, author_overlap={author_ov:.2f}, year_match={year_match})"
+            f"(title_sim={title_sim:.2f} raw={title_sim_raw:.2f}, "
+            f"author_overlap={author_ov:.2f} raw={author_ov_raw:.2f}, "
+            f"year_match={year_match}, doi_exact_match={doi_match})"
         )
 
         # Take the strongest evidence across sources
@@ -382,6 +403,9 @@ def verify_one(citation: dict) -> dict:
             best_title_sim = title_sim
             best_author_ov = author_ov
             best_year_match = year_match
+            best_title_sim_raw = title_sim_raw
+            best_author_ov_raw = author_ov_raw
+            best_doi_exact_match = doi_match
 
         # Early exit on strong valid — no need to hit remaining APIs
         if best_verdict == "valid" and best_confidence >= 0.9:
@@ -395,6 +419,9 @@ def verify_one(citation: dict) -> dict:
         "title_similarity": round(best_title_sim, 3),
         "author_overlap": round(best_author_ov, 3),
         "year_match": best_year_match,
+        "title_similarity_raw": round(best_title_sim_raw, 3),
+        "author_overlap_raw": round(best_author_ov_raw, 3),
+        "doi_exact_match": best_doi_exact_match,
         "reasons": reasons,
     }
 

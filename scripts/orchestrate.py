@@ -622,6 +622,9 @@ def _make_unresolvable(citation_id: int, reason: str, channel_a: dict, channel_b
                 "record": rec,
                 "title_similarity": channel_a.get("title_similarity"),
                 "author_overlap": channel_a.get("author_overlap"),
+                "title_similarity_raw": channel_a.get("title_similarity_raw"),
+                "author_overlap_raw": channel_a.get("author_overlap_raw"),
+                "doi_exact_match": channel_a.get("doi_exact_match"),
             }
     ch_b_guess = None
     if channel_b:
