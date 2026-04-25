@@ -82,7 +82,8 @@ Reconcile the two:
 <output-dir>/
 ├── citations.json             # parsed structured citations
 ├── verdicts.json              # per-citation final labels + both channels' raw data
-├── replacements.json          # hallucinated → replacement mapping with scores
+├── replacements.json          # Stage 4 raw replacement-search results (status + winner + candidates)
+├── corrections.json           # Stage 4b structured output: corrections / replacements / unresolvable + meta block
 └── report.md                  # human-readable report (always)
 ```
 
