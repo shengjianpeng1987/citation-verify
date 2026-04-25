@@ -157,11 +157,18 @@ User provides the second validation document (English or Chinese; user selects).
   - (d) Output `<input>.patched.docx` differs in sha256 from the original input, but all non-citation paragraphs are byte-identical.
   - (e) Idempotent — running the same `corrections.json` twice produces sha256-identical output.
   - (f) The SKILL.md Stage 5 paragraph removed when this was deferred is restored in the same commit that completes (a)–(e).
+- `render_report.py --format docx` — deferred from Phase 1 (formerly an unimplemented `--format docx` promise in SKILL.md). Acceptance:
+  - (a) `--format` argument added to `render_report.py` argparse with choices `{markdown, docx}`, default `markdown`.
+  - (b) DOCX output reuses `python-docx` (already in `REQUIRED`) so no new system-level dependency (no pandoc).
+  - (c) DOCX content layout mirrors the current Markdown report: At-a-glance table + per-citation dual-channel detail blocks.
+  - (d) `tests/` adds a smoke test asserting the generated `.docx` is a valid OOXML zip and contains at least one table.
+  - (e) On completion, the two SKILL.md lines removed when this was deferred (the Stage 5 DOCX/PDF bullet and the `report.docx` Output-layout line) are restored in the same commit.
 
 ### Exit criteria
 - A zero-context reader can follow README's Quickstart and run `examples/nasal_methylation/run.sh` successfully within 10 minutes of `git clone`.
 - CITATION.cff parses (test with `cffconvert` or `pip install cffconvert && cffconvert --validate`).
 - `docx_patch.py` deliverable acceptance criteria (a)–(f) all met.
+- `render_report.py --format docx` deliverable acceptance criteria (a)–(e) all met.
 
 ---
 

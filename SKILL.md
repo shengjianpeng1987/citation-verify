@@ -75,7 +75,6 @@ Reconcile the two:
 
 **Stage 5 — Render the report.** `scripts/render_report.py` produces:
 - A Markdown report (always) with per-citation verdicts, evidence links, and replacement rationale.
-- A DOCX/PDF report (optional, via `--format docx`) in table form.
 
 ## Output layout
 
@@ -84,8 +83,7 @@ Reconcile the two:
 ├── citations.json             # parsed structured citations
 ├── verdicts.json              # per-citation final labels + both channels' raw data
 ├── replacements.json          # hallucinated → replacement mapping with scores
-├── report.md                  # human-readable report (always)
-└── report.docx                # optional, if --format docx
+└── report.md                  # human-readable report (always)
 ```
 
 ## Dependencies
