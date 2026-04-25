@@ -9,11 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Stage 4b: `corrections.json` output separating `corrections[]` / `replacements[]` / `unresolvable[]`.
-- `schemas/corrections.schema.json` with required top-level `meta` block (schema_version, orchestrator_version, generated_at, input_doc_sha256, input_doc_filename, codex_model, api_sources_enabled).
+- `schemas/corrections.schema.json` with required top-level `meta` block (schema_version, orchestrator_version, generated_at, input_doc_sha256, input_doc_filename, codex_model, api_sources_enabled, **valid_citation_ids** as of 0.2.0).
 - SKILL.md invariants #6 (`canonical_record.source` must be from Channel A: crossref / openalex / semantic_scholar — never `channel_b_web`) and #7 (Stage 4b consumes Stage 3 verdict buckets without re-classifying).
 - `PLAN.md` — development and JOSS publication plan.
 - Apache-2.0 `LICENSE` and `NOTICE`.
 - `pyproject.toml` skeleton; `VERSION` file.
+- `tests/test_skill_doc_parity.py` — release gate: scans SKILL.md for `--xxx` flags and Output-layout files, asserts each resolves to an argparse `add_argument` or an emitted file.
+- `tests/test_schema_shape_drift.py` — release gate: asserts `field_diff_entry` shape parity between `corrections.schema.json#/$defs` and the inline copy in `correction_diff.schema.json`.
+
+### Changed
+- **BREAKING (schema 0.1.0 → 0.2.0):** `corrections.schema.json` requires `meta.valid_citation_ids` (sorted unique array of citation IDs whose Stage 3 verdict was `valid`). Pre-0.2.0 instances without this field will now fail validation. Lets a corrections.json reader enumerate silent-valid citations without cross-referencing verdicts.json.
 
 ### Changed
 - Vancouver-format citation parser added to fallback path; junk-title guard (`_title_looks_usable`) prevents empty/punctuation-leading/<3-word titles from becoming API search queries.

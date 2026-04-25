@@ -13,7 +13,10 @@
         "additionalProperties": false,
         "required": ["field", "original", "corrected", "severity"],
         "properties": {
-          "field": {"enum": ["authors", "title", "year", "venue", "volume", "issue", "page", "doi"]},
+          "field": {
+            "enum": ["authors", "title", "year", "venue", "volume", "issue", "page", "doi"],
+            "description": "url intentionally omitted — url is derivative of doi, not separately verifiable."
+          },
           "original": {"type": ["string", "null"]},
           "corrected": {"type": ["string", "null"]},
           "severity": {"enum": ["high", "medium", "low"]}

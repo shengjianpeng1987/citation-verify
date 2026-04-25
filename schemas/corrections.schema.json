@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Stage 4b output: corrections, replacements, and unresolvable citations",
-  "description": "Schema version 0.1.0. Bump the schema_version string in corrections.json meta per semver on any change (patch = clarification, minor = additive non-breaking, major = breaking).",
+  "description": "Schema version 0.2.0. Bump the schema_version string in corrections.json meta per semver on any change (patch = clarification, minor = additive non-breaking, major = breaking). 0.1.0 → 0.2.0: meta.valid_citation_ids is now required (BREAKING for pre-0.2.0 instances).",
   "type": "object",
   "additionalProperties": false,
   "required": ["meta", "corrections", "replacements", "unresolvable"],
@@ -31,7 +31,8 @@
         "input_doc_sha256",
         "input_doc_filename",
         "codex_model",
-        "api_sources_enabled"
+        "api_sources_enabled",
+        "valid_citation_ids"
       ],
       "properties": {
         "schema_version": {
@@ -67,6 +68,12 @@
           "items": {"enum": ["crossref", "openalex", "semantic_scholar"]},
           "uniqueItems": true,
           "description": "Which Channel A sources were active for this run."
+        },
+        "valid_citation_ids": {
+          "type": "array",
+          "items": {"type": "integer", "minimum": 1},
+          "uniqueItems": true,
+          "description": "Citation IDs whose Stage 3 verdict was 'valid'. Lets an auditor reading corrections.json alone enumerate which citations were silent (no entry in any bucket because they passed verification). Empty array if zero valid verdicts."
         }
       }
     },

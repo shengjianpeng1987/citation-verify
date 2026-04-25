@@ -48,7 +48,7 @@ SCHEMAS = SKILL_ROOT / "schemas"
 
 # --- Stage 4b constants ---
 
-SCHEMA_VERSION = "0.1.0"  # corrections.schema.json version. Bump per semver on schema change.
+SCHEMA_VERSION = "0.2.0"  # corrections.schema.json version. Bump per semver on schema change.
 API_SOURCES_ENABLED = ["crossref", "openalex", "semantic_scholar"]
 
 # --- dependency check ---
@@ -791,6 +791,11 @@ def step4b_build_corrections(
     replacements_out.sort(key=lambda x: x["citation_id"])
     unresolvable.sort(key=lambda x: x["citation_id"])
 
+    valid_citation_ids = sorted({
+        int(v["citation_id"])
+        for v in verdicts
+        if v.get("final_label") == "valid" and v.get("citation_id") is not None
+    })
     meta = {
         "schema_version": SCHEMA_VERSION,
         "orchestrator_version": _read_orchestrator_version(),
@@ -799,6 +804,7 @@ def step4b_build_corrections(
         "input_doc_filename": input_path.name,
         "codex_model": _detect_codex_model(),
         "api_sources_enabled": list(API_SOURCES_ENABLED),
+        "valid_citation_ids": valid_citation_ids,
     }
     return {
         "meta": meta,
