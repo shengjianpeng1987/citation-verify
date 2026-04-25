@@ -1,0 +1,40 @@
+name: lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Non-blocking initially per PLAN.md Phase 2: surface ruff / mypy findings
+# without failing the workflow. Tighten to blocking once the codebase has
+# been brought into compliance (Phase 3 or later).
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ruff
+        run: pip install ruff
+      - name: Run ruff check
+        run: ruff check .
+
+  mypy:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install mypy + runtime deps (mypy needs them for type resolution)
+        run: |
+          pip install mypy
+          pip install -r requirements.txt
+      - name: Run mypy
+        run: mypy scripts/ tests/
