@@ -15,6 +15,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Apache-2.0 `LICENSE` and `NOTICE`.
 - `pyproject.toml` skeleton; `VERSION` file.
 - `tests/test_skill_doc_parity.py` — release gate: scans SKILL.md for `--xxx` flags and Output-layout files, asserts each resolves to an argparse `add_argument` or an emitted file.
+- Phase 2 snapshot harness:
+  - `tests/_runner.py` — capture/replay subprocess interceptor for `api_verify.py` and `codex_atom.sh`. Fixture paths keyed by citation id (api) or input file basename (codex). `normalize_meta()` handles `generated_at` and `codex_model` for diffable snapshots.
+  - `tests/_record_fixtures.py` — one-shot CLI to run the orchestrator in record mode and persist the snapshot baseline.
+  - `tests/conftest.py` — pytest `replay_subprocess(case)` fixture mounting the replay-mode interceptor on `orchestrate.subprocess.run`.
+  - `tests/test_runner_unit.py` — 6 unit tests locking fixture-path resolution and meta-normalization behaviour.
+  - `tests/test_pipeline_snapshots.py` — full-pipeline replay tests for both cases (nasal_methylation, eif4enif1). Run in <1 s with no network. Skip if input docx is absent locally.
+  - `tests/fixtures/api/<case>/citation_<id>.json` — recorded Channel A outputs (10 nasal + 20 EIF4ENIF1).
+  - `tests/fixtures/codex/<case>/<input_basename>.json` — recorded Codex atomic outputs (15 nasal + 26 EIF4ENIF1).
+  - `tests/snapshots/<case>/{corrections,verdicts,replacements}.json` — meta-normalized baseline outputs.
 
 ### Changed
 - Vancouver-format citation parser added to fallback path; junk-title guard (`_title_looks_usable`) prevents empty/punctuation-leading/<3-word titles from becoming API search queries.
