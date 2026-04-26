@@ -1,5 +1,24 @@
 citation-verify
 Copyright 2026 Sheng Jianpeng
 
-This product includes software developed at
-Nanjing University of Aeronautics and Astronautics.
+Licensed under the Apache License, Version 2.0. See LICENSE for details.
+
+This product includes software developed by Sheng Jianpeng. Patent rights
+are retained by the copyright holder under the terms of Apache License 2.0
+Section 3 (Grant of Patent License).
+
+This product depends on the following third-party packages, each governed
+by its own license terms:
+  - pdfplumber (MIT) — Jeremy Singer-Vine
+  - python-docx (MIT) — Steve Canny
+  - requests (Apache 2.0) — Kenneth Reitz / Python Software Foundation
+  - rapidfuzz (MIT) — Max Bachmann
+  - jsonschema (MIT) — Julian Berman
+  - Other dependencies — see requirements.txt
+
+This product invokes the following external services / tools at runtime;
+their licenses are NOT redistributed with this product:
+  - Codex CLI (OpenAI) — proprietary; users must accept OpenAI's terms
+  - Crossref REST API — public bibliographic data; CC0 metadata
+  - OpenAlex REST API — CC0 metadata
+  - Semantic Scholar API — Allen Institute for AI; see API terms
