@@ -1,6 +1,7 @@
 # citation-verify — Development & Publication Plan
 
-**Owner:** Sheng Jianpeng, Nanjing University of Aeronautics and Astronautics
+**Copyright holder:** 杭州茵菲多组学生物科技有限公司 (English name TBD)
+**Lead developer:** Sheng Jianpeng (盛剑鹏), Nanjing University of Aeronautics and Astronautics
 **Collaborators:** Claude (Cowork / planning + review), Claude Code (implementation)
 **Target venue:** Journal of Open Source Software (JOSS)
 **Current phase:** Phase 1
